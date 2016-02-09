@@ -7,8 +7,8 @@
  * Time: 08:55
  */
 class index
-{
-<!DOCTYPE html>
+
+<!DOCTYPE html>{
 <html>
 <head lang="en">
 <meta charset="UTF-8">
