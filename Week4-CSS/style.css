@@ -82,19 +82,19 @@ H2,H3{
 #mug1{
     background-color: aqua;
     width:33%;
-
+    float:left;
 }
 
 #mug2{
     background-color: chartreuse;
     width:33%;
-
+    display: inline-block;
 }
 
 #mug3{
     background-color: hotpink;
     width:33%;
-
+    float: right;
 }
 
 p{
@@ -107,6 +107,7 @@ p{
 footer::after{
     content: "The Marc Corporation";
     color: slategrey;
+    background-color: lightsteelblue;
     font-family: 'Pacifico', cursive;
     font-size: 18pt;
 }
