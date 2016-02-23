@@ -1,48 +1,54 @@
 *{
-    background:skyblue;
+   background-color: skyblue;
     text-align: justify;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;}
 
-}
+
 h1{
     color: midnightblue;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lobster', cursive;
     font-size: 50pt;
-    padding: 0px;
+    padding: 10px;
+    text-align: center}
 
-}
-header{
-    background:navy;
-    margin:10px;
-}
+
 
 li{
-    float: right;
+    float: left;
+    list-style: none;
+    margin:0;
+    overflow:hidden;
+    background-color: blue;}
 
 
-}
 
 a{
-    display:block;
+    display:inline-block;
+    width: 550px;
+    height: 20px;
     font-size: 20px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     background-color: midnightblue;
-    padding:10px;
-
+    text-decoration: none;
+    padding:0px 10px 10px;
 }
+
+li a:hover{
+    background-color: indigo;
+}
+
+
+
 
 
 
 img{
     height:250px;
     width:250px;
+
 }
-
-
-
-
 
 
 
@@ -51,6 +57,44 @@ H2,H3{
     font-size: 24pt;
     font-family: 'Montserrat', sans-serif;
     font-weight:bold;
+    padding: 30px;
+    margin:20px;
+
+}
+
+#mugContainer1{
+    float: left;
+    width: 33%;
+
+}
+
+#mugContainer2{
+    display: inline-block;
+    width:33%;
+
+}
+#mugContainer3{
+    float: right;
+    width: 33%;
+
+}
+
+#mug1{
+    background-color: aqua;
+    width:33%;
+
+}
+
+#mug2{
+    background-color: chartreuse;
+    width:33%;
+
+}
+
+#mug3{
+    background-color: hotpink;
+    width:33%;
+
 }
 
 p{
@@ -60,11 +104,24 @@ p{
 }
 
 
+footer::after{
+    content: "The Marc Corporation";
+    color: slategrey;
+    font-family: 'Pacifico', cursive;
+    font-size: 18pt;
+}
 
 
-/*mouse over link*/
-A:hover{
-    color:red;}
+
+
+h1::first-letter{
+    font-size: 200%;
+    color: orchid;
+
+}
+
+
+
 
 
 
