@@ -10,6 +10,7 @@
 <?php
 error_reporting(-1);
 
+echo "in PHP";
 $db = new mysqli(
     "eu-cdbr-azure-north-d.cloudapp.net",
     "b52b6c6935c6d2",
