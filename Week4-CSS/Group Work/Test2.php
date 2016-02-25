@@ -20,7 +20,7 @@ error_reporting(-1);
       } catch ( PDOException $e ) {
           echo "Connection failed: " . $e->getMessage();
       }
-      $sql = "SELECT * FROM gameCollection";
+      $sql = "SELECT * FROM gameCollection WHERE Year='2010'";
       try {
           $results = $conn->query( $sql );
 
