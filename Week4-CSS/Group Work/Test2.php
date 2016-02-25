@@ -11,9 +11,9 @@
 
 
 $db = new mysqli(
-    "csdm-webdev.rgu.ac.uk",
-    "1510646",
-    "1510646",
+    "eu-cdbr-azure-north-d.cloudapp.net",
+    "b52b6c6935c6d2",
+    "26ebeed0",
     "db1510646_gameshare"
 );
 
@@ -32,7 +32,7 @@ while ($row=mysql_fetch_array($result)){
 
 //print_r ($row);
 echo $row['Title'];
-echo $row ['Year'];
+echo $row ['Year'];}
 ?>
 
 
