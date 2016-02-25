@@ -20,7 +20,7 @@ error_reporting(-1);
       } catch ( PDOException $e ) {
           echo "Connection failed: " . $e->getMessage();
       }
-      $sql = "SELECT * FROM 'game collection'";
+      $sql = "SELECT * FROM gameCollection";
       try {
           $results = $conn->query( $sql );
 
