@@ -8,7 +8,7 @@
 <h1>RESULTS</h1>
 
 <?php
-
+error_reporting(-1);
 
 $db = new mysqli(
     "eu-cdbr-azure-north-d.cloudapp.net",
