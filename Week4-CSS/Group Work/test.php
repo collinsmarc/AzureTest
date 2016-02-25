@@ -7,28 +7,32 @@
  */
 
 
-
+echo "in PHP";
 $db = new mysqli(
-    "CSDM-WEBDEV",
-    "1510646",
-    "1510646",
+    "eu-cdbr-azure-north-d.cloudapp.net",
+    "b52b6c6935c6d2",
+    "26ebeed0",
     "db1510646_gameshare"
 );
 
-// test if connection was established, and print any errors
+//test if connection was established, and print any errors
+
 
 if (!$db) {
     die('Connect Error: ' . mysql_error());
 }
 
-$sql="SELECT * FROM game collection WHERE Year=2010";
+$sql="SELECT * FROM 'game collection'";
 
 $result=mysql_query($sql);
 
 while ($row=mysql_fetch_array($result)){
 
-    print_r ($row);
+//print_r ($row);
     echo $row['Title'];
     echo $row ['Year'];}
+?>
+
+
 
 ?>
