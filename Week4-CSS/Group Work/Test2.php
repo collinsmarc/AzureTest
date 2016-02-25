@@ -10,32 +10,39 @@
 <?php
 error_reporting(-1);
 
-echo "in PHP";
-$db = new mysqli(
-    "eu-cdbr-azure-north-d.cloudapp.net",
-    "b52b6c6935c6d2",
-    "26ebeed0",
-    "db1510646_gameshare"
-);
 
-//test if connection was established, and print any errors
+      $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+      $username = "b52b6c6935c6d2";
+      $password = "26ebeed0";
+      try {
+          $conn = new PDO( $dsn, $username, $password );
+          $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+      } catch ( PDOException $e ) {
+          echo "Connection failed: " . $e->getMessage();
+      }
+      $sql = "SELECT * FROM game collection";
+      try {
+          $results = $conn->query( $sql );
 
-
-  if (!$db) {
-    die('Connect Error: ' . mysql_error());
-}
-
-$sql="SELECT * FROM 'game collection'";
-
-$result=mysql_query($sql);
-
-while ($row=mysql_fetch_array($result)){
-
-//print_r ($row);
-echo $row['Title'];
-echo $row ['Year'];}
-?>
-
+          if ($results->rowcount()==0){
+              echo "no games found <br />";
+          } else {
+              //generate table of politicians
+              print "<table>\n";
+              echo "<th>title</th><th>year</th>";
+              foreach ($results as $row){
+                  echo "<tr>";
+                  echo "<td>".$row["Title"]."</td>";
+                  echo "<td>".$row["Year"]."</td>";
+                  echo "</tr>\n";
+              }
+              print "</table>\n";
+          }
+      } catch ( PDOException $e ) {
+          echo "Query failed: " . $e->getMessage();
+      }
+     $conn = null;
+    ?>
 
 
 
