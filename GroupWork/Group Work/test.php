@@ -16,6 +16,23 @@ try {
 
     if(isset($title)){//if keyword set goes here
         $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%'" ;
+        if ($results->rowcount()==0){
+            echo "no games found <br />";
+        } else {
+            //generate table of politicians
+            print "<table>\n";
+            echo "<th>title</th><th>year</th>";
+            foreach ($results as $row){
+                echo "<tr>";
+                echo "<td>".$row["Title"]."</td>";
+                echo "<td>".$row["Year"]."</td>";
+                echo "</tr>\n";
+            }
+            print "</table>\n";
+        }
 
-}
-}
+
+     $conn = null;
+    ?>
+
+
