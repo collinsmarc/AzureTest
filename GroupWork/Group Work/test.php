@@ -1,22 +1,21 @@
 <?php
-    $con= new mysqli("localhost","root","","Employee");
-    $name = $_post['search'];
-    //$query = "SELECT * FROM employees
-   // WHERE first_name LIKE '%{$name}%' OR last_name LIKE '%{$name}%'";
+error_reporting(-1);
 
-    // Check connection
-    if (mysqli_connect_errno())
-    {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
 
-$result = mysqli_query($con, "SELECT * FROM employees
-    WHERE first_name LIKE '%{$name}%' OR last_name LIKE '%{$name}%'");
+$dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+$username = "b52b6c6935c6d2";
+$password = "26ebeed0";
+try {
+    $conn = new PDO( $dsn, $username, $password );
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+} catch ( PDOException $e ) {
+    echo "Connection failed: " . $e->getMessage();
 
-while ($row = mysqli_fetch_array($result))
-{
-    echo $row['first_name'] . " " . $row['last_name'];
-    echo "<br>";
+    $query = "";
+    $title = $_REQUEST['title'];
+
+    if(isset($title)){//if keyword set goes here
+        $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%'" ;
+
 }
-    mysqli_close($con);
-    ?>
+}

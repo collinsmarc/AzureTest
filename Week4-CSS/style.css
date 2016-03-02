@@ -1,4 +1,4 @@
-*{
+body{
    background-color: skyblue;
     text-align: justify;
     margin: 0px;
@@ -9,8 +9,7 @@ h1{
     color: midnightblue;
     font-family: 'Lobster', cursive;
     font-size: 50pt;
-    padding: 10px;
-    text-align: center}
+    }
 
 
 
@@ -60,39 +59,52 @@ H2,H3{
     padding: 30px;
     margin:20px;
 
+
+}
+
+
+
+.title{
+    float: left;
 }
 
 #mugContainer1{
     float: left;
-    width: 33%;
+    background-color: cornflowerblue;
 
+
+
+}
+
+#mugContainer1:hover{
+    background-color: orchid;
 }
 
 #mugContainer2{
     display: inline-block;
-    width:33%;
+    background-color: dodgerblue;
 
 }
 #mugContainer3{
     float: right;
-    width: 33%;
+    background-color: mediumslateblue;
 
 }
 
 #mug1{
-    background-color: aqua;
+
     width:33%;
     float:left;
 }
 
 #mug2{
-    background-color: chartreuse;
+
     width:33%;
     display: inline-block;
 }
 
 #mug3{
-    background-color: hotpink;
+
     width:33%;
     float: right;
 }

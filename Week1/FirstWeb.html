@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Tech Radar.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+          href="unsemantic-grid-responsivetablet.
+css">
 </head>
 <body>
+<main class="grid-container">
+
     <header>
        <div id="quicklinks">
           <ul>
@@ -32,7 +38,9 @@
              <input type="submit" value="Go">
          </form>
           </div>
-     <nav>
+
+
+        <nav>
          <ul>
              <li><a href="#">Home</a></li>
              <li><a href="#">Reviews</a></li>
@@ -73,22 +81,28 @@
               <li><a href="#">Windows 10</a></li>
           </ul>
           </nav>
-      <section>
+
+
+        <section class="grid-33" id="article1">
           <article>
        <img id="twitterStorm" src="twitter.jpg" alt="Twitter Storm">
        <h2><a href="#">Twitter CEO has responded to rumours of a timeline shakeup</a></h2>
        <p>It's not what you think</p>
           </article>
-        <article>
+            </section>
+
+
+        <section class="grid-33" id="article2">
           <img id="galaxy" src="galaxy.jpg" alt="Galaxy Story">
           <h3><a href="#"> Galaxy Note to launch in UK instead of an S7 Edge+</a></h3>
-        </article>
+        </sectionarticle>
        <article>
            <img id="doom" src="doom.jpg" alt="doom story">
            <h3><a href="#">Finally-the new Doom has a release date</a></h3>
         </article>
     </section>
-    <section>
+
+        <section class="grid-33" id="article3">
       <header>
         <ul>
            <h2>Latest News</h2>
@@ -101,6 +115,7 @@
      <img id="superbowl" src="superbowl.jpg" alt="superbowl story">
      <h2><a href="#">Watch the best SuperBowl 50 commericals here right now</a></h2>
      <p>It ain't the SuperBowl without extravagant ads. here are the best spots from the big game.</p>
+
     </section>
 
     </main>
@@ -126,5 +141,6 @@
    </div>
      <p>© Future Publishing Limited  Quay House, The Ambury, Bath BA1 1UA. All rights reserved. England and Wales company registration number 2008885</p>
     </footer>
+</main>
 </body>
 </html>
