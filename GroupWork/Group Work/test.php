@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
     if (isset($title)) {//if keyword set goes here
         $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%'";
         try {
-            $results = $conn->query($sql);
+            $results = $conn->query($query);
 
             if ($results->rowcount() == 0) {
                 echo "no games found <br />";
