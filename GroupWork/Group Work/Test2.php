@@ -21,11 +21,11 @@ error_reporting(-1);
           echo "Connection failed: " . $e->getMessage();
       }
 
-$title = 'FIFA 16';
+$title = $_POST['title'];
 
 
 
-$sql = "SELECT * FROM gameCollection WHERE LIKE '%{$title}%'";
+$sql = "SELECT * FROM gameCollection WHERE LIKE '%$title%'";
       try {
           $results = $conn->query( $sql );
 
