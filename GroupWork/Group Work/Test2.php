@@ -21,7 +21,7 @@ error_reporting(-1);
           echo "Connection failed: " . $e->getMessage();
       }
 
-$title = $_POST['title'];
+$title = $_POST['FIFA 16'];
 
 
 
