@@ -9,30 +9,35 @@ try {
     $conn = new PDO( $dsn, $username, $password );
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 } catch ( PDOException $e ) {
-    echo "Connection failed: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage();}
 
     $query = "";
     $title = $_REQUEST['title'];
 
-    if(isset($title)){//if keyword set goes here
-        $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%'" ;
-        if ($results->rowcount()==0){
-            echo "no games found <br />";
-        } else {
-            //generate table of politicians
-            print "<table>\n";
-            echo "<th>title</th><th>year</th>";
-            foreach ($results as $row){
-                echo "<tr>";
-                echo "<td>".$row["Title"]."</td>";
-                echo "<td>".$row["Year"]."</td>";
-                echo "</tr>\n";
+    if(isset($title)) {//if keyword set goes here
+        $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%'";
+        try {
+            $results = $conn->query($sql);
+
+            if ($results->rowcount() == 0) {
+                echo "no games found <br />";
+            } else {
+                //generate table of politicians
+                print "<table>\n";
+                echo "<th>title</th><th>year</th>";
+                foreach ($results as $row) {
+                    echo "<tr>";
+                    echo "<td>" . $row["Title"] . "</td>";
+                    echo "<td>" . $row["Year"] . "</td>";
+                    echo "</tr>\n";
+                }
+                print "</table>\n";
             }
-            print "</table>\n";
+        } catch (PDOException $e) {
+            echo "Query failed: " . $e->getMessage();
         }
-
-
-     $conn = null;
-    ?>
+        $conn = null;
+    }
+?>
 
 
