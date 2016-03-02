@@ -12,7 +12,7 @@ try {
     echo "Connection failed: " . $e->getMessage();}
 
     $query = "";
-    $title = $_REQUEST['title'];
+    $title = $_POST['title'];
 
     if(isset($title)) {//if keyword set goes here
         $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%'";
