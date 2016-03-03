@@ -73,7 +73,7 @@ ul {
     position: relative;
     height: 130px;
     border-top: solid 1px #F7F1E8;
-    background: #8A7B65 url(images/rgu2.jpg) repeat-x top left;
+    background: #8A7B65 (rgu2.jpg) repeat-x top left;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
@@ -102,7 +102,7 @@ ul {
     position: absolute;
     line-height: 55px;
     width: 910px;
-    background: #DE2211 url(images/rgu1.jpg) repeat-x top left;
+    background: #DE2211 url(rgu1.jpg) repeat-x top left;
     font-family: Oswald, sans-serif;
     left: 0;
     bottom: 0;
@@ -140,7 +140,7 @@ ul {
     position: relative;
     border-top: solid 1px #FFFFFF;
     padding: 45px 35px 15px 35px;
-    background: #FFFFFF url(images/pur1.png) repeat-x top left;
+    background: #FFFFFF url(pur1.png) repeat-x top left;
     margin: 0 0 0 0;
     border-bottom: solid 5px #D0D0D0;
     border-bottom-left-radius: 10px;
