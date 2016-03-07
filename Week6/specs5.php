@@ -31,7 +31,7 @@
 
 
     }while ($todaysGood<=7);
-
+      echo "<br> no more goods available";
     ?>
 </p>
 </body>
