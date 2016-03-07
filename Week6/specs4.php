@@ -6,7 +6,7 @@
 <p>
     <?php
     for ($i=1;$i<30;$i++){
-        echo "on the".$i."of the month no products are available";
+        echo "on the".$i."of the month no products are available <br>";
 
     }
 
