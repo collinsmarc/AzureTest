@@ -17,7 +17,9 @@
 
         }if (($i%4)==0){
             echo "sausage rolls";
-        }
+        }else
+            echo "nothing!";
+
         echo "<br>";
 
     }
