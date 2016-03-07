@@ -11,12 +11,12 @@
         echo "on the".$i."of the month you can buy ";
 
         if (($i%2)==0){
-            echo "specs";
+            echo "specs <br>";
         }if (($i%3)==0){
-            echo "mugs";
+            echo "mugs <br>";
 
         }if (($i%4)==0){
-            echo "sausage rolls";
+            echo "sausage rolls<br>";
         }
 
     }
