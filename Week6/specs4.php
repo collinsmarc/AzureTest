@@ -5,22 +5,22 @@
 <body>
 <p>
     <?php
-    for ($i=0;$i<30;$i++){
+    for ($i=1;$i<31;$i++){
 
 
         echo "on the".$i."of the month you can buy ";
 
         if (($i%2)==0){
-            echo "specs <br>";
+            echo "specs ";
         }if (($i%3)==0){
-            echo "mugs <br>";
+            echo "mugs ";
 
         }if (($i%4)==0){
-            echo "sausage rolls<br>";
+            echo "sausage rolls";
         }
+        echo "<br>";
 
     }
-
 
     ?>
 </p>
