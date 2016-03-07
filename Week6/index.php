@@ -6,8 +6,9 @@
 <p>
     <?php
    $myname="marc";
-    $myage=25;
-    echo "my name is" .$myname."and i am".$myage;
+   if ($myname=="marc"){
+       print "I Know You";
+   }
 
     ?>
 </p>
