@@ -5,8 +5,19 @@
 <body>
 <p>
     <?php
-    for ($i=1;$i<30;$i++){
-        echo "on the".$i."of the month no products are available <br>";
+    for ($i=0;$i<30;$i++){
+
+
+        echo "on the".$i."of the month you can buy ";
+
+        if (($i%2)==0){
+            echo "specs";
+        }if (($i%3)==0){
+            echo "mugs";
+
+        }if (($i%4)==0){
+            echo "sausage rolls";
+        }
 
     }
 
