@@ -17,21 +17,22 @@ li{
     float: left;
     list-style: none;
     margin:0;
+
     overflow:hidden;
-    background-color: blue;}
+    ;}
 
 
 
 a{
     display:inline-block;
-    width: 550px;
-    height: 20px;
+    width:300px;
+    height:10px;
     font-size: 20px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     background-color: midnightblue;
     text-decoration: none;
-    padding:0px 10px 10px;
+    padding:20px;
 }
 
 li a:hover{
@@ -78,6 +79,14 @@ H2,H3{
 
 #mugContainer1:hover{
     background-color: orchid;
+}
+
+#mugContainer2:hover{
+    background-color: darkcyan;
+}
+
+#mugContainer3:hover{
+    background-color: salmon;
 }
 
 #mugContainer2{
