@@ -5,7 +5,7 @@
 <body>
 <p>
     <?php
-   $myage=17;
+   $myage=21;
     $myname="marc";
 
    if ($myage>=16) {
