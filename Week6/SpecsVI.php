@@ -25,18 +25,18 @@
 
     sort($favpeeps);
 
-    $randnum=rand(0,count($favpeeps));
+    $randnum=rand(0,count($favpeeps))-1;
     $WINNER=($favpeeps[$randnum]);
 
     print "The winner of the Specs is ".strtoupper($WINNER);
     unset ($favpeeps[$WINNER]);
 
-    $randnum=rand(0,count($favpeeps));
+    $randnum=rand(0,count($favpeeps))-1;
     $WINNER=($favpeeps[$randnum]);
     print "<br> The Winner of the Sausage rolls is  ".strtoupper($WINNER);
     unset ($favpeeps[$WINNER]);
 
-    $randnum=rand(0,count($favpeeps));
+    $randnum=rand(0,count($favpeeps))-1;
     $WINNER=($favpeeps[$randnum]);
     print "<br> The winner of the mugs is ".strtoupper($WINNER);
 
