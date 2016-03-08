@@ -21,8 +21,10 @@
     array_push($favpeeps,"John Steinbeck");
 
     sort($favpeeps);
+    $chosenPerson=rand_string($favpeeps);
+    print $chosenPerson;
 
-    print rand($favpeeps);
+
 
 
 
