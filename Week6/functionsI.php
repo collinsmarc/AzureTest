@@ -7,13 +7,24 @@
     <?php
     $myname="Marc Collins";
     $length=strlen($myname);
-    print $length; "<br>";
+    print $length;
 
     $partial=substr($myname,0,2);
-    print $partial;"<br>";
+    print $partial;
 
     $upper=strtoupper($myname);
-    print $upper;"<br>;"
+    print $upper;
+    "<br><br>";
+
+
+   $round=round(M_PI);
+    print $round;
+
+    "<br>";
+
+    $round4=round(M_PI_4);
+    print $round4;
+
 
 
     ?>
