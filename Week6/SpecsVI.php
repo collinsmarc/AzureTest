@@ -23,9 +23,9 @@
     sort($favpeeps);
 
     $randnum=rand(0,count($favpeeps));
+    $WINNER=($favpeeps[$randnum]);
 
-
-    print ($favpeeps[$randnum]);
+    print strtoupper($WINNER);
 
 
 
