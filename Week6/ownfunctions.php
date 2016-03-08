@@ -14,7 +14,8 @@
             ."<br> Specs ".$noSpecs
             ."<br> Mugs ".$noMugs
             ."<br> Sausage Rolls ".$noSausageRolls
-            ."<br> Award for capture: ".$reward;
+            ."<br> Award for capture: ".$reward
+            ."<br>";
     }
 
     wantedPerson("Marc",2,3,4);
