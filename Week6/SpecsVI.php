@@ -7,6 +7,9 @@
     <?php
     $favpeeps=array();
 
+
+
+
     array_push($favpeeps,"Marc");
     array_push($favpeeps,"Che Guevara");
     array_push($favpeeps,"Pablo Escobar");
@@ -25,7 +28,10 @@
     $randnum=rand(0,count($favpeeps));
     $WINNER=($favpeeps[$randnum]);
 
-    print strtoupper($WINNER);
+    print "The winner of the Specs is ".strtoupper($WINNER);
+    print "<br> The Winner of the Sausage rolls is  ".strtoupper($WINNER);
+    print "<br> The winner of the mugs is ".strtoupper($WINNER);
+
 
 
 
