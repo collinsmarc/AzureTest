@@ -25,11 +25,8 @@
     $round4=round(M_PI,4);
     print "<br>".$round4;
 
-    $randnum=rand([1][30]);
-    print "<br>".$randnum;
 
-
-
+    print "<br>".rand(1,30);
     ?>
 </p>
 </body>
