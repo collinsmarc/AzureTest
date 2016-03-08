@@ -7,35 +7,43 @@
     <?php
     $todaysGood=rand(0,2);
 
-    while($todaysGood<=7){
-        for ($i = 1; $i < 31; $i++) {
+$specs = 7;
+$mugs = 7;
+$sausagerolls = 7;
+//Set the first date of the month
+$day = 1;
+while(($specs > 0) && (mugs > 0) && ($sausagerolls > 0)) {
+    $todaysGood = rand(0,2);
+    //specs = 0
+    //mugs = 1
+    //sausagerolls = 2
 
-
-            echo "on the" . $i . "of the month you can buy ";
-
-            if (($i % 2) == 0) {
-                echo "specs ";
-            }
-            if (($i % 3) == 0) {
-                echo "mugs ";
-
-            }
-            if (($i % 4) == 0) {
-                echo "sausage rolls";
-            } else
-                echo "nothing!";
-
-            echo "<br>";
-
-        }
+    switch ($todaysGood) {
+        case 0:
+            $specs--;
+            echo "On day " . $monthDate . " Specs are available<br>";
+            break;
+        case 1:
+            $mugs--;
+            echo "On day " . $monthDate . " Mugs are available<br>";
+            break;
+        case 2:
+            $sausagerolls--;
+            echo "On day " . $monthDate . " Sausage Rolls are available<br>";
+            break;
     }
+    $day++;
+}
+echo "No more goods are available this month";
+
+//This code should work. I haven't tested it but it looks right. Mike.
+?>
 
 
 
 
 
-      echo "<br> no more goods available";
-    ?>
+
 </p>
 </body>
 </html>
