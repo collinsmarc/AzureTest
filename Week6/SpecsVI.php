@@ -22,7 +22,7 @@
 
     sort($favpeeps);
 
-    print rand(0,11);
+    print rand($favpeeps);
 
 
 
