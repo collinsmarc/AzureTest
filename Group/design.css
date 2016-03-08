@@ -1,5 +1,6 @@
+/* CSS is in alphabetical order based upon what the style is being applied to*/
 
-
+/*Styles applying directly to tags*/
 * {
 	padding: 0;
 	margin: 0;
@@ -21,6 +22,11 @@ body {
 	line-height: 1.75em;
 }
 
+body #results{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body,input {
 	font-family: Tahoma, sans-serif;
 }
@@ -34,11 +40,6 @@ h1{
 	font-weight: normal;
 	letter-spacing: -1px;
 }
-
-
-
-
-
 
 img.alignleft {
 	float: left;
@@ -54,6 +55,7 @@ ul {
 	margin-bottom: 1.5em;
 }
 
+/*Styles applying to specific IDs*/
 
 #content {
 	padding: 0;
@@ -100,6 +102,8 @@ ul {
 	font-size: 3.25em;
 }
 
+/*Style for the navigation menu*/
+
 #menu {
 	position: absolute;
 	line-height: 55px;
@@ -136,32 +140,107 @@ ul {
 	padding-left: 0;
 }
 
+/*End of style for navigation menu*/
+
+#label {
+	color: #808080;
+}
+
 #page {
 	width: 910px;
-	color: #5B5B5B;
+	color: #333333;
 	position: relative;
 	border-top: solid 1px #FFFFFF;
 	padding: 45px 35px 15px 35px;
-	background: #C587B6 repeat-x top left;
+	background: #FFFFFF repeat-x top left;
 	margin: 0 0 0 0;
 	border-bottom: solid 5px #D0D0D0;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	
 }
-
-
 
 #page a {
 	color: #1C1C1C;
 }
 
-
-}
-
 #page strong {
 	color: #121212;
 }
+
+#Password {
+	border-radius: 5px;
+}
+
+#qsgo {
+	display: inline-block;
+	position: relative;
+	right: -150px;
+	float: right;
+	margin-top: 20px;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	font-family: Oswald, sans-serif;
+	color: #FFFFFF;
+	padding: 2px 4px 2px 4px;
+	background-color: darkorchid;
+	text-shadow: 0px 1px 1px #590200;
+	border-radius: 5px;
+}
+
+#qsearch {
+	display: inline-block;
+	position: relative;
+	left: -40px;
+	float: right;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+#register {
+	color: white;
+	font-size: 10px;
+	position: relative;
+	top: 40px;
+	left: 20px;
+}
+
+/*Style for the results table following a search*/
+
+#results {
+	border-collapse: collapse;
+	border-width: 0;
+	margin: auto;
+	display: block;
+}
+
+#results td{
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#results th {
+	background-color: lavender;
+	width: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#results th, #results td{
+	border-bottom: 1px solid #ddd;
+	border-spacing: 0;
+}
+
+#results tr:hover {
+	background-color: lavender;
+	border-color: lavender;
+	border-bottom-width: 0;
+}
+/*End of results table styling */
+
+/*Style for the advanced search page */
 
 #search {
 	line-height: 159px;
@@ -190,14 +269,20 @@ ul {
 	border: 0;
 	border-bottom: solid 1px #A89983;
 	padding: 5px 8px 5px 8px;
-	color: #C4B8A8;
+	color: #333333;
 	border-radius: 5px;
 }
+
+/*End of advanced search styling */
 
 #sidebar {
 	padding: 0;
 	width: 250px;
 	margin: 0 0 0 660px;
+}
+
+#Username {
+	border-radius: 5px;
 }
 
 #wrapper {
