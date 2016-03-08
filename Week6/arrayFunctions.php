@@ -12,7 +12,7 @@
 
     print count($favbands);
 
-    print "<br>.$favbands[1]";
+    print "<br>".$favbands[1];
 
     ?>
 </p>
