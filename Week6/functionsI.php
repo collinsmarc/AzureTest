@@ -7,13 +7,13 @@
     <?php
     $myname="Marc Collins";
     $length=strlen($myname);
-    print $length;
+    print $length; "<br>";
 
     $partial=substr($myname,0,2);
-    print $partial;
+    print $partial;"<br>";
 
     $upper=strtoupper($myname);
-    print $upper;
+    print $upper;"<br>;"
 
 
     ?>
