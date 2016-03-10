@@ -79,9 +79,18 @@ ul {
 	border-top: solid 1px #F7F1E8;
 	background: #7D0862 repeat-x top left;
 	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	
+	border-top-right-radius: 10px;}
+
+#homePic{
+	position:relative;
+	margin-right: 10px;
+
+	border-radius: 5px;
+
+
 }
+
+
 
 #logo {
 	line-height: 149px;
