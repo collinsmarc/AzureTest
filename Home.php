@@ -6,7 +6,14 @@
 </head>
 
 <body>
-<h1>Hello</h1>
+<h1>Hello <?php
+    echo htmlspecialchars($_GET['username']).'!'; ?>
+
+
+
+
+
+   </h1>
 </body>
 
 </html>
