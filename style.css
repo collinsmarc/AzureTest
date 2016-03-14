@@ -1,4 +1,4 @@
-*{
+body{
     background-color: #DBC9DF;
 }
 
@@ -7,18 +7,20 @@ h1,h2,h3{
 }
 
 #username{
-    border-radius: 10px;
+    border-radius: 30px;
     font-family: Tahoma;
+    background-color: white;
 }
 
 #password{
-    border-radius:10px;
+    border-radius:30px;
     font-family: Tahoma;
+    background-color: white;
 
 }
 
 #submit{
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: purple;
     color: white;
 }
