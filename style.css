@@ -1,0 +1,24 @@
+*{
+    background-color: #DBC9DF;
+}
+
+h1,h2,h3{
+    font-family: Tahoma;
+}
+
+#username{
+    border-radius: 10px;
+    font-family: Tahoma;
+}
+
+#password{
+    border-radius:10px;
+    font-family: Tahoma;
+
+}
+
+#submit{
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
+}
