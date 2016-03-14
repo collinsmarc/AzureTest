@@ -79,18 +79,13 @@ ul {
 	border-top: solid 1px #F7F1E8;
 	background: #7D0862 repeat-x top left;
 	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;}
-
-#homePic{
-	position:relative;
-	margin-right: 10px;
-
-	border-radius: 5px;
-
-
+	border-top-right-radius: 10px;
+	
 }
 
-
+#homePic {
+	border-radius: 5px;
+}
 
 #logo {
 	line-height: 149px;
@@ -176,8 +171,9 @@ ul {
 	color: #121212;
 }
 
-#Password {
+#password {
 	border-radius: 5px;
+	margin-left: 5px;
 }
 
 #qsgo {
@@ -208,9 +204,12 @@ ul {
 #register {
 	color: white;
 	font-size: 10px;
-	position: relative;
-	top: 40px;
-	left: 20px;
+	position: absolute;
+	float: right;
+	right: 20px;
+	top: 110px;
+	overflow: hidden;
+	line-height: 1em;
 }
 
 /*Style for the results table following a search*/
@@ -271,6 +270,7 @@ ul {
 	text-shadow: 0px 1px 1px #590200;
 	text-transform: lowercase;
 	border-radius: 5px;
+	z-index: 50;
 }
 
 #search input.form-text {
@@ -290,7 +290,7 @@ ul {
 	margin: 0 0 0 660px;
 }
 
-#Username {
+#username {
 	border-radius: 5px;
 }
 
