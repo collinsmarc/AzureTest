@@ -7,7 +7,7 @@
 
 <body>
 <h1>Hello <?php
-    echo htmlspecialchars($_GET['username']).'!'; ?>
+    echo ($_GET['username']); ?>
 
 
 
