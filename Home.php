@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,7 +9,7 @@
 
 <body>
 <h1>Hello <?php
-    echo ($_GET['username']); ?>
+    echo ($_GET[$username]); ?>
 
 
 
