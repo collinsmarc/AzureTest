@@ -47,5 +47,7 @@ maximum-scale=1"  />
 
 
 </main>
-
+<footer>
+    <p>all rights reserved to the MMDB. Admin Marc</p>
+</footer>
 
