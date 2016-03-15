@@ -47,3 +47,16 @@ li a:hover{
     background-color: yellow;
     color:black;
 }
+
+#right{
+    float: right;
+}
+
+#guys{
+    height:300px;
+    width:300px;
+}
+
+#left{
+    float: left;
+}
