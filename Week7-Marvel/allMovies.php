@@ -9,12 +9,13 @@ include("connection.php"); //establish connection to DB
     <link rel="stylesheet" href="StyleMarvel.css.css" type="text/css"/>
     <link rel="stylesheet"
           href="unsemantic-grid-responsive-tablet.css">
-    <meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,
-maximum-scale=1"  />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,
+maximum-scale=1"/>
 </head>
 
 <header>
-    <h1>MARVEL SEARCHBD<h1>
+    <h1>MARVEL SEARCHBD
+        <h1>
             <h2>Here to meet all your searching needs</h2>
             <nav id="quicklinks">
                 <ul>
@@ -29,32 +30,22 @@ maximum-scale=1"  />
 
 <main>
 
-<?php
+    <?php
 
 
-    $sql="SELECT * FROM marvelmovies";
-$result=mysqli_query($db,$sql);
+    $sql = "SELECT * FROM marvelmovies";
+    $result = mysqli_query($db, $sql);
 
-while ($row=$result->fetch_array()){
-    $movieTitle=$row['title'];
-    print "<p>".$movieTitle."</p>";
-}
+    while ($row = $result->fetch_array()) {
+        $movieTitle = $row['title'];
+        print "<p>" . $movieTitle . "</p>";
+    }
 
 
-
-?>
-
+    ?>
+<p>is this working</p>
 
 </main>
-
-
-
-
-
-
-
-
-
 
 
 <footer>
