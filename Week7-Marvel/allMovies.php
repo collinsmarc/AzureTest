@@ -38,12 +38,22 @@ maximum-scale=1"/>
 
     while ($row = $result->fetch_array()) {
         $movieTitle = $row['title'];
-        print "<p>" . $movieTitle . "</p>";
+        print "<table id='results'>\n";
+        echo "<th>MarvelID</th><th>Year</th><th>\Title</th><th>Studio</th><th id='age'><th id='desc'>Notes</th>";
+        foreach ($results as $row) {
+            echo "<tr>";
+            echo "<td>" . $row["marvelMovieID"] . "</td>";
+            echo "<td>" . $row["yearRelseased"] . "</td>";
+            echo "<td>" . $row["title"] . "</td>";
+            echo "<td>" . $row["productionStudio"] . "</td>";
+            echo "<td>" . $row["notes"] . "</td>";
+
+        }
     }
 
 
     ?>
-<p>is this working</p>
+
 
 </main>
 
