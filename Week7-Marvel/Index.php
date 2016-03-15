@@ -42,12 +42,12 @@ maximum-scale=1"  />
         <img id="guys" img src="marvelguys.jpg">
         </section>
 
-    </main>
+
 
 <footer>
     <p>all rights reserved to the MMDB. Admin Marc</p>
     </footer>
 
-
+</main>
 
 
