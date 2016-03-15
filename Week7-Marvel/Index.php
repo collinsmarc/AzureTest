@@ -5,8 +5,8 @@ include("connection.php"); //establish connection to DB
 <html>
 <head>
     <meta charset="utf-8">
-    <title> MARVEL SEARCH</title>
-    <link rel="stylesheet" href="StyleMarvel.css.css" type="text/css"/>
+        <title> MARVEL SEARCH</title>
+    <link rel="stylesheet" href="StyleMarvel.css" type="text/css"/>
     <link rel="stylesheet"
           href="unsemantic-grid-responsive-tablet.css">
     <meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,
@@ -14,7 +14,8 @@ maximum-scale=1"  />
 </head>
 
 <header>
-    <h1>MARVEL SEARCHBD<h1>
+    <img id="marvel" img src="marvel.jpg" width="400px">
+    <h1>The Marvel Database<h1>
             <h2>Here to meet all your searching needs</h2>
      <nav id="quicklinks">
          <ul>

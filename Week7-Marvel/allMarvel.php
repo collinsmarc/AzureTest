@@ -6,7 +6,7 @@ include("connection.php"); //establish connection to DB
 <head>
     <meta charset="utf-8">
     <title> MARVEL SEARCH</title>
-    <link rel="stylesheet" href="StyleMarvel.css.css" type="text/css"/>
+    <link rel="stylesheet" href="StyleMarvel.css" type="text/css"/>
     <link rel="stylesheet"
           href="unsemantic-grid-responsive-tablet.css">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,
