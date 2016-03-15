@@ -3,6 +3,11 @@ header{
     color:white;
 }
 
+#marvel{
+    float: right;
+    float:left;
+}
+
 main{
     background-color:white;
     color:darkslategrey;
