@@ -33,7 +33,7 @@ maximum-scale=1"/>
 
 
     <?php
-    $sql = "SELECT * FROM marvelmovies WHERE 'yearReleased'>2010";
+    $sql = "SELECT * FROM marvelmovies WHERE yearReleased>2010";
     $result = mysqli_query($db, $sql);
 
     while ($row = $result->fetch_array()) {
