@@ -18,7 +18,7 @@ maximum-scale=1"  />
             <h2>Here to meet all your searching needs</h2>
      <nav id="quicklinks">
          <ul>
-             <li>
+
              <li><a href="index.php">Home Page</a></li>
              <li><a href="allMovies.php">All Movies</a></li>
              <li><a href="allMarvel.php">All Marvel Movies</a></li>
@@ -40,6 +40,7 @@ maximum-scale=1"  />
 
 <footer>
     <p>all rights reserved to the MMDB. Admin Marc</p>
+    </footer>
 
 
 
