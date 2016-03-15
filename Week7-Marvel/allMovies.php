@@ -40,7 +40,7 @@ maximum-scale=1"/>
         $movieTitle = $row['title'];
         print "<table id='results'>\n";
         echo "<th>MarvelID</th><th>Year</th><th>\Title</th><th>Studio</th><th id='age'><th id='desc'>Notes</th>";
-        foreach ($results as $row) {
+        foreach ($result as $row) {
             echo "<tr>";
             echo "<td>" . $row["marvelMovieID"] . "</td>";
             echo "<td>" . $row["yearRelseased"] . "</td>";
