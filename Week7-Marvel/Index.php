@@ -22,7 +22,7 @@ maximum-scale=1"  />
              <li><a href="index.php">Home Page</a></li>
              <li><a href="allMovies.php">All Movies</a></li>
              <li><a href="allMarvel.php">All Marvel Movies</a></li>
-             <li><a href="2010After.php.php">After 2010</a></li>
+             <li><a href="2010After.php">After 2010</a></li>
              <li><a href="Xmen.php">All X-Men </a></li>
              </ul>
          </header>
