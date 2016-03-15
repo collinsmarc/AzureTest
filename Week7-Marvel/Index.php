@@ -32,11 +32,14 @@ maximum-scale=1"  />
 
     <div id="fixer"></div>
     <section class="grid-50" id="left">
-        <h2> Search here</h2>
+        <h2>The Only Place to Search!</h2>
+        <p>Lorem ipsum dolor sit amet, consectur adipiscing elit. Aenean euismod bibendum laoreet.Proint gravida dolor sit amet lacus accumsan
+            et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis paturient montes, nascetur ridiculus mus.
+            Nam fermentum, nulla luctus phareta vulpate, felis tellus mollis orci, sed r</p>
         </section>
 
     <section class="grid-50" id="right">
-        <h2> Also search here</h2>
+        <img id="guys" img src="marvelguys.jpg">
         </section>
 
     </main>
