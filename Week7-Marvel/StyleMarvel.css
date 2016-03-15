@@ -30,4 +30,5 @@ a{
 
 li a:hover{
     background-color: yellow;
+    color:black;
 }

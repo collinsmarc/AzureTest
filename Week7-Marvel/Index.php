@@ -14,9 +14,9 @@ maximum-scale=1"  />
 </head>
 
 <header>
-    <img id="marvel" img src="marvel.jpg" width="400px">
+    <img id="marvel" img src="marvel_logo.jpg" width="300px">
     <h1>The Marvel Database<h1>
-            <h2>Here to meet all your searching needs</h2>
+            <h2>Here to meet all your nerdy needs</h2>
      <nav id="quicklinks">
          <ul>
 
