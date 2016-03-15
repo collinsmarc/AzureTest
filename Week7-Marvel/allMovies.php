@@ -26,6 +26,7 @@ maximum-scale=1"/>
                     <li><a href="2010After.php">After 2010</a></li>
                     <li><a href="Xmen.php">All X-Men </a></li>
                 </ul>
+                </nav>
 </header>
 
 <main>
