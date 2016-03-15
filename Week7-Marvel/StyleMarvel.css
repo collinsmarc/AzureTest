@@ -66,3 +66,7 @@ footer{
     background-color: black;
     color:white;
 }
+
+#results{
+    padding:10px;
+}
