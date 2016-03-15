@@ -29,6 +29,8 @@ maximum-scale=1"  />
          </header>
 
 <main class="grid-container">
+
+    <div id="fixer"></div>
     <section class="grid-50" id="left">
         <h2> Search here</h2>
         </section>

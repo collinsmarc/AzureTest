@@ -3,9 +3,12 @@ header{
     color:white;
 }
 
-#marvel{
-    float: right;
-    float:left;
+
+
+
+
+#fixer{
+    clear: both;
 }
 
 main{
