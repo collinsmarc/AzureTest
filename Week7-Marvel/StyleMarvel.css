@@ -40,7 +40,7 @@ a{
     font-family: fantasy;
     background-color: darkslategrey;
     text-decoration: none;
-    padding:20px;
+
 }
 
 li a:hover{
@@ -59,4 +59,9 @@ li a:hover{
 
 #left{
     float: left;
+}
+
+footer{
+    background-color: black;
+    color:white;
 }
