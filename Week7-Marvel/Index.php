@@ -44,10 +44,10 @@ maximum-scale=1"  />
 
 
 
-<footer>
-    <p>all rights reserved to the MMDB. Admin Marc</p>
-    </footer>
+
 
 </main>
-
+<footer>
+    <p>all rights reserved to the MMDB. Admin Marc</p>
+</footer>
 
