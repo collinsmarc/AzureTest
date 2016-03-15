@@ -19,7 +19,6 @@ maximum-scale=1"  />
             <h2>Here to meet all your nerdy needs</h2>
      <nav id="quicklinks">
          <ul>
-
              <li><a href="index.php">Home Page</a></li>
              <li><a href="allMovies.php">All Movies</a></li>
              <li><a href="allMarvel.php">All Marvel Movies</a></li>

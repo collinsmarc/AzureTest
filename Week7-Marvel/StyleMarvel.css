@@ -17,6 +17,9 @@ p{
 #fixer{
     clear: both;
 }
+nav{
+    height:20px;
+}
 
 main{
     background-color:white;
