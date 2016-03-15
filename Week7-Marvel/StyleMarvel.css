@@ -21,6 +21,7 @@ p{
 main{
     background-color:white;
     color:darkslategrey;
+    padding: 20px;
 }
 
 li{
