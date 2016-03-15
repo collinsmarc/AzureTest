@@ -14,7 +14,9 @@ p{
 
 
 
-
+#fixer{
+    clear: both;
+}
 
 main{
     background-color:white;
