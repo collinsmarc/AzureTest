@@ -30,9 +30,9 @@ maximum-scale=1"/>
 
 <main>
 
-    <?php
 
 
+<?php
     $sql = "SELECT * FROM marvelmovies";
     $result = mysqli_query($db, $sql);
 
