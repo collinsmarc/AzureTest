@@ -29,7 +29,7 @@ maximum-scale=1"/>
 </header>
 
 <main>
-
+    <div id="fixer"></div>
 
 
     <?php
