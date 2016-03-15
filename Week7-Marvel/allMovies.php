@@ -43,7 +43,7 @@ maximum-scale=1"/>
         foreach ($result as $row) {
             echo "<tr>";
             echo "<td>" . $row["marvelMovieID"] . "</td>";
-            echo "<td>" . $row["yearRelseased"] . "</td>";
+            echo "<td>" . $row["yearReleased"] . "</td>";
             echo "<td>" . $row["title"] . "</td>";
             echo "<td>" . $row["productionStudio"] . "</td>";
             echo "<td>" . $row["notes"] . "</td>";
