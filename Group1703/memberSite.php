@@ -55,8 +55,8 @@ header("Location:index.html");
                         <h3>What would you like to do today?</h3>
                         <p><a href="#">Forgotten Password?</a></p>
                         <p><a href="#">Change Password</a></p>
-                        <form name="logout" input id="logoutButton" action="logout.php" method="post">
-                            <input type="submit" type="submit" value="Log Out">
+                        <form name="logout" action="logout.php" method="post">
+                            <input id="logoutButton" type="submit" type="submit" value="Log Out">
                         </article>
                 </section>
 
