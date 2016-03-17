@@ -39,7 +39,7 @@
                     <li><a href="index.html">Homepage</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="Search.php">Search</a></li>
                     <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go"></li>
                 </ul>
             </form>
