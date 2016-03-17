@@ -21,7 +21,8 @@
                     <a id="register" href="Register.html">Not a member? Register.</a>
                ';}
                else{
-                   echo '<form name="logout" action="logout.php" method="post">
+                   echo "Welcome Back".$_SESSION['username'];
+                   echo ' <form name="logout" action="logout.php" method="post">
                             <input id="logoutButton" type="submit" type="submit" value="Log Out">
                             </form>';
                }
