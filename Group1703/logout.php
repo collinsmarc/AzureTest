@@ -5,7 +5,7 @@ session_start();
 session_destroy();
  echo 'You have cleaned session';
 
-header("Location:home.html");
+header("Location:index.html");
  ?>
 
 
