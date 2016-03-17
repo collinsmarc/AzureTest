@@ -24,10 +24,10 @@
             </form>
         ";}
 else{
-    echo "Logged in as: ".$_SESSION['username'];
-    echo "<form name='logout' action='logout.php' method='post'>
-                            <input id='logoutButton' type='submit' type='submit' value='Log Out'>
-                            </form>";
+    echo "<form name='logout' action='logout.php' method='post'>";
+            echo "Logged in as: ".$_SESSION['username'];
+            echo "<input id='logoutButton' type='submit' type='submit' value='Log Out'>
+          </form>";
 
 }?>
         </div>
