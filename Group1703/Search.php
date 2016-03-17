@@ -21,7 +21,7 @@
                     <a id="register" href="Register.html">Not a member? Register.</a>
                ';}
                else{
-                   echo "Welcome Back".$_SESSION['username'];
+                   echo "Logged in as: ".$_SESSION['username'];
                    echo ' <form name="logout" action="logout.php" method="post">
                             <input id="logoutButton" type="submit" type="submit" value="Log Out">
                             </form>';
