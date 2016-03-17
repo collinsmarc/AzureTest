@@ -17,9 +17,8 @@
         <div id="logo">
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
-        <form name="logout" action="logout.php" method="post">
-            <input type="submit" type="submit" value="logout">
-        </form>
+
+
 
 
 
@@ -51,6 +50,8 @@
                     <article id="welcome">
                         <h2>Welcome Back <?$stuno?></h2>
                         <h3>What would you like to do today?</h3>
+                        <form name="logout" action="logout.php" method="post">
+                            <input type="submit" type="submit" value="logout">
                         </article>
                 </section>
 
