@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="design.css"/>
 </head>
 
-<body>
+
 <div id="wrapper">
         <div id="logo">
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
@@ -22,6 +22,8 @@ else{       echo "Logged in as: ".$_SESSION['username'];
             echo "<input id='logoutButton' type='submit' type='submit' value='Log Out'>";
 
 }?>
+                </div>
+            </Form>
             </div>
         </form>
     </div>-->
