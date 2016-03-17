@@ -3,58 +3,36 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="design.css"/>
+    <link rel="stylesheet"
+          href="unsemantic-grid-responsive-tablet.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 </head>
 
 
+<body>
 <div id="wrapper">
         <div id="logo">
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
     <div id="search">
         <Form Name ="login" action="login.php" method="post">
-            <div id="logintext">
+
         <? if(!isset($_SESSION['username'])){ echo
             '<font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
-             <a id="register" href="Register.html">Not a member? Register.</a>
+             <a id="register" href="Register.html">Not a member? Register.</a> </Form>
               ';}
 
 else{       echo "Logged in as: ".$_SESSION['username'];
             echo "<input id='logoutButton' type='submit' type='submit' value='Log Out'>";
 
 }?>
-                </div>
-            </Form>
+
+
             </div>
-        </form>
-    </div>-->
 
-<body>
-<div id="wrapper">
-    <div id="header">
-        <div id="logo">
-            <h1><strong><font size="20">GameShare RGU</font></strong></h1>
-        </div>
-        <div id="search">
-            <Form Name ="login" action="login.php" method="post">
-                <div id="logintext">
-                    <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
-                    <a id="register" href="Register.html">Not a member? Register.</a>
-                </div>
-            </form>
-        </div>
+    </div>
 
-        <div id="menu">
-            <form action="results.php" method="post">
-                <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="search.html">Search</a></li>
-                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go"></li>
-                </ul>
-            </form>
-            <br class="clearfix" />
-        </div>
+
 
         <div id="content">
             <table  style="width:300px" >
