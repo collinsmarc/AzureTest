@@ -48,7 +48,7 @@
             <main class="grid container">
                 <section class="grid-65" section id="content1">
                     <article id="welcome">
-                        <h2>Welcome Back <?php print $stuno?></h2>
+                        <h2>Welcome Back <?echo $_SESSION['username'];?></h2>
                         <h3>What would you like to do today?</h3>
                         <form name="logout" action="logout.php" method="post">
                             <input type="submit" type="submit" value="logout">
