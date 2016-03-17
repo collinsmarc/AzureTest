@@ -20,13 +20,24 @@ header("Location:index.html");
         <div id="logo">
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
+        <?
+        $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+        $username = "b52b6c6935c6d2";
+        $password = "26ebeed0";
+        try {
+        $conn = new PDO($dsn, $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $sql = "SELECT firstName FROM members WHERE studentID = 'username'";
+            $results = $conn->query($sql);
 
 
+        } catch (PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+        }
 
-
-
-
-
+        $conn = null;
+        ?>
 
 <div id="menu">
     <form action="results.php" method="post">
@@ -51,7 +62,7 @@ header("Location:index.html");
             <main class="grid container">
                 <section class="grid-65" section id="content1">
                     <article id="welcome">
-                        <h2>Welcome Back <?echo $_SESSION['username'];?></h2>
+                        <h2>Welcome Back <?echo $results;?></h2>
                         <h3>What would you like to do today?</h3>
 
                         <p><a href="#">Change Password</a></p>
