@@ -339,7 +339,9 @@ ul {
 	color: #808080;
 }
 
-#button {
+
+
+#button,#logoutButton {
 	width: 50px;
 	float: right;
 	border-top: solid 1px;
