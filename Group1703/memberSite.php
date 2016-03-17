@@ -50,7 +50,7 @@
                     <article id="welcome">
                         <h2>Welcome Back <?echo $_SESSION['username'];?></h2>
                         <h3>What would you like to do today?</h3>
-                        <form name="logoutButton" action="logout.php" method="post">
+                        <form name="logout" input id="logoutButton" action="logout.php" method="post">
                             <input type="submit" type="submit" value="Log Out">
                         </article>
                 </section>
