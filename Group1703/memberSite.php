@@ -54,6 +54,7 @@ header("Location:index.html");
                         <h2>Welcome Back <?echo $_SESSION['username'];?></h2>
                         <h3>What would you like to do today?</h3>
                         <p><a href="#">Forgotten Password?</a></p>
+                        <p><a href="#">Change Password</a></p>
                         <form name="logout" input id="logoutButton" action="logout.php" method="post">
                             <input type="submit" type="submit" value="Log Out">
                         </article>
