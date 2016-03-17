@@ -12,33 +12,24 @@
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
         <div id="search">
-            <Form Name="login" action="login.php" method="post">
+            <Form Name ="login" action="login.php" method="post">
                 <div id="logintext">
-                    <font size="-2"><label for="username">DONE :</label><input id="username" name="username"
-                                                                                   type="text" size="-2"/><label
-                            for="Password">Password :</label><input id="password" name="password" type="password"
-                                                                    size="-2"/></font><input class="form-submit"
-                                                                                             type="submit"
-                                                                                             value="Login"/>
+                    <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
                     <a id="register" href="Register.html">Not a member? Register.</a>
-
-
-
                 </div>
             </form>
         </div>
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="home.html">Homepage</a></li>
+                    <li><a href="index.html">Homepage</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="search.html">Search</a></li>
-                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input
-                            id="qsgo" type="submit" value="Go"></li>
+                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go"></li>
                 </ul>
             </form>
-            <br class="clearfix"/>
+            <br class="clearfix" />
         </div>
     </div>
     <div id="page">
@@ -72,14 +63,18 @@
                     } else {
                         echo "Logged in as $stuno";
 
-                        $_SESSION['valid'] = true;
-                        $_SESSION['timeout'] = time();
-                        $_SESSION['username'] = "$stuno";
+                      $_SESSION['valid'] = true;
+                     $_SESSION['timeout'] = time();
+                       $_SESSION['username'] = "$stuno";
+
+
+
+
 
 
                     }
                 } catch (PDOException $e) {
-                    echo "Query failed: " . $e->getMessage();
+                echo "Query failed: " . $e->getMessage();
                 }
             } catch (PDOException $e) {
                 echo "Connection failed: " . $e->getMessage();
@@ -88,12 +83,15 @@
             $conn = null;
             ?>
         </div>
-        <br class="clearfix"/>
-    </div>
-    <form name="logout" action="logout.php" method="post">
-        <input type="submit" type="submit" value="logout">
-        </form>
 
+        <form name="logout" action="logout.php" method="post">
+            <input type="submit" type="submit" value="logout">
+            </form>
+
+
+
+        <br class="clearfix" />
+    </div>
     <div id="footer">
         &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
     </div>

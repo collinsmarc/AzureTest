@@ -21,7 +21,7 @@
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="home.html">Homepage</a></li>
+                    <li><a href="index.html">Homepage</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="search.html">Search</a></li>
@@ -34,40 +34,47 @@
     <div id="page">
         <div id="content">
 
-                <?php
+            <?php
 
-                error_reporting(-1);
+            error_reporting(-1);
 
-                $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
-                $username = "b52b6c6935c6d2";
-                $password = "26ebeed0";
-                try {
-                    $conn = new PDO($dsn, $username, $password);
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+            $username = "b52b6c6935c6d2";
+            $password = "26ebeed0";
+            try {
+                $conn = new PDO($dsn, $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 $sql = "";
 
-                $fname = $_POST['Fname'];
+                $stuno = $_POST['pstuno'];
 
-                $sname = $_POST['Sname'];
+                $email = $_POST['pemail'];
 
-                $stuno = $_POST['stuno'];
+                $sql = "SELECT password FROM members WHERE studentID = '$stuno' AND email = '$email'";
+                $results = $conn->query($sql);
 
-                $email = $_POST['email'];
+            if ($results->rowcount() == 0) {
+                echo "No members were found to match those details.<br />";
+            } else {
 
-                $password = $_POST['Epassword'];
+                $to      =  $email;
+                $subject = 'Forgotten Password';
+                $message = "You requested an email to remind you of your password to the GameShare service. That password is: '$result'";
+                $headers = 'From: webmaster@gameshare.com' . "\r\n" .
+                    'Reply-To: webmaster@gameshare.com' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
 
+                mail($to, $subject, $message, $headers);
+                echo "Please check your email for your password";
 
-                $sql = "INSERT INTO members (firstName, lastName, email, studentID, password) VALUES ('$fname', '$sname', '$email', '$stuno', '$password')";
+            }
 
-                $conn->exec($sql);
-                echo "New record created successfully";
+            } catch (PDOException $e) {
+                echo "Connection failed: " . $e->getMessage();
+            }
 
-                } catch (PDOException $e) {
-                    echo "Connection failed: " . $e->getMessage();
-                }
-
-                $conn = null;
+            $conn = null;
             ?>
         </div>
         <br class="clearfix" />
@@ -78,5 +85,3 @@
 </div>
 </body>
 </html>
-
-

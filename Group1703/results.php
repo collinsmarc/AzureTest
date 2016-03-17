@@ -21,7 +21,7 @@
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="home.html">Homepage</a></li>
+                    <li><a href="index.html">Homepage</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="search.html">Search</a></li>
@@ -33,7 +33,7 @@
     </div>
     <div id="page">
         <div id="content">
-            <table  style="width:300px" >
+            <div id='resultsdiv'>
                 <?php
 
                 //header("Location:results.html");
@@ -84,7 +84,7 @@
                     } else {
 
                         print "<table id='results'>\n";
-                        echo "<th>Title</th><th>Platform</th><th>Genre</th><th>Year</th><th id='age'>Age Rating</th><th id='desc'>Description</th>";
+                        echo "<th>Title</th><th>Platform</th><th>Genre</th><th>Year</th><th id='age'>Age Rating</th><th id='desc'>Description</th><th>Borrow</th>";
                         foreach ($results as $row) {
                             echo "<tr>";
                             echo "<td>" . $row["Title"] . "</td>";
@@ -93,6 +93,7 @@
                             echo "<td>" . $row["Year"] . "</td>";
                             echo "<td>" . $row["Age Rating"] . "</td>";
                             echo "<td>" . $row["Description"] . "</td>";
+                            echo "<td><form id='borrow' action='borrow.php' method='post'><input id='borrow' type='submit' name='Borrow' value='Borrow'></form></td>";
                         }
                         print "</table>\n";
                     }
@@ -102,7 +103,7 @@
                 $conn = null;
 
                 ?>
-            </table>
+            </div>
         </div>
         <br class="clearfix" />
     </div>

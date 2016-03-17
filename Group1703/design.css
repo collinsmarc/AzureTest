@@ -214,26 +214,37 @@ ul {
 
 /*Style for the results table following a search*/
 
+#borrow {
+	width: 60px;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	font-family: Oswald, sans-serif;
+	color: #FFFFFF;
+	padding: 2px 4px 2px 4px;
+	background-color: darkorchid;
+	text-shadow: 0px 1px 1px #590200;
+	border-radius: 5px;
+}
+
 #results {
 	border-collapse: collapse;
 	border-width: 0;
-	margin: auto;
+	border-radius: 5px;
 	display: block;
 }
 
 #results td{
-	padding-left: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding: 5px 5px 5px 5px;
 	text-align:center;
 	vertical-align:middle;
 }
 
 #results th {
 	background-color: lavender;
-	width: 50px;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #results th, #results td{
@@ -245,6 +256,12 @@ ul {
 	background-color: lavender;
 	border-color: lavender;
 	border-bottom-width: 0;
+}
+
+#resultsdiv {
+	width: 50%;
+	margin: 0 auto;
+	padding: 0 0 0 0;
 }
 /*End of results table styling */
 
@@ -299,3 +316,73 @@ ul {
 	width: 980px;
 	position: relative;
 }
+
+
+#flog {
+	float: left;
+}
+
+#page a {
+	color: #1C1C1C;
+}
+
+/*Login Field on homepage */
+
+#logins {
+	margin-top: 20px;
+	color: #808080;
+}
+
+#loginf {
+	border-style: solid;
+	border-radius: 5px;
+	color: #808080;
+}
+
+#button {
+	width: 50px;
+	float: right;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	font-family: Oswald, sans-serif;
+	color: #FFFFFF;
+	padding: 2px 4px 2px 4px;
+	background-color: darkorchid;
+	text-shadow: 0px 1px 1px #590200;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+/* End of login field styling */
+
+/* Home Page Sliding image CSS */
+
+@keyframes slidy {
+	0% { left: 0%; }
+	20% { left: -100%; }
+	40% { left: -200%; }
+	60% { left: 0%; }
+	80% { left: -100%; }
+	90% { left: -200%; }
+	100% { left: 0%; }
+}
+
+div#slider {
+	overflow: hidden;
+}
+
+div#slider figure img {
+	width: 20%; float: left;
+}
+
+div#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	text-align: left;
+	font-size: 0;
+	animation: 40s slidy infinite;
+}
+/* End of Home Page Sliding image CSS
