@@ -51,14 +51,14 @@
                         <h2>Welcome Back <?echo $_SESSION['username'];?></h2>
                         <h3>What would you like to do today?</h3>
                         <form name="logout" action="logout.php" method="post">
-                            <input type="submit" type="submit" value="logout">
+                            <input type="submit" type="submit" value="Log Out">
                         </article>
                 </section>
 
 
                 <section class="grid-35" section id="content2">
                     <h3>Your Titles</h3>
-                    <br><br><br><br><br>
+                    <br><br><br><br><br><br>
                     <h3>Your Loans</h3>
 
                 </section>
