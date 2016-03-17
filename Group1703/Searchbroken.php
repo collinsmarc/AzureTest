@@ -1,10 +1,30 @@
-<?session_start()?>;
-
+<?session_start();?>
 <!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="design.css"/>
 </head>
+
+<!--<body>
+<div id="wrapper">
+        <div id="logo">
+            <h1><strong><font size="20">GameShare RGU</font></strong></h1>
+        </div>
+    <div id="search">
+        <Form Name ="login" action="login.php" method="post">
+            <div id="logintext">
+        <?/* if(!isset($_SESSION['username'])){ echo
+            '<font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
+             <a id="register" href="Register.html">Not a member? Register.</a>
+              ';}
+
+else{       echo "Logged in as: ".$_SESSION['username'];
+            echo "<input id='logoutButton' type='submit' type='submit' value='Log Out'>";
+
+}*/?>
+            </div>
+        </form>
+    </div>-->
 
 <body>
 <div id="wrapper">
@@ -20,6 +40,7 @@
                 </div>
             </form>
         </div>
+
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
@@ -32,8 +53,7 @@
             </form>
             <br class="clearfix" />
         </div>
-    </div>
-    <div id="page">
+
         <div id="content">
             <table  style="width:300px" >
                 <form  name="search" Method ="post" action = "results.php">
