@@ -13,9 +13,9 @@
         <div id="search">
             <Form Name ="login" action="login.php" method="post">
                 <? if(!isset($_SESSION['username'])){
-                    echo'
+                    echo '
                     <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
-                    <a id="register" href="Register.html">Not a member? Register.</a>
+                    <a id="register" href="BackUps/Register.html">Not a member? Register.</a>
                ';}
                 else{
                     echo "Logged in as: ".$_SESSION['username'];
