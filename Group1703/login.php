@@ -46,6 +46,7 @@
                 $conn = new PDO($dsn, $username, $password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+            if(!isset($_SESSION['username'])) {
                 $sql = "";
 
                 $stuno = $_POST['username'];
@@ -63,15 +64,24 @@
                     } else {
                         echo "Logged in as $stuno";
 
-                      $_SESSION['valid'] = true;
-                     $_SESSION['timeout'] = time();
-                       $_SESSION['username'] = "$stuno";
+                        $_SESSION['valid'] = true;
+                        $_SESSION['timeout'] = time();
+                        $_SESSION['username'] = "$stuno";
                         header("Location:memberSite.php");
 
                     }
                 } catch (PDOException $e) {
-                echo "Query failed: " . $e->getMessage();
+                    echo "Query failed: " . $e->getMessage();
                 }
+            } else {
+            session_start();
+ unset($_SESSION["username"]);
+ unset($_SESSION["password"]);
+session_destroy();
+
+
+header("Location:index.html");
+ }
             } catch (PDOException $e) {
                 echo "Connection failed: " . $e->getMessage();
             }
