@@ -22,7 +22,7 @@
             </form>
         </div>";}
 else{
-    echo  $_SESSION['username'];
+    echo  "Logged in as: ".$_SESSION['username'];
     echo "<form name='logout' action='logout.php' method='post'>
                             <input id='logoutButton' type='submit' type='submit' value='Log Out'>
                             </form>";
