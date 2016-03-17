@@ -57,7 +57,9 @@
 
 
                 <section class="grid-35" section id="content2">
-                    <img id="homePic" img src="controller.jpg" width=500px;>
+                    <h3>Your Titles</h3>
+                    <br><br><br><br><br>
+                    <h3>Your Loans</h3>
 
                 </section>
             </main>
