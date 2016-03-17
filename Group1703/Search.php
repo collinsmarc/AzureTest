@@ -7,11 +7,11 @@
 
 <body>
 <div id="wrapper">
-    <div id="header">
+    < id="header">
         <div id="logo">
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
-        <div id='search'>
+
 
 
         <? if(!isset($_SESSION['username'])){ echo
@@ -31,7 +31,6 @@ else{
           </form>";
 
 }?>
-        </div>
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
