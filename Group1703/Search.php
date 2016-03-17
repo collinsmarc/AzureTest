@@ -22,10 +22,12 @@
             </form>
         </div>";}
 else{
-    echo  "Logged in as: ".$_SESSION['username'];
+    echo "<div id='loggedin'>";
+    echo "Logged in as: ".$_SESSION['username'];
     echo "<form name='logout' action='logout.php' method='post'>
                             <input id='logoutButton' type='submit' type='submit' value='Log Out'>
                             </form>";
+    echo "</div>";
 
 }?>
 
@@ -44,8 +46,7 @@ else{
             </form>
             <br class="clearfix" />
         </div>
-    </div>
-    <div id="page">
+
         <div id="content">
             <table  style="width:300px" >
                 <form  name="search" Method ="post" action = "results.php">
