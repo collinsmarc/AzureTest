@@ -41,12 +41,37 @@
     </form>
     <br class="clearfix"/>
 </div>
-</div>
+    </div>
+    <div id="page">
+        <div id="content">
+
+
+            <main class="grid container">
+                <section class="grid-65" section id="content1">
+                    <article id="welcome">
+                        <h2>Welcome Back <?$stuno?></h2>
+                        <h3>What would you like to do today?</h3>
+                        </article>
+                </section>
+
+
+                <section class="grid-35" section id="content2">
+                    <img id="homePic" img src="controller.jpg" width=500px;>
+
+                </section>
+            </main>
+
+        </div>
+        <br class="clearfix" />
+    </div>
+    <div id="footer">
+        &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
+    </div>
 </div>
 </body>
+</html>
 
 
 
 
 
-        </main>
