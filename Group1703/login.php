@@ -66,11 +66,7 @@
                       $_SESSION['valid'] = true;
                      $_SESSION['timeout'] = time();
                        $_SESSION['username'] = "$stuno";
-
-
-
-
-
+                        header("Location:memberSite.php");
 
                     }
                 } catch (PDOException $e) {
@@ -84,9 +80,6 @@
             ?>
         </div>
 
-        <form name="logout" action="logout.php" method="post">
-            <input type="submit" type="submit" value="logout">
-            </form>
 
 
 
