@@ -7,7 +7,7 @@ $firstName=$_POST["firstName"];
 $lastName=$_POST["lastName"];
 $power=$_POST["power"];
 
-
+echo "{$firstName}, {$lastName}, {$power}";
 
 
 $sql="INSERT INTO superheroes (firstName,lastName,mainSuperpower)
