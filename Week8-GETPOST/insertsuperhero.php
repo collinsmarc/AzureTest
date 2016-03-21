@@ -13,6 +13,9 @@ $power=$_POST["power"];
 $sql="INSERT INTO superheroes ('firstName','lastName','mainSuperpower')
 VALUES ($firstname,$lastName,$power) ";
 
+$result=$db->query($sql);
+
+
 ?>
 
 
