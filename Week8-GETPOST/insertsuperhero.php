@@ -14,11 +14,6 @@ $sql="INSERT INTO superheroes (firstName,lastName,mainSuperpower)
 VALUES ('$firstName','$lastName','$power') ";
 
 $result=$db->query($sql);
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
 
 $conn->close();
 ?>
