@@ -41,7 +41,7 @@ elseif(isset($_POST['action']))
 }
 else
 {
-    header("location: /login-signup-in-php");
+    header("location: /index.html");
 }
 
 ?>
