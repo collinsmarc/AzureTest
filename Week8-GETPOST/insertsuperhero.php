@@ -15,6 +15,8 @@ VALUES ('$firstName','$lastName','$power') ";
 
 $result=$db->query($sql);
 
+echo "New Entry";
+
 
 ?>
 
