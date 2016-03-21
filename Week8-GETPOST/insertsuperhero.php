@@ -10,7 +10,7 @@ $power=$_POST["power"];
 echo "{$firstName}, {$lastName}, {$power}";
 
 
-$sql="INSERT INTO superheroes (firstName,lastName,mainSuperpower)
+$sql="INSERT INTO superheros (firstName,lastName,mainSuperpower)
 VALUES ('$firstName','$lastName','$power') ";
 
 if (mysqli_query($db, $sql)) {
