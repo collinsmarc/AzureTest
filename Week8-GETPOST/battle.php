@@ -14,7 +14,7 @@ $sql=mysql_query("SELECT lastName FROM superhero");
 if(mysql_num_rows($sql)){
 $select= '<select name="select">';
     while($rs=mysql_fetch_array($sql)){
-    $select.='<option value="'.$rs['id'].'">'.$rs['name'].'</option>';
+    $select.='<option value="'.$rs['lastName'].'">'.$rs['name'].'</option>';
     }
     }
     $select.='</select>';
