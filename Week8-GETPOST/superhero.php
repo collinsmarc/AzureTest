@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Planets</title>
+    <title> SuperHero Data Entry</title>
 </head>
 
 <main>
