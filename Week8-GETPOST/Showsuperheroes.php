@@ -5,13 +5,7 @@ $sql="SELECT * FROM superheros";
 
 $result=$db->query($sql);
 
-foreach ($result as $row) {
-    echo "<tr>";
-    echo "<td>" . $row["superheroID"] . "</td>";
-    echo "<td>" . $row["firstName"] . "</td>";
-    echo "<td>" . $row["lastName"] . "</td>";
-    echo "<td>" . $row["mainSuperpower"] . "</td>";
-
-
+while($row=$result->fetch_array()){
+    echo "<p>.$superheroID. $firstName. $lastName. $mainSuperpower.<br>";
 
 }
