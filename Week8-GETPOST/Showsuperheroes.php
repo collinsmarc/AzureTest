@@ -10,7 +10,7 @@ foreach ($result as $row) {
     echo "<td>" . $row["superheroID"] . "</td>";
     echo "<td>" . $row["firstName"] . "</td>";
     echo "<td>" . $row["lastName"] . "</td>";
-    echo "<td>" . $row["power"] . "</td>";
+    echo "<td>" . $row["mainSuperpower"] . "</td>";
 
 
 
