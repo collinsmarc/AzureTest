@@ -19,7 +19,7 @@ if($_POST['action']=="password")
             $to=$email;
             $subject="Forget Password";
             $from = 'Gameshare';
-            $body='Hi, <br/> <br/>Your Membership ID is '.$Results['studentID'].' <br><br>Click here to reset your password http://htmlpractice.azurewebsites.net/reset.php'.$encrypt.'&action=reset   <br/> <br/>--<br>Gameshare<br>Solve your problems.';
+            $body='Hi, <br/> <br/>Your Membership ID is '.$Results['studentID'].' <br><br>Click here to reset your password http://marcwebs.azurewebsites.net/Group1703/reset.php'.$encrypt.'&action=reset   <br/> <br/>--<br>Gameshare<br>Solve your problems.';
             $headers = "From: " . strip_tags($from) . "\r\n";
             $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
