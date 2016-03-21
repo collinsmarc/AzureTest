@@ -1,5 +1,5 @@
-include('db.php');
-<?
+<? include('db.php');
+
 if(isset($_GET['action']))
 {          
     if($_GET['action']=="reset")
@@ -32,7 +32,7 @@ elseif(isset($_POST['action']))
         $query = "update members set password='".md5($password)."' where studentID='".$Results['studentID']."'";
         mysqli_query($connection,$query);
  
-        $message = "Your password changed sucessfully <a href=\"http://htmlpractice.azurewebsites.net/index.html">click here to login</a>.";
+        $message = "Your password changed sucessfully <a href=\'http://marcwebs.azurewebsites.net/Group1703/index.html'>click here to login</a>.";
     }
     else
     {
@@ -43,4 +43,6 @@ else
 {
     header("location: /login-signup-in-php");
 }
+
+?>
 
