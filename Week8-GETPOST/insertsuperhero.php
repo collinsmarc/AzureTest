@@ -1,7 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 1510646
- * Date: 21/03/2016
- * Time: 09:59
- */
+include("connection.php"); //establish connection to DB
+
+//insert into superhero db
+
+$firstname=$_POST["firstName"];
+$lastName=$_POST["lastName"];
+$power=$_POST["power"];
+
+
+
+
+$sql="INSERT INTO 'superheroes' (superheroID,firstName,lastName,mainSuperpower)
+VALUES ($firstname,$lastName,$power) ";
+
+mysqli_close($con);
+
+?>
+
+
+
+
+
