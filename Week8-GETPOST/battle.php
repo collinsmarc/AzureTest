@@ -1,5 +1,5 @@
 <?php
-include("connection.php");?> //establish connection to DB
+include("connection.php");?>
 
 <!DOCTYPE html>
 <html lang="en">
