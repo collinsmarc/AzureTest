@@ -4,6 +4,6 @@ $name=$_POST["fullname"];
 $gender=$_POST["gender"];
 $power=$_POST["power"];
 
-echo $fullname.$gender.$power;
+echo $name."<br>".$gender."<br>".$power;
 
 ?>
