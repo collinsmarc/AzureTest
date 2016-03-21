@@ -10,12 +10,12 @@ $power=$_POST["power"];
 
 
 
-$sql="INSERT INTO 'superheroes' (superheroID,firstName,lastName,mainSuperpower)
+$sql="INSERT INTO superheroes ('firstName','lastName','mainSuperpower')
 VALUES ($firstname,$lastName,$power) ";
 
-mysqli_close($con);
-
 ?>
+
+
 
 
 
