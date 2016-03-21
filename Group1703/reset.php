@@ -41,7 +41,7 @@ elseif(isset($_POST['action']))
 }
 else
 {
-    header("location: Group1703/index.html");
+    header("location: /index.html");
 }
 
 ?>

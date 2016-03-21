@@ -58,16 +58,18 @@
                 echo "No members were found to match those details.<br />";
             } else {
 
-                $to      =  $email;
-                $subject = 'Forgotten Password';
-                $message = "You requested an email to remind you of your password to the GameShare service. That password is: '$result'";
-                $headers = 'From: webmaster@gameshare.com' . "\r\n" .
-                    'Reply-To: webmaster@gameshare.com' . "\r\n" .
-                    'X-Mailer: PHP/' . phpversion();
+                $encrypt = md5(1290*3+$Results['studentID']);
+                $message = "Your password reset link send to your e-mail address.";
+                $to=$email;
+                $subject="Forget Password";
+                $from = 'Gameshare';
+                $body='Hi, <br/> <br/>Your Membership ID is '.$Results['studentID'].' <br><br>Click here to reset your password http://marcwebs.azurewebsites.net/Group1703/reset.php'.$encrypt.'&action=reset   <br/> <br/>--<br>Gameshare<br>Solve your problems.';
+                $headers = "From: " . strip_tags($from) . "\r\n";
+                $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
+                $headers .= "MIME-Version: 1.0\r\n";
+                $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-                mail($to, $subject, $message, $headers);
-                echo "Please check your email for your password";
-
+                mail($to,$subject,$body,$headers);
             }
 
             } catch (PDOException $e) {
