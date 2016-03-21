@@ -13,7 +13,10 @@ echo "{$firstName}, {$lastName}, {$power}";
 $sql="INSERT INTO superheroes (firstName,lastName,mainSuperpower)
 VALUES ('$firstName','$lastName','$power') ";
 
-$result=$db->query($sql);
+if (mysqli_query($db, $sql)) {
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($db);
+}
 
 $conn->close();
 ?>
