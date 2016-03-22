@@ -18,8 +18,8 @@ include("connection.php");?>
 <h2>Battle Information Input</h2>
 
 <form id="dropDown" method="post">
-    <select>
-        <option value="Select">Select Superhero</option>
+
+
         <?php
                 $query="SELECT lastName FROM superheros";
                  $result=$db->query($sql);
