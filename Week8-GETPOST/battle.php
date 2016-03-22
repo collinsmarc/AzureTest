@@ -9,15 +9,7 @@ include("connection.php");?>
 </head>
 <body>
 
-<?
-$sql="SELECT lastName FROM superheros";
 
-$result=$db->query($sql);
-
-while($row=$result->fetch_array()){
-    echo "<p>".$row['superheroID']. "<p>".$row['firstName']. "<p>".$row['lastName']."<p>".$row['mainSuperpower'];
-
-}?>
 
 
 <form id="dropDown" method="post">
