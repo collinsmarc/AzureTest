@@ -40,7 +40,7 @@ include("connection.php");?>
 
     </select>
 
-    <p> Which Villan was Fought</p>
+
 
         <input type="text" input name="villan" placeholder="Villan Fought">
         <br><br>
