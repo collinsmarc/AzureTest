@@ -10,17 +10,33 @@ include("connection.php");?>
 <body>
 
 <?
-$sql=mysql_query("SELECT lastName FROM superhero");
-if(mysql_num_rows($sql)){
-$select= '<select name="select">';
-    while($rs=mysql_fetch_array($sql)){
-    $select.='<option value="'.$rs['lastName'].'">'.$rs['name'].'</option>';
-    }
-    }
-    $select.='</select>';
-echo $select;?>
+$sql="SELECT lastName FROM superheros";
+
+$result=$db->query($sql);
+
+while($row=$result->fetch_array()){
+    echo "<p>".$row['superheroID']. "<p>".$row['firstName']. "<p>".$row['lastName']."<p>".$row['mainSuperpower'];
+
+}?>
 
 
+<form id="dropDown" method="post">
+    <select>
+        <option value="Select">Select Superhero</option>
+        <option value="new"><?$sql="SELECT lastName FROM superheros";
+
+            $result=$db->query($sql);
+
+            while($row=$result->fetch_array()){
+            echo "<p>".$row['lastName'];
+
+                }?>
+        </option>
+
+
+
+
+</form>
 
 
 
