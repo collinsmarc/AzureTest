@@ -26,7 +26,7 @@ include("connection.php"); //establish connection to DB
             echo "<td>" . $row["lastname"] ."&nbsp &nbsp"."</td>";
             echo "<td>" . $row["mainSuperPower"] ."&nbsp &nbsp" . "</td>";
             echo "<td>" . $row["villanFought"] ."&nbsp &nbsp" . "</td>";
-        echo "<p>";
+        echo "<p> </p>";
 
     }
 
