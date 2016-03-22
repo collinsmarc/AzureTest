@@ -29,7 +29,7 @@ include("connection.php");?>
                     $lastName = $row['lastName'];
                     $id = $row['superheroID'];
 
-                    echo "<option value='{$id}'>{$firstName}{$lastName}</option>";
+                    echo "<option value='{$id}'>{$firstName}."-".{$lastName}</option>";
                 }
 
 
