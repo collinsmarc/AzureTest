@@ -7,12 +7,15 @@ include("connection.php");?>
     <meta charset="UTF-8">
     <title> Battle INFO</title>
 </head>
+
+<header>
 <h1>Battle Portal</h1>
+</header>
 
 <body>
 
 
-<h1>Battle Information Input</h1>
+<h2>Battle Information Input</h2>
 
 <form id="dropDown" method="post">
     <select>
