@@ -20,7 +20,7 @@ include("connection.php"); //establish connection to DB
     $sql="SELECT * FROM superherobattles";
     $result=$db->query($sql);
 
-    echo "<th>First Name &nbsp;&nbsp;</th><th>Last Name&nbsp;&nbsp;</th><th>Power&nbsp;&nbsp;</th><th>Villan Fought&nbsp;&nbsp;</th> <p> </p>";
+    echo "<th>First Name &nbsp;&nbsp;</th><th>Last Name&nbsp;&nbsp;</th><th>Power&nbsp;&nbsp;</th><th>Villan Fought&nbsp;&nbsp;</th> <p></p>";
 
 
     while($row=$result->fetch_array()){
