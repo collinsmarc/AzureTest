@@ -17,9 +17,11 @@ include("connection.php");?>
 
 <h2>Battle Information Input</h2>
 
-<form action="insertBattle.php" form id="dropDown" method="post">
+
 
   <p>Who Fought in this Battle?</p>
+
+<form action="insertBattle.php"  method="post">
     <select name="superhero">
         <?php
                 $query="SELECT * FROM superheros";
