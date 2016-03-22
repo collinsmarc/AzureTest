@@ -21,5 +21,16 @@ if (mysqli_query($db, $sql)) {
 $conn->close();
 
 ?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Insert</title>
+</head>
 
+
+
+<main>
 <input type="submit" form action="battle.php">
+</main>
+</html>
