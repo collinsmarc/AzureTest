@@ -19,5 +19,5 @@ if (mysqli_query($db, $sql)) {
 
 
 $conn->close();
-header ("location:battle.php");
+
 ?>
