@@ -17,12 +17,12 @@ include("connection.php");?>
 
 <h2>Battle Information Input</h2>
 
-<form id="dropDown" method="post">
+<form action="insertBattle.php" form id="dropDown" method="post">
 
-
+  <p>Who Fought in this Battle?</p>
         <?php
-                $query="SELECT lastName FROM superheros";
-                 $result=$db->query($sql);
+                $query="SELECT * FROM superheros";
+                 $result=$db->query($query);
           echo "<select name='dropdown' value=''><option>Choose Superhero</option>";
 
             while($row=$result->fetch_array()){
