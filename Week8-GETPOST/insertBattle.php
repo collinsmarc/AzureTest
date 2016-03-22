@@ -4,13 +4,13 @@ include("connection.php"); //establish connection to DB
 //insert into battle db
 
 $superheroID=$_POST["superhero"];
-$villan=$_POST["villan"];
+$vil=$_POST["villan"];
 
 
 
 
 $sql="INSERT INTO battles (superheroID,villanFought)
-VALUES ('$superheroID','$villan')";
+VALUES ('$superheroID','$vil')";
 
 if (mysqli_query($db, $sql)) {
 } else {
