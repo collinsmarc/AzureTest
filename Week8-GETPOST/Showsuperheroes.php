@@ -6,6 +6,6 @@ $sql="SELECT * FROM superheros";
 $result=$db->query($sql);
 
 while($row=$result->fetch_array()){
-    echo "<p>".$row['superheroID']. "<p>".$row['firstName']. "<p>".$row['lastName']."<p>".$row['mainSuperpower'];
+    echo "<p>".$row['superheroID']. "   ".$row['firstName']. "   ".$row['lastName']."   ".$row['mainSuperpower']."<p></p>";
 
 }
