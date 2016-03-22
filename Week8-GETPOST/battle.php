@@ -39,10 +39,11 @@ include("connection.php");?>
     </select>
 
     <p> Which Villan was Fought</p>
-    <form>
+
         <input type="text" id="villan" placeholder="Villan Fought">
+        <br><br>
         <input type="submit" value="Log Battle">
-    </form>
+
 
 
 
