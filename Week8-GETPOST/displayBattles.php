@@ -20,6 +20,9 @@ include("connection.php"); //establish connection to DB
     $sql="SELECT * FROM superherobattles";
     $result=$db->query($sql);
 
+    echo "<th>First Name</th><th>Last Name</th><th>Power</th><th>Villan Fought</th>";
+
+
     while($row=$result->fetch_array()){
         echo "<tr>";
             echo "<td>" . $row["firstname"] ."&nbsp &nbsp" . "</td>";
