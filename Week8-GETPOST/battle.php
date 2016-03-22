@@ -41,6 +41,7 @@ include("connection.php");?>
     <p> Which Villan was Fought</p>
     <form>
         <input type="text" id="villan" placeholder="Villan Fought">
+        <input type="submit" value="Log Battle">
     </form>
 
 
