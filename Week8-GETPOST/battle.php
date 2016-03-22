@@ -25,7 +25,7 @@ include("connection.php");?>
             $result=$db->query($sql);
 
             while($row=$result->fetch_array()){
-            echo "<p>".$_POST['lastName'];
+            echo "<p>".$row['lastName'];
 
                 }?>
         </option>
