@@ -20,20 +20,23 @@ include("connection.php");?>
 <form id="dropDown" method="post">
     <select>
         <option value="Select">Select Superhero</option>
-        <option value="new"><?$sql="SELECT lastName FROM superheros";
+        <option value="new"><php?$sql="SELECT lastName FROM superheros";
 
             $result=$db->query($sql);
 
             while($row=$result->fetch_array()){
             echo "<option value>=".$row['lastName']."
 
-                }?>
+                ?>
         </option>
 
 
 
 
 </form>
+</body>
+</html>
+
 
 
 
