@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <html>
 
 <head>
@@ -12,11 +14,23 @@
         </div>
         <div id="search">
             <Form Name ="login" action="login.php" method="post">
-                <div id="logintext">
+
+
+                <? if(!isset($_SESSION['username'])){
+                    echo '
                     <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
                     <a id="register" href="registerDetails.php">Not a member? Register.</a>
-                </div>
+               ';}
+                else{
+                    echo "Logged in as: ".$_SESSION['username'];
+                    echo ' <form name="logout" action="logout.php" method="post">
+                            <input id="logoutButton" type="submit" type="submit" value="Log Out">
+                            </form>';
+                }
+
+                ?>
             </form>
+
         </div>
         <div id="menu">
             <form action="results.php" method="post">
