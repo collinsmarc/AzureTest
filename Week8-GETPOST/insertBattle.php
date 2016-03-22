@@ -21,3 +21,5 @@ if (mysqli_query($db, $sql)) {
 $conn->close();
 
 ?>
+
+<input type="submit" form action="battle.php">
