@@ -22,10 +22,10 @@ include("connection.php"); //establish connection to DB
 
     while($row=$result->fetch_array()){
         echo "<tr>";
-            echo "<td>" . $row["firstname"] . "</td>";
-            echo "<td>" . $row["lastname"] . "</td>";
-            echo "<td>" . $row["mainSuperPower"] . "</td>";
-            echo "<td>" . $row["villanFought"] . "</td>";
+            echo "<td>" . $row["firstname"] ."<p>  <p>" . "</td>";
+            echo "<td>" . $row["lastname"] ."<p>  <p>" . "</td>";
+            echo "<td>" . $row["mainSuperPower"] ."<p>  <p>" . "</td>";
+            echo "<td>" . $row["villanFought"] ."<p>  <p>" . "</td>";
 
     }
 
