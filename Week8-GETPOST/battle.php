@@ -20,18 +20,23 @@ include("connection.php");?>
 <form action="insertBattle.php" form id="dropDown" method="post">
 
   <p>Who Fought in this Battle?</p>
+    <select name="superhero">
         <?php
                 $query="SELECT * FROM superheros";
                  $result=$db->query($query);
-          echo "<select name='dropdown' value=''><option>Choose Superhero</option>";
+                while($row=$result->fetch_array()) {
+                    $firstName = $row['firstName'];
+                    $lastName = $row['lastName'];
+                    $id = $row['superheroID'];
 
-            while($row=$result->fetch_array()){
-            echo "<option value=".$row['lastName'].">"."</option>";}
-            echo "</select>";
+                    echo "<option value='{$id}'>{$firstName}{$lastName}</option>";
+                }
+
+
 
                 ?>
 
-
+    </select>
 
 
 
