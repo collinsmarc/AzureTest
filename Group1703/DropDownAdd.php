@@ -73,7 +73,7 @@ if(!isset($_SESSION['username'])){
                             }
 
 
-                            $query="SELECT * FROM gamecollection WHERE platform='XBOX'";
+                            $query="SELECT * FROM gamecollection";
                             $result=$db->query($query);
                             while($row=$result->fetch_array()) {
                                 $title = $row['Title'];
