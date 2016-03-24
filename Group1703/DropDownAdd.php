@@ -52,11 +52,9 @@ if(!isset($_SESSION['username'])){
     <div id="page">
         <div id="content">
 
-            <main>
-
 
 <form>
-
+    <select name="Titles">
 
                            <?php
 
@@ -70,27 +68,23 @@ if(!isset($_SESSION['username'])){
                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-                                $query = "SELECT * FROM gameCollection";
-                                $result = $db->query($query);
-                                while ($row = $result->fetch_array()) {
-                                    $title = $row['Title'];
-                                    $id = $row['GameID'];
-
-
-                                    echo "asdasfasf";
-                                }
                                 }catch
                                 (PDOException $e) {
-                                    echo "Connection failed: " . $e->getMessage();
+                                    echo "Connection failed: " . $e->getMessage();}
 
 
+                           $query = "SELECT * FROM gamecollection";
+                           $result = $db->query($query);
+                           while ($row = $result->fetch_array()) {
+                               $title = $row['Title'];
+                               $id = $row['GameID'];
 
+                               echo "<option value='{$id}'>{$title}</option>";
                            }
-
 
                             ?>
 
-
+    </select>
 </form>
 
 
