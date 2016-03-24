@@ -70,18 +70,13 @@ if(!isset($_SESSION['username'])){
                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             } catch (PDOException $e) {
                                 echo "Connection failed: " . $e->getMessage();
+
+
+
+
                             }
 
-
-                            $query="SELECT * FROM gamecollection";
-                            $result=$db->query($query);
-                            while($row=$result->fetch_array()) {
-                                $title = $row['Title'];
-                                $id= $row['GameID'];
-
-
-                                echo "sdegfsdgdsg";
-                            }
+                       echo "kttktktk";
 
 
 
