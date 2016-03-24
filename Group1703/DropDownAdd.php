@@ -58,7 +58,7 @@ if(!isset($_SESSION['username'])){
 
                            <?php
 
-                            error_reporting(-1);
+                            /*error_reporting(-1);
 
                             $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
                             $username = "b52b6c6935c6d2";
@@ -80,12 +80,12 @@ if(!isset($_SESSION['username'])){
                                $id = $row['GameID'];
 
                                echo "<option value='{$id}'>{$title}</option>";
-                           }
+                           }*/
 
                             ?>
 
     </select>
-</form>
+
 
 
 
