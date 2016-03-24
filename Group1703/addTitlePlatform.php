@@ -57,13 +57,13 @@ if(!isset($_SESSION['username'])){
       <main>
           <form action="#" method="post" name="platformSelect">
               <select>
-                  <option value="Select Platform"></option>
-                  <option value="PS3"></option>
-                  <option value="PS4"></option>
-                  <option value="XBOX360"></option>
-                  <option value="XBOXONE"></option>
-                  <option value="Wii"></option>
-                  <option value="Wii U"></option>
+                  <option value="Select Platform">Select Platform</option>
+                  <option value="PS3">PS3</option>
+                  <option value="PS4">PS4</option>
+                  <option value="XBOX360">XBOX360</option>
+                  <option value="XBOXONE">XBOXONE</option>
+                  <option value="Wii">Wii</option>
+                  <option value="Wii U">Wii U</option>
 
 
               </select>
