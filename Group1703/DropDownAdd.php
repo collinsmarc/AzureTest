@@ -74,12 +74,12 @@ if(!isset($_SESSION['username'])){
 
 
                            $query = "SELECT * FROM gamecollection";
-                           $result = $db->query($query);
+                           $result = $conn->query($query);
                            while ($row = $result->fetch_array()) {
                                $title = $row['Title'];
                                $id = $row['GameID'];
 
-//                               echo "<option value='{$id}'>{$title}</option>";
+                               echo "<option value='{$id}'>{$title}</option>";
                            }
 
                             ?>
