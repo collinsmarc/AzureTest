@@ -53,8 +53,9 @@ if(!isset($_SESSION['username'])){
         <div id="content">
 
             <main>
-                <form action="" method="post" name="platformSelect">
 
+
+<form>
                         <select name="Titles">
 
                            <?php
@@ -76,7 +77,7 @@ if(!isset($_SESSION['username'])){
                            $id= $row['GameID'];
 
 
-                           echo "<option value='{$id}'>fdgdfgdfg </option>";}
+                           echo "sdgsdgsdgsdg";}
 
                             } catch (PDOException $e) {
                                 echo "Connection failed: " . $e->getMessage();
@@ -90,7 +91,7 @@ if(!isset($_SESSION['username'])){
                             ?>
 
                         </select>
-
+</form>
 
 
 
