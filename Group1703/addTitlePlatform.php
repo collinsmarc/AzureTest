@@ -54,6 +54,31 @@ if(!isset($_SESSION['username'])){
     <div id="page">
         <div id="content">
 
+      <main>
+          <form action="#" method="post" name="platformSelect">
+              <select>
+                  <option value="Select Platform"></option>
+                  <option value="PS3"></option>
+                  <option value="PS4"></option>
+                  <option value="XBOX360"></option>
+                  <option value="XBOXONE"></option>
+                  <option value="Wii"></option>
+                  <option value="Wii U"></option>
+
+
+              </select>
+
+          </form>
+
+
+
+
+
+
+
+      </main>
+
+
         </div>
         <br class="clearfix" />
     </div>
