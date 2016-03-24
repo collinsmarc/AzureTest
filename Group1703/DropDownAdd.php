@@ -75,7 +75,7 @@ if(!isset($_SESSION['username'])){
 
                            $query = "SELECT * FROM gamecollection";
                            $result = $conn->query($query);
-                           while ($row = $result->fetch_array()) {
+                           foreach($result as $row) {
                                $title = $row['Title'];
                                $id = $row['GameID'];
 
