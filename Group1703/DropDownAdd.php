@@ -53,20 +53,8 @@ if(!isset($_SESSION['username'])){
         <div id="content">
 
             <main>
-                <form action="DropDownAdd.php" method="post" name="platformSelect">
+                <form action="" method="post" name="platformSelect">
                     <select id="platformSelectDrop">
-                        <option value="Select Platform">Select Platform</option>
-                        <option value="PS3">PS3</option>
-                        <option value="PS4">PS4</option>
-                        <option value="XBOX360">XBOX360</option>
-                        <option value="XBOXONE">XBOXONE</option>
-                        <option value="Wii">Wii</option>
-                        <option value="Wii U">Wii U</option>
-
-                    </select>
-                    <br><br>
-                    <input type="submit" value="Select">
-
 
                         <select name="Titles">
 
