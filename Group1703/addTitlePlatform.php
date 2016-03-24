@@ -56,7 +56,7 @@ if(!isset($_SESSION['username'])){
 
       <main>
           <form action="#" method="post" name="platformSelect">
-              <select>
+              <select id="platformSelectDrop">
                   <option value="Select Platform">Select Platform</option>
                   <option value="PS3">PS3</option>
                   <option value="PS4">PS4</option>
@@ -65,8 +65,8 @@ if(!isset($_SESSION['username'])){
                   <option value="Wii">Wii</option>
                   <option value="Wii U">Wii U</option>
 
-
               </select>
+              <input type="select" value="Select">
 
           </form>
 
