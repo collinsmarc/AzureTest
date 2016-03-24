@@ -54,7 +54,6 @@ if(!isset($_SESSION['username'])){
 
             <main>
                 <form action="" method="post" name="platformSelect">
-                    <select id="platformSelectDrop">
 
                         <select name="Titles">
 
