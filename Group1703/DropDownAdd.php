@@ -80,7 +80,7 @@ if(!isset($_SESSION['username'])){
                                 $id= $row['GameID'];
 
 
-                                echo "title is {$title}";
+                                echo "sdegfsdgdsg";
                             }
 
 
