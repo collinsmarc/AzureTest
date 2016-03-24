@@ -66,7 +66,9 @@ if(!isset($_SESSION['username'])){
                   <option value="Wii U">Wii U</option>
 
               </select>
-              <input type="select" value="Select">
+              <br><br>
+              <input type="submit" value="Select">
+
 
           </form>
 
