@@ -73,7 +73,16 @@ if(!isset($_SESSION['username'])){
                                     echo "Connection failed: " . $e->getMessage();}
 
 
-                           $query = "SELECT * FROM gamecollection";
+
+                           $platform = $_POST['platformSelect'];
+                           if (!isset($platform)) {
+                               $platform = '%';
+                           }
+
+
+
+
+                           $query = "SELECT * FROM gamecollection WHERE Platform Like '$platform'";
                            $result = $conn->query($query);
                            foreach($result as $row) {
                                $title = $row['Title'];
