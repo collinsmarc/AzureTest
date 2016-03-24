@@ -58,6 +58,7 @@ header("Location:index.html");
 
                 <section class="grid-35" section id="content2">
                     <h3>Your Titles</h3>
+                    <a href="addTitlePlatform.php">Add Title</a>
                     <br><br><br><br><br><br>
                     <h3>Your Loans</h3>
 
