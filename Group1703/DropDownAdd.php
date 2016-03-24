@@ -88,7 +88,7 @@ if(!isset($_SESSION['username'])){
                                $title = $row['Title'];
                                $id = $row['GameID'];
 
-                               echo "<option value='{$id}'>{$title}{$platform}</option>";
+                               echo "<option value='{$id}'>{$title}</option>";
                            }
 
                             ?>
