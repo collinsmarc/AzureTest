@@ -75,7 +75,9 @@ if(!isset($_SESSION['username'])){
 
 
                            $platform = $_POST['platformSelectDrop'];
-
+                           if (!isset($platform)) {
+                               $platform = '%';
+                           }
 
 
 
