@@ -58,7 +58,7 @@ if(!isset($_SESSION['username'])){
 
                            <?php
 
-                            /*error_reporting(-1);
+                            error_reporting(-1);
 
                             $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
                             $username = "b52b6c6935c6d2";
@@ -73,7 +73,7 @@ if(!isset($_SESSION['username'])){
                                     echo "Connection failed: " . $e->getMessage();}
 
 
-                           $query = "SELECT * FROM gamecollection";
+                           /*$query = "SELECT * FROM gamecollection";
                            $result = $db->query($query);
                            while ($row = $result->fetch_array()) {
                                $title = $row['Title'];
