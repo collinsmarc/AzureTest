@@ -70,14 +70,14 @@ if(!isset($_SESSION['username'])){
                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-                                $query = "SELECT * FROM gamecollection";
+                                $query = "SELECT * FROM gameCollection";
                                 $result = $db->query($query);
                                 while ($row = $result->fetch_array()) {
                                     $title = $row['Title'];
                                     $id = $row['GameID'];
 
 
-                                    echo "{$title}";
+                                    echo "asdasfasf";
                                 }
                                 }catch
                                 (PDOException $e) {
