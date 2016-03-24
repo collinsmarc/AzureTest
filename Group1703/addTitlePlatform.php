@@ -55,7 +55,7 @@ if(!isset($_SESSION['username'])){
         <div id="content">
 
       <main>
-          <form action="#" method="post" name="platformSelect">
+          <form action="DropDownAdd.php" method="post" name="platformSelect">
               <select id="platformSelectDrop">
                   <option value="Select Platform">Select Platform</option>
                   <option value="PS3">PS3</option>
