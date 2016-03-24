@@ -68,13 +68,7 @@ if(!isset($_SESSION['username'])){
                             try {
                                 $conn = new PDO($dsn, $username, $password);
                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                            } catch (PDOException $e) {
-                                echo "Connection failed: " . $e->getMessage();
 
-
-
-
-                            }
 
                            $query="SELECT * FROM gamecollection";
                            $result=$db->query($query);
@@ -85,7 +79,13 @@ if(!isset($_SESSION['username'])){
 
                            echo "<option value='{$id}'>{$title} </option>";}
 
+                            } catch (PDOException $e) {
+                                echo "Connection failed: " . $e->getMessage();
 
+
+
+
+                            }
 
 
                             ?>
