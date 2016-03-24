@@ -70,22 +70,22 @@ if(!isset($_SESSION['username'])){
                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-                           $query="SELECT * FROM gamecollection";
-                           $result=$db->query($query);
-                           while($row=$result->fetch_array()) {
-                           $title = $row['Title'];
-                           $id= $row['GameID'];
+                                $query = "SELECT * FROM gamecollection";
+                                $result = $db->query($query);
+                                while ($row = $result->fetch_array()) {
+                                    $title = $row['Title'];
+                                    $id = $row['GameID'];
 
 
-                           echo "sdgsdgsdgsdg";}
+                                    echo "<option value='{$id}'>hello</option>";
+                                }
+                                }catch
+                                (PDOException $e) {
+                                    echo "Connection failed: " . $e->getMessage();
 
-                            } catch (PDOException $e) {
-                                echo "Connection failed: " . $e->getMessage();
 
 
-
-
-                            }
+                           }
 
 
                             ?>
