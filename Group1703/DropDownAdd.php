@@ -56,7 +56,7 @@ if(!isset($_SESSION['username'])){
 
 
 <form>
-                        <select name="Titles">
+
 
                            <?php
 
@@ -77,7 +77,7 @@ if(!isset($_SESSION['username'])){
                                     $id = $row['GameID'];
 
 
-                                    echo "<option value='{$id}'>hello</option>";
+                                    echo "{$title}";
                                 }
                                 }catch
                                 (PDOException $e) {
@@ -90,7 +90,7 @@ if(!isset($_SESSION['username'])){
 
                             ?>
 
-                        </select>
+
 </form>
 
 
