@@ -58,8 +58,8 @@ if(!isset($_SESSION['username'])){
 
             <main class="grid container">
                 <section class="grid-50" section id="leftAddGame">
-                    <h3> Add your<?php
-                        $platform = $_POST['platformSelectDrop'];
+                    <h3> Add your Game<?php
+                        
                         print $platform?></h3>
 <form>
     <select name="Titles">
@@ -102,7 +102,7 @@ if(!isset($_SESSION['username'])){
                             ?>
 
     </select>
-    <br><br>
+    <br>
     <input type="submit" value="Select Game">
                     </form>
                     </section>
