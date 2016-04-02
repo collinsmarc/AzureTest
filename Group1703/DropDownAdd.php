@@ -94,6 +94,8 @@ if(!isset($_SESSION['username'])){
                             ?>
 
     </select>
+    <br><br>
+    <input type="submit" value="Select Game">
 
 
 
