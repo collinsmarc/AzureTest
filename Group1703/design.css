@@ -416,8 +416,10 @@ div#slider figure {
 
 #leftAddGame{
 	text-align: center;
+	float: left;
 }
 
 #rightAddGame{
 	text-align: center;
+	float: right;
 }
