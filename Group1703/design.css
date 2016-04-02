@@ -415,9 +415,9 @@ div#slider figure {
 /* End of Home Page Sliding image CSS*/
 
 #leftAddGame{
-	float: left;
+	text-align: center;
 }
 
 #rightAddGame{
-	float: right;
+	text-align: center;
 }

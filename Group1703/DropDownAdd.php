@@ -57,7 +57,7 @@ if(!isset($_SESSION['username'])){
         <div id="content">
 
             <main class="grid container">
-                <section class="grid-65" section id="leftAddGame">
+                <section class="grid-50" section id="leftAddGame">
 <form>
     <select name="Titles">
 
@@ -104,7 +104,7 @@ if(!isset($_SESSION['username'])){
                     </form>
                     </section>
 
-                <section class="grid-35" section id="rightAddGame">
+                <section class="grid-50" section id="rightAddGame">
                 <a href="#">Title not there? Add your Game </a>
 
 
