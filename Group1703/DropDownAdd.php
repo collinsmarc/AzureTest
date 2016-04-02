@@ -10,7 +10,11 @@ if(!isset($_SESSION['username'])){
 
 <head>
     <link rel="stylesheet" type="text/css" href="design.css"/>
+    <link rel="stylesheet"
+          href="unsemantic-grid-responsive-tablet.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 </head>
+
 
 <body>
 <div id="wrapper">
@@ -52,7 +56,8 @@ if(!isset($_SESSION['username'])){
     <div id="page">
         <div id="content">
 
-
+            <main class="grid container">
+                <section class="grid-65" section id="leftAddGame">
 <form>
     <select name="Titles">
 
@@ -96,11 +101,14 @@ if(!isset($_SESSION['username'])){
     </select>
     <br><br>
     <input type="submit" value="Select Game">
-
-
-
-
                     </form>
+                    </section>
+
+                <section class="grid-35" section id="rightAddGame">
+                <a href="#">Title not there? Add your Game </a>
+
+
+                    </section>
 
 
 
