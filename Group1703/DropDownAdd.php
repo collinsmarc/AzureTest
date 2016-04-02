@@ -56,8 +56,8 @@ if(!isset($_SESSION['username'])){
     <div id="page">
         <div id="content">
 
-            <main class="grid container">
-                <section class="grid-50" section id="leftAddGame">
+            <main>
+                <section id="DropAddMenu">
                     <h3> Add your Game</h3>
 <form>
     <select name="Titles">
@@ -105,7 +105,8 @@ if(!isset($_SESSION['username'])){
                     </form>
                     </section>
 
-                <section class="grid-50" section id="rightAddGame">
+                <section id="NewGame">
+                    <br><br>
                 <a href="#">Title not there? Add New Game </a>
 
 

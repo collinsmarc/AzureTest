@@ -419,7 +419,11 @@ div#slider figure {
 	float: left;
 }
 
-#rightAddGame{
+
+#DropAddMenu{
 	text-align: center;
-	float: right;
+}
+
+#NewGame{
+	text-align: center;
 }
