@@ -1,9 +1,7 @@
-<?session_start();
-if(!isset($_SESSION['username'])){
+<? session_start();
+if (!isset($_SESSION['username'])) {
     header("Location:index.html");
-}?>
-
-
+} ?>
 
 
 <!DOCTYPE html>
@@ -23,14 +21,14 @@ if(!isset($_SESSION['username'])){
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
         <div id="search">
-            <Form Name ="login" action="login.php" method="post">
-                <? if(!isset($_SESSION['username'])){
+            <Form Name="login" action="login.php" method="post">
+                <? if (!isset($_SESSION['username'])) {
                     echo '
                     <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
                     <a id="register" href="registerDetails.php">Not a member? Register.</a>
-               ';}
-                else{
-                    echo "Logged in as: ".$_SESSION['username'];
+               ';
+                } else {
+                    echo "Logged in as: " . $_SESSION['username'];
                     echo ' <form name="logout" action="logout.php" method="post">
                             <input id="logoutButton" type="submit" type="submit" value="Log Out">
                             </form>';
@@ -40,6 +38,7 @@ if(!isset($_SESSION['username'])){
                 ?>
             </form>
         </div>
+
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
@@ -47,18 +46,19 @@ if(!isset($_SESSION['username'])){
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="Search.php">Search</a></li>
-                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go"></li>
+                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input
+                            id="qsgo" type="submit" value="Go"></li>
                 </ul>
             </form>
-            <br class="clearfix" />
+            <br class="clearfix"/>
         </div>
     </div>
     <div id="page">
         <div id="content">
 
             <main>
-                <table  style="width:300px" >
-                    <form  name="AddNew" Method ="post" action = "#">
+                <table style="width:300px">
+                    <form name="AddNew" Method="post" action="newEntryGameSQL.php">
                         <tr>
                             <td><label for="title">Title :</label></td>
                             <td><input id="title" name="title" type="text"/></td>
@@ -123,30 +123,29 @@ if(!isset($_SESSION['username'])){
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
-                                <input type="submit"  value="Search">
+                                <input type="submit" value="Add Game">
                         </tr>
-                            </td>
+                        </td>
 
                     </form>
                 </table>
                 
-
-
-
-
-
+                
+                
+                
+                
 
 
             </main>
 
-</div>
         </div>
-        </div>
-        <br class="clearfix" />
-    
-    <div id="footer">
-        &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
     </div>
+</div>
+<br class="clearfix"/>
+
+<div id="footer">
+    &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
+</div>
 </div>
 </body>
 
