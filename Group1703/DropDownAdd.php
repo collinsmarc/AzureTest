@@ -58,9 +58,7 @@ if(!isset($_SESSION['username'])){
 
             <main class="grid container">
                 <section class="grid-50" section id="leftAddGame">
-                    <h3> Add your Game<?php
-                        
-                        print $platform?></h3>
+                    <h3> Add your Game</h3>
 <form>
     <select name="Titles">
 
@@ -108,7 +106,7 @@ if(!isset($_SESSION['username'])){
                     </section>
 
                 <section class="grid-50" section id="rightAddGame">
-                <a href="#">Title not there? Add your Game </a>
+                <a href="#">Title not there? Add New Game </a>
 
 
                     </section>
