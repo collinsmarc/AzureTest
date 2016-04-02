@@ -107,7 +107,7 @@ if(!isset($_SESSION['username'])){
 
                 <section id="NewGame">
                     <br><br>
-                <a href="newEntryGame.php">Title not there? Add New Game </a>
+                <a href="newEntryGameForm.php">Title not there? Add New Game </a>
 
 
                     </section>
