@@ -58,6 +58,9 @@ if(!isset($_SESSION['username'])){
 
             <main class="grid container">
                 <section class="grid-50" section id="leftAddGame">
+                    <h2> Add your<?php
+                        $platform = $_POST['platformSelectDrop'];
+                        echo $platform?>_</h2>
 <form>
     <select name="Titles">
 
