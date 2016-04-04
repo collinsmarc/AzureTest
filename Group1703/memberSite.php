@@ -89,7 +89,7 @@ if (!isset($_SESSION['username'])) {
                         } else {
 
 
-                            foreach ($results as $row) {
+
                                 /*print "<table id='results'>\n";
                                 echo "<th>game ID</th><th>Condition</th>";*/
                                 foreach ($results as $row) {
@@ -103,7 +103,7 @@ if (!isset($_SESSION['username'])) {
 
                             }
                         }
-                    } catch (PDOException $e) {
+                     catch (PDOException $e) {
                         echo "Query failed: " . $e->getMessage();
                     }
                     $conn = null;
