@@ -29,6 +29,7 @@ if (!isset($_SESSION['username'])) {
 
         $conn->exec($sql);
         echo "New record created successfully";
+        header("Location:memberSite.php");
 
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
