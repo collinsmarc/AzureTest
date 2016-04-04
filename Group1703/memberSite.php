@@ -86,7 +86,7 @@ if (!isset($_SESSION['username'])) {
           $sql = "SELECT * FROM owns
         INNER JOIN gamecollection
         ON owns.gameID = gamecollection.GameID
-        WHERE Users.Username = '" . $user ."'";
+        WHERE owns.studentID = '" . $user ."'";
 
 
                     try {
