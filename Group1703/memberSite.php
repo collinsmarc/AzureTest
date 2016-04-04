@@ -99,7 +99,7 @@ if (!isset($_SESSION['username'])) {
 
 
                                 print "<table id='results'>\n";
-                                echo "<th>game ID</th><th>Condition</th>";
+                                echo "<th>game ID</th><th>Condition</th><th>Options</th>";
                                 foreach ($results as $row) {
                                     echo "<tr>";
                                     echo "<td>" . $row["Title"] . "</td>";
