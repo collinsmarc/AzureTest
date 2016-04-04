@@ -58,6 +58,53 @@ header("Location:index.html");
 
                 <section class="grid-35" section id="content2">
                     <h3>Your Titles</h3>
+                    <?php
+
+
+
+                    error_reporting(-1);
+
+                    $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+                    $username = "b52b6c6935c6d2";
+                    $password = "26ebeed0";
+                    try {
+                        $conn = new PDO($dsn, $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    } catch (PDOException $e) {
+                        echo "Connection failed: " . $e->getMessage();
+                    }
+                    
+                    $user=$_SESSION['username'];
+
+                   $query = "SELECT * FROM owns WHERE studentID LIKE $user";
+                    try {
+                        $results = $conn->query($query);
+
+                        if ($results->rowcount() == 0) {
+                            echo "no games added <br />";
+                        } else {
+
+                            print "<table id='results'>\n";
+                            echo "<th>Title</th><th>Platform</th><th>Genre</th><th>Year</th><th id='age'>Age Rating</th><th id='desc'>Description</th><th>Borrow</th>";
+                            foreach ($results as $row) {
+                                echo "<tr>";
+                                echo "<td>" . $row["Title"] . "</td>";
+                                echo "<td>" . $row["Platform"] . "</td>";
+                                echo "<td>" . $row["Genre"] . "</td>";
+                                echo "<td>" . $row["Year"] . "</td>";
+                                echo "<td>" . $row["Age Rating"] . "</td>";
+                                echo "<td>" . $row["Description"] . "</td>";
+                                echo "<td><form id='borrow' action='borrow.php' method='post'><input id='borrow' type='submit' name='Borrow' value='Borrow'></form></td>";
+                            }
+                            print "</table>\n";
+                        }
+                    } catch (PDOException $e) {
+                        echo "Query failed: " . $e->getMessage();
+                    }
+                    $conn = null;
+
+                    ?>
+
                     <a href="addTitlePlatform.php">Add Title</a>
                     <br><br><br><br><br><br>
                     <h3>Your Loans</h3>
