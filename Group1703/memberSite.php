@@ -73,10 +73,11 @@ header("Location:index.html");
                     } catch (PDOException $e) {
                         echo "Connection failed: " . $e->getMessage();
                     }
-                    
-                    $user=$_SESSION['username'];
 
-                   $query = "SELECT * FROM owns WHERE studentID LIKE 1510646";
+                    $user=$_SESSION['username'];
+                    $query = "SELECT * FROM gamecollection WHERE studentID Like '$user'";
+                  
+
                     try {
                         $results = $conn->query($query);
 
@@ -84,17 +85,21 @@ header("Location:index.html");
                             echo "no games added <br />";
                         } else {
 
-                            print "<table id='results'>\n";
-                            echo "<th>Title</th><th>Platform</th><th>Borrow</th>";
-                            foreach ($results as $row) {
-                                echo "<tr>";
-                                echo "<td>" . $row["Title"] . "</td>";
-                                echo "<td>" . $row["Platform"] . "</td>";
 
+                            echo "<th>Title</th><th>Platform</th>";
+
+
+                            foreach ($result as $row) {
+
+                                $id = $row['GameID'];
+
+                                echo "{$id}";
                             }
-                            print "</table>\n";
                         }
-                    } catch (PDOException $e) {
+                    }
+
+
+                     catch (PDOException $e) {
                         echo "Query failed: " . $e->getMessage();
                     }
                     $conn = null;
