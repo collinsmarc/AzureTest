@@ -27,6 +27,7 @@ WHERE studentID='$id'";
     }
 
     $conn = null;
-    header('Location: memberSite.php');
+
 }
+header('Location: memberSite.php');
 ?>
