@@ -80,7 +80,7 @@ header("Location:index.html");
                     FROM gamecollection
                     INNER JOIN owns
                     ON gamecollection.GameID=owns.gameID
-                    AND owns.studentID LIKE $user";
+                    AND owns.studentID LIKE '1510646'";
               
 
 
