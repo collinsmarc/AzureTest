@@ -76,7 +76,7 @@ header("Location:index.html");
                     
                     $user=$_SESSION['username'];
 
-                   $query = "SELECT * FROM owns WHERE studentID LIKE $user";
+                   $query = "SELECT * FROM owns WHERE studentID = $user";
                     try {
                         $results = $conn->query($query);
 
@@ -85,16 +85,12 @@ header("Location:index.html");
                         } else {
 
                             print "<table id='results'>\n";
-                            echo "<th>Title</th><th>Platform</th><th>Genre</th><th>Year</th><th id='age'>Age Rating</th><th id='desc'>Description</th><th>Borrow</th>";
+                            echo "<th>Title</th><th>Platform</th><th>Borrow</th>";
                             foreach ($results as $row) {
                                 echo "<tr>";
                                 echo "<td>" . $row["Title"] . "</td>";
                                 echo "<td>" . $row["Platform"] . "</td>";
-                                echo "<td>" . $row["Genre"] . "</td>";
-                                echo "<td>" . $row["Year"] . "</td>";
-                                echo "<td>" . $row["Age Rating"] . "</td>";
-                                echo "<td>" . $row["Description"] . "</td>";
-                                echo "<td><form id='borrow' action='borrow.php' method='post'><input id='borrow' type='submit' name='Borrow' value='Borrow'></form></td>";
+
                             }
                             print "</table>\n";
                         }
