@@ -103,7 +103,7 @@ header("Location:index.html");
 
 
 
-                                echo "{$title}{$platform}";
+                                echo "working";
                             }
                         }
                     }
