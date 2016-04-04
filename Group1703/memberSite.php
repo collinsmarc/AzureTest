@@ -1,7 +1,7 @@
-<?session_start();
-if(!isset($_SESSION['username'])){
-header("Location:index.html");
-}?>
+<? session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location:index.html");
+} ?>
 
 <!DOCTYPE html>
 
@@ -22,21 +22,22 @@ header("Location:index.html");
         </div>
 
 
-<div id="menu">
-    <form action="results.php" method="post">
-        <ul>
-            <li><a href="index.html">Homepage</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="Search.php">Search</a></li>
-            <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo"
-                                                                                                         type="submit"
-                                                                                                         value="Go">
-            </li>
-        </ul>
-    </form>
-    <br class="clearfix"/>
-</div>
+        <div id="menu">
+            <form action="results.php" method="post">
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="Search.php">Search</a></li>
+                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input
+                            id="qsgo"
+                            type="submit"
+                            value="Go">
+                    </li>
+                </ul>
+            </form>
+            <br class="clearfix"/>
+        </div>
     </div>
     <div id="page">
         <div id="content">
@@ -45,21 +46,20 @@ header("Location:index.html");
             <main class="grid container">
                 <section class="grid-65" section id="content1">
                     <article id="welcome">
-                        <h2>Welcome Back <?echo $_SESSION['username'];?></h2>
+                        <h2>Welcome Back <? echo $_SESSION['username']; ?></h2>
                         <h3>What would you like to do today?</h3>
 
                         <p><a href="#">Change Password</a></p>
                         <form name="logout" action="logout.php" method="post">
                             <input id="logoutButton" type="submit" type="submit" value="Log Out">
-                            </form>
-                        </article>
+                        </form>
+                    </article>
                 </section>
 
 
                 <section class="grid-35" section id="content2">
                     <h3>Your Titles</h3>
                     <?php
-
 
 
                     error_reporting(-1);
@@ -74,13 +74,11 @@ header("Location:index.html");
                         echo "Connection failed: " . $e->getMessage();
                     }
 
-                    $user=$_SESSION['username'];
+                    $user = $_SESSION['username'];
 
                     $sql = "SELECT *
                     FROM owns
                     WHERE studentID LIKE $user;";
-
-              
 
 
                     try {
@@ -91,25 +89,18 @@ header("Location:index.html");
                         } else {
 
 
-                            echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
-
-
                             foreach ($results as $row) {
 
 
+                                $id = $row['gameID'];
 
-                              $id=$row['gameID'];
-
-
+                                echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
                                 echo "<tr>";
-                            echo "<td>" . $row["gameID"] . "</td>";
-                            echo "<td>" . $row["game_condition"] . "</td>";
+                                echo "<td>" . $row["gameID"] . "</td>";
+                                echo "<td>" . $row["game_condition"] . "</td>";
                             }
                         }
-                    }
-
-
-                     catch (PDOException $e) {
+                    } catch (PDOException $e) {
                         echo "Query failed: " . $e->getMessage();
                     }
                     $conn = null;
@@ -124,7 +115,7 @@ header("Location:index.html");
             </main>
 
         </div>
-        <br class="clearfix" />
+        <br class="clearfix"/>
     </div>
     <div id="footer">
         &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
