@@ -76,11 +76,11 @@ header("Location:index.html");
 
                     $user=$_SESSION['username'];
 
-                    $sql = "SELECT gamecollection.Title, gamecollection.Platform
-                    FROM gamecollection
+                    $sql = "SELECT *
+                    FROM gameCollection
                     INNER JOIN owns
-                    ON gamecollection.GameID=owns.gameID
-                    AND owns.studentID LIKE '1510646'";
+                    ON gameCollection.GameID=owns.gameID
+                    AND owns.studentID LIKE $user";
               
 
 
@@ -90,10 +90,8 @@ header("Location:index.html");
                         if ($results->rowcount() == 0) {
                             echo "no games added <br />";
                         } else {
-                            $id = $row['gameID'];
 
-
-                           $title=$row['Title'];
+                            $title=$row['Title'];
                             $platform=$row['Platform'];
 
                             echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
@@ -103,7 +101,7 @@ header("Location:index.html");
 
 
 
-                                echo "$title";
+                                echo "{$title}{$platform}";
                             }
                         }
                     }
