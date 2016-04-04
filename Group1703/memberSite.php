@@ -94,7 +94,7 @@ header("Location:index.html");
 
                                 $id = $row['GameID'];
 
-                                echo "{$id}";
+                                echo "working";
                             }
                         }
                     }
