@@ -90,27 +90,15 @@ header("Location:index.html");
                             echo "no games added <br />";
                         } else {
 
-                            $gameIDgrab=$row['gameID'];
-
-                            $query = "SELECT *
-                    FROM gamecollection
-                    WHERE GameID LIKE $gameIDgrab;";
-
-                            $results = $conn->query($query);
-
-
-
-                            $title=$row['Title'];
-                            $platform=$row['Platform'];
 
                             echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
 
 
                             foreach ($results as $row) {
+                              $id=$row['gameID'];
 
 
-
-                                echo "{$title}{$platform}";
+                                echo "{$id}";
                             }
                         }
                     }
