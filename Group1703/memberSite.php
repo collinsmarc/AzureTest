@@ -91,7 +91,7 @@ header("Location:index.html");
                             echo "no games added <br />";
                         } else {
                             $id = $row['gameID'];
-                            $studid=$row['studentID'];
+
 
                            $title=$row['Title'];
                             $platform=$row['Platform'];
@@ -103,7 +103,7 @@ header("Location:index.html");
 
 
 
-                                echo "working";
+                                echo "$title";
                             }
                         }
                     }
