@@ -95,10 +95,15 @@ header("Location:index.html");
 
 
                             foreach ($results as $row) {
+
+
+
                               $id=$row['gameID'];
 
 
-                                echo "{$id}";
+                                echo "<tr>";
+                            echo "<td>" . $row["gameID"] . "</td>";
+                            echo "<td>" . $row["game_condition"] . "</td>";
                             }
                         }
                     }
