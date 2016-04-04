@@ -59,7 +59,7 @@ if(!isset($_SESSION['username'])){
             <main>
                 <section id="DropAddMenu">
                     <h3> Add your Game</h3>
-<form action="AddCopy.php" method="post ">
+<form name="addingCopy" method="post" action="AddCopy.php">
     <select name="Titles">
 
                            <?php
