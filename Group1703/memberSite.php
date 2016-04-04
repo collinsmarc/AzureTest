@@ -90,7 +90,7 @@ header("Location:index.html");
                             echo "<th>Title</th><th>Platform</th>";
 
 
-                            foreach ($result as $row) {
+                            foreach ($results as $row) {
 
                                 $id = $row['GameID'];
 
