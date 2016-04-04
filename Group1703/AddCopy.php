@@ -1,65 +1,43 @@
 <? session_start();
 if (!isset($_SESSION['username'])) {
     header("Location:index.html");
-} ?>
-
-<!DOCTYPE html>
 
 
-<head>
-    <link rel="stylesheet" type="text/css" href="design.css"/>
-    <link rel="stylesheet"
-          href="unsemantic-grid-responsive-tablet.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
-</head>
+    error_reporting(-1);
+
+    $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+    $username = "b52b6c6935c6d2";
+    $password = "26ebeed0";
+    try {
+        $conn = new PDO($dsn, $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);;
+
+        $query = "SELECT * FROM gamecollection
+                   WHERE Title = '" . $POST['Titles'] . "'";
+
+        $conn->exec($query);
+
+        $gameID = $row['GameID'];
+        $id = $_SESSION['username'];
+        $condition = $POST['conditionGame'];
 
 
-<body>
-<div id="wrapper">
-    <div id="header">
-        <div id="logo">
-            <h1><strong><font size="20">GameShare RGU</font></strong></h1>
-        </div>
+        $sql = "";
 
 
-        <div id="menu">
-            <form action="results.php" method="post">
-                <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="Search.php">Search</a></li>
-                    <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input
-                            id="qsgo"
-                            type="submit"
-                            value="Go">
-                    </li>
-                </ul>
-            </form>
-            <br class="clearfix"/>
-        </div>
-    </div>
-    <div id="page">
-        <div id="content">
+        $sql = "INSERT INTO owns (gameID,studentID,game_condition) VALUES ('$gameID','$id','$condition')";
 
+        $conn->exec($sql);
+        echo "New record created successfully";
 
-            <main class="grid container">
-                <section class="grid-65" section id="content1">
-                
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
 
-                </section>
-            </main>
+    $conn = null;
 
-        </div>
-        <br class="clearfix"/>
-    </div>
-    <div id="footer">
-        &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
-    </div>
-</div>
-</body>
-</html>
-
+}
+            ?>
 
 
 
