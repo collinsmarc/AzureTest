@@ -76,7 +76,7 @@ header("Location:index.html");
                     
                     $user=$_SESSION['username'];
 
-                   $query = "SELECT * FROM owns WHERE studentID = $user";
+                   $query = "SELECT * FROM owns WHERE studentID = '1510646'";
                     try {
                         $results = $conn->query($query);
 
