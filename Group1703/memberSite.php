@@ -76,9 +76,17 @@ if (!isset($_SESSION['username'])) {
 
                     $user = $_SESSION['username'];
 
-                    $sql = "SELECT *
+                   /* $sql = "SELECT *
                     FROM owns
-                    WHERE studentID LIKE $user;";
+                    INNER JOIN gamecollection ON
+                    WHERE studentID LIKE $user;";*/
+
+
+
+          $sql = "SELECT * FROM owns
+        INNER JOIN gamecollection
+        ON owns.gameID = gamecollection.GameID
+        WHERE Users.Username = '" . $user ."'";
 
 
                     try {
@@ -94,7 +102,7 @@ if (!isset($_SESSION['username'])) {
                                 echo "<th>game ID</th><th>Condition</th>";
                                 foreach ($results as $row) {
                                     echo "<tr>";
-                                    echo "<td>" . $row["gameID"] . "</td>";
+                                    echo "<td>" . $row["Title"] . "</td>";
                                     echo "<td>" . $row["game_condition"] . "</td>";
 
                                 }
