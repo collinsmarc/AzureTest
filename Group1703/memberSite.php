@@ -90,15 +90,15 @@ if (!isset($_SESSION['username'])) {
 
 
 
-                                /*print "<table id='results'>\n";
-                                echo "<th>game ID</th><th>Condition</th>";*/
+                                print "<table id='results'>\n";
+                                echo "<th>game ID</th><th>Condition</th>";
                                 foreach ($results as $row) {
                                     echo "<tr>";
                                     echo "<td>" . $row["gameID"] . "</td>";
                                     echo "<td>" . $row["game_condition"] . "</td>";
 
                                 }
-//                                print "</table>\n";
+                               print "</table>\n";
 
 
                             }
