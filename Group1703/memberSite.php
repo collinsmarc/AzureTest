@@ -95,8 +95,8 @@ if (!isset($_SESSION['username'])) {
                                 foreach ($results as $row) {
                                     echo "<tr>";
                                     echo "<td>" . $row["gameID"] . "</td>";
-                                    echo "<td>" . $row["Condition"] . "</td>";
-                                   
+                                    echo "<td>" . $row["game_condition"] . "</td>";
+
                                 }
                                 print "</table>\n";
 
