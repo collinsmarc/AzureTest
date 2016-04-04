@@ -76,12 +76,15 @@ header("Location:index.html");
 
                     $user=$_SESSION['username'];
 
-                    $query = "SELECT * FROM owns WHERE studentID LIKE '$user'";
+                    $sql = "SELECT gameCollection.Title, gameCollection.Platform
+                    FROM gameCollection, owns
+                    WHERE gameCollection.GameID=owns.gameID
+                    AND owns.studentID LIKE $user";
+              
 
-                  
 
                     try {
-                        $results = $conn->query($query);
+                        $results = $conn->query(sql);
 
                         if ($results->rowcount() == 0) {
                             echo "no games added <br />";
@@ -89,10 +92,7 @@ header("Location:index.html");
                             $id = $row['gameID'];
                             $studid=$row['studentID'];
 
-                            $query2="SELECT * FROM gameCollection WHERE gameID LIKE '$id'";
-                            $results2 = $conn->query($query2);
-
-                            $title=$row['Title'];
+                           $title=$row['Title'];
                             $platform=$row['Platform'];
 
                             echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
@@ -102,7 +102,7 @@ header("Location:index.html");
 
 
 
-                                echo "{$id}{$studid}{$title}{$platform}";
+                                echo "{$title}{$platform}";
                             }
                         }
                     }
