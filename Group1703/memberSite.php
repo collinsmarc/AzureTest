@@ -75,7 +75,7 @@ header("Location:index.html");
                     }
 
                     $user=$_SESSION['username'];
-                    $query = "SELECT * FROM gamecollection WHERE studentID Like '$user'";
+                    $query = "SELECT * FROM owns WHERE studentID Like '$user'";
                   
 
                     try {
