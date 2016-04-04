@@ -17,7 +17,7 @@ if(!isset($_SESSION['username'])) {
 
 
         $sql = "DELETE FROM owns
-WHERE studentID='$id'";
+        WHERE studentID LIKE '$id'";
 
         $conn->exec($sql);
        
