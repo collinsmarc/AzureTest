@@ -76,7 +76,7 @@ header("Location:index.html");
 
                     $user=$_SESSION['username'];
                     $user2='1510646';
-                    $query = "SELECT * FROM owns WHERE studentID = '$user2'";
+                    $query = "SELECT * FROM owns WHERE studentID LIKE '$user2'";
                   
 
                     try {
