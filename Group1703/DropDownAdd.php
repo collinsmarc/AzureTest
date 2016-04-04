@@ -101,13 +101,15 @@ if(!isset($_SESSION['username'])){
 
     </select>
     <br>
+    <input type="text" name="conditionGame" placeholder="Enter Condition of Game">
+    <br>
     <input type="submit" value="Select Game">
                     </form>
                     </section>
 
                 <section id="NewGame">
                     <br><br>
-                <a href="newEntryGameForm.php">Title not there? Add New Game </a>
+                <a href="newEntryGame.php">Title not there? Add New Game </a>
 
 
                     </section>
