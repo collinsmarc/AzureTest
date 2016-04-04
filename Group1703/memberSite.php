@@ -76,16 +76,16 @@ header("Location:index.html");
 
                     $user=$_SESSION['username'];
 
-                    $sql = "SELECT gameCollection.Title, gameCollection.Platform
-                    FROM gameCollection
+                    $sql = "SELECT gamecollection.Title, gamecollection.Platform
+                    FROM gamecollection
                     INNER JOIN owns
-                    ON gameCollection.GameID=owns.gameID
+                    ON gamecollection.GameID=owns.gameID
                     AND owns.studentID LIKE $user";
               
 
 
                     try {
-                        $results = $conn->query(sql);
+                        $results = $conn->query($sql);
 
                         if ($results->rowcount() == 0) {
                             echo "no games added <br />";
