@@ -90,14 +90,17 @@ if (!isset($_SESSION['username'])) {
 
 
                             foreach ($results as $row) {
+                                print "<table id='results'>\n";
+                                echo "<th>game ID</th><th>Condition</th>";
+                                foreach ($results as $row) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row["gameID"] . "</td>";
+                                    echo "<td>" . $row["Condition"] . "</td>";
+                                   
+                                }
+                                print "</table>\n";
 
 
-                                $id = $row['gameID'];
-
-                                echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
-                                echo "<tr>";
-                                echo "<td>" . $row["gameID"] . "</td>";
-                                echo "<td>" . $row["game_condition"] . "</td>";
                             }
                         }
                     } catch (PDOException $e) {
