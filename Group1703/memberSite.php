@@ -77,10 +77,9 @@ header("Location:index.html");
                     $user=$_SESSION['username'];
 
                     $sql = "SELECT *
-                    FROM gameCollection
-                    INNER JOIN owns
-                    ON gameCollection.GameID=owns.gameID
-                    AND owns.studentID LIKE $user";
+                    FROM owns
+                    WHERE studentID LIKE $user;";
+
               
 
 
@@ -90,6 +89,16 @@ header("Location:index.html");
                         if ($results->rowcount() == 0) {
                             echo "no games added <br />";
                         } else {
+
+                            $gameIDgrab=$row['gameID'];
+
+                            $query = "SELECT *
+                    FROM gamecollection
+                    WHERE GameID LIKE $gameIDgrab;";
+
+                            $results = $conn->query($query);
+
+
 
                             $title=$row['Title'];
                             $platform=$row['Platform'];
