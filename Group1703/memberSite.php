@@ -77,8 +77,9 @@ header("Location:index.html");
                     $user=$_SESSION['username'];
 
                     $sql = "SELECT gameCollection.Title, gameCollection.Platform
-                    FROM gameCollection, owns
-                    WHERE gameCollection.GameID=owns.gameID
+                    FROM gameCollection
+                    INNER JOIN owns
+                    ON gameCollection.GameID=owns.gameID
                     AND owns.studentID LIKE $user";
               
 
