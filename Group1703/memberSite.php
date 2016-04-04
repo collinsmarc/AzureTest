@@ -94,7 +94,7 @@ header("Location:index.html");
 
                                 $id = $row['GameID'];
 
-                                echo "working";
+                                echo "$id";
                             }
                         }
                     }
@@ -106,7 +106,7 @@ header("Location:index.html");
                     $conn = null;
 
                     ?>
-
+                    <br><br>
                     <a href="addTitlePlatform.php">Add Title</a>
                     <br><br><br><br><br><br>
                     <h3>Your Loans</h3>
