@@ -24,7 +24,7 @@ try {
     $desc= $_POST['desc'];
 
 
-    $sql = "INSERT INTO gamecollection (GameID, Title, year, Genre, Platform, Age Rating, Description) VALUES ('46','$title', '$year', '$genre', '$platform', '15',$desc)";
+    $sql = "INSERT INTO gamecollection (GameID, Title, Year, Genre, Platform, Age Rating, Description) VALUES ('46','test', '2015', 'Action', 'PS4', '15','test')";
 
     $conn->exec($sql);
     echo "New record created successfully";
