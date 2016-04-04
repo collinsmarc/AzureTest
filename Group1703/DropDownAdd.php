@@ -103,7 +103,7 @@ if(!isset($_SESSION['username'])){
     <br>
     <input type="text" name="conditionGame" placeholder="Enter Condition of Game">
     <br>
-    <input type="submit"input id='borrow' value="Select Game">
+    <input type="submit"input id='borrow' value="Add">
                     </form>
                     </section>
 
