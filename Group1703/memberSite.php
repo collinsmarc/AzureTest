@@ -75,8 +75,8 @@ header("Location:index.html");
                     }
 
                     $user=$_SESSION['username'];
-                    $user2='1510646';
-                    $query = "SELECT * FROM owns WHERE studentID LIKE '$user2'";
+
+                    $query = "SELECT * FROM owns WHERE studentID LIKE '$user'";
                   
 
                     try {
@@ -87,14 +87,15 @@ header("Location:index.html");
                         } else {
 
 
-                            echo "<th>Title</th><th>Platform</th>";
+                            echo "<th>Title</th> &nbsp;&nbsp;<th>Platform</th>";
 
 
                             foreach ($results as $row) {
 
-                                $id = $row['GameID'];
+                                $id = $row['gameID'];
+                                $studid=$row['studentID'];
 
-                                echo "$id";
+                                echo "{$id}{$studid}";
                             }
                         }
                     }
