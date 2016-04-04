@@ -17,16 +17,16 @@ if(!isset($_SESSION['username'])) {
 
 
         $sql = "DELETE FROM owns
-WHERE studentID='$id' AND gameID='$gameID'";
+WHERE studentID='$id'";
 
         $conn->exec($sql);
-        header('Location: memberSite.php');
+       
 
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
 
     $conn = null;
-
+    header('Location: memberSite.php');
 }
 ?>
