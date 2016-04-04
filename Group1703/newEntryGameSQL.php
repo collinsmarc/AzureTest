@@ -9,7 +9,7 @@ try {
     $conn = new PDO($dsn, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "";
+   /* $sql = "";
 
     $title = $_POST['title'];
 
@@ -26,7 +26,7 @@ try {
 
     $sql = "INSERT INTO gamecollection (GameID, Title, Year, Genre, Platform, Age Rating, Description) VALUES ('46','test', '2015', 'Action', 'PS4', '15','test')";
 
-    $conn->exec($sql);
+    $conn->exec($sql);*/
     echo "New record created successfully";
     header("Location:memberSite.php");
 
