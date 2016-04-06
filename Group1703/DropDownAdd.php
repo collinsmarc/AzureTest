@@ -10,7 +10,11 @@ if(!isset($_SESSION['username'])){
 
 <head>
     <link rel="stylesheet" type="text/css" href="design.css"/>
+    <link rel="stylesheet"
+          href="unsemantic-grid-responsive-tablet.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 </head>
+
 
 <body>
 <div id="wrapper">
@@ -52,8 +56,10 @@ if(!isset($_SESSION['username'])){
     <div id="page">
         <div id="content">
 
-
-<form>
+            <main>
+                <section id="DropAddMenu">
+                    <h3> Add your Game</h3>
+<form name="addingCopy" method="post" action="AddCopy.php">
     <select name="Titles">
 
                            <?php
@@ -94,11 +100,19 @@ if(!isset($_SESSION['username'])){
                             ?>
 
     </select>
-
-
-
-
+    <br>
+    <input type="text" name="conditionGame" placeholder="Enter Condition of Game">
+    <br>
+    <input type="submit"input id='borrow' value="Add">
                     </form>
+                    </section>
+
+                <section id="NewGame">
+                    <br><br>
+                <a href="newEntryGame.php">Title not there? Add New Game </a>
+
+
+                    </section>
 
 
 
