@@ -1,4 +1,7 @@
-<?php
+<? session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location:index.html");}
+
 
 error_reporting(-1);
 
@@ -11,20 +14,10 @@ try {
 
     $sql = "";
 
-    $title = $_POST['title'];
+    $id=$_SESSION['username'];
+    $condition=$_POST['conditionGame'];
 
-    $year = $_POST['year'];
-
-    $genre = $_POST['genre'];
-
-    $platform = $_POST['platform'];
-
-    $age = $_POST['age'];
-
-    $desc= $_POST['desc'];
-
-
-    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('46','1510646','1','brand new')";
+    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('46','$id','1','$condition')";
 
 
     $conn->exec($sql);
