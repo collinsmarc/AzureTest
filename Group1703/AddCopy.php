@@ -12,29 +12,20 @@ try {    $conn = new PDO($dsn, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "";
+    $query = "";
 
     $id=$_SESSION['username'];
     $condition=$_POST['conditionGame'];
     $gameID=$_POST['Titles'];
-/*    $title=$_POST['Titles'];
-
-    $platform = $_POST['platformSelectDrop'];
-    if (!isset($platform)) {
-        $platform = '%';
-    }
 
 
 
+    $query = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns WHERE gameID LIKE '$gameID')";
+    $copy = $conn->exec($query);
+    $copy += 1;
 
-    $query = "SELECT * FROM gamecollection WHERE Platform Like '$platform' AND Title LIKE '$title'";
-    $result = $conn->query($query);
-    foreach($result as $row) {
 
-        $Gameid = $row['GameID'];
-
-    }*/
-
-    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','1','$condition')";
+    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','$copy','$condition')";
 
 
     $conn->exec($sql);
