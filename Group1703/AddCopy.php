@@ -12,33 +12,30 @@ if (!isset($_SESSION['username'])) {
         $conn = new PDO($dsn, $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);;
 
-        /*$sql = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns INNER JOIN gamecollection
-                ON owns.gameID = gamecollection.GameID
-                WHERE gamecollection.Title = '" . $_POST['Titles'] . "')";
+        /*   /*$sql = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns INNER JOIN gamecollection
+                   ON owns.gameID = gamecollection.GameID
+                   WHERE gamecollection.Title = '" . $_POST['Titles'] . "')";
 
 
-        $copyID = 0;
+           $copyID = 0;
 
-        try {
-            $results = $conn->query($sql);
+           try {
+               $results = $conn->query($sql);
 
-            if ($results->rowcount() == 0) {
-               $copyID = 1 ;
-            } else {
-                $copyID = $results + 1;
-            }
-        } catch (PDOException $e) {
-            echo "Query failed: " . $e->getMessage();
-        }*/
+               if ($results->rowcount() == 0) {
+                  $copyID = 1 ;
+               } else {
+                   $copyID = $results + 1;
+               }
+           } catch (PDOException $e) {
+               echo "Query failed: " . $e->getMessage();
+           }*/
 
-        $select = "SELECT gameID FROM gamecollection WHERE gamecollection.Title = '" . $_POST['Titles'] . "')";
-        $gameID = $conn->query($select);
+        /*    $select = "SELECT gameID FROM gamecollection WHERE gamecollection.Title = '" . $_POST['Titles'] . "')";
+            $gameID = $conn->query($select);
 
-        $id = $_SESSION['username'];
-        $condition = $POST['conditionGame'];
-
-
-        $add = "";
+            $id = $_SESSION['username'];
+            $condition = $POST['conditionGame'];*/
 
 
         $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES ('45','1510646','2','test')";
@@ -52,7 +49,6 @@ if (!isset($_SESSION['username'])) {
     }
 
     $conn = null;
-
 }
             ?>
 
