@@ -114,7 +114,7 @@ if (!isset($_SESSION['username'])) {
                         </tr>
                         <tr>
                             <td><label for="age">Age Rating :</label></td>
-                            <td><input id="desc" name="desc" type="text"/></td>
+                            <td><input id="age" name="age" type="text"/></td>
                         </tr>
 
 
