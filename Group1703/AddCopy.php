@@ -20,7 +20,7 @@ try {    $conn = new PDO($dsn, $username, $password);
 
 
 
-    $query = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns WHERE gameID LIKE '$gameID')";
+    $query = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns WHERE gameID LIKE '$gameID') AS maximum";
     $copy = $conn->exec($query);
     $copy += 1;
 
