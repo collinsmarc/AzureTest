@@ -15,8 +15,26 @@ try {    $conn = new PDO($dsn, $username, $password);
 
     $id=$_SESSION['username'];
     $condition=$_POST['conditionGame'];
+    $gameID=$_POST['Titles'];
+/*    $title=$_POST['Titles'];
 
-    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('32','$id','1','$condition')";
+    $platform = $_POST['platformSelectDrop'];
+    if (!isset($platform)) {
+        $platform = '%';
+    }
+
+
+
+
+    $query = "SELECT * FROM gamecollection WHERE Platform Like '$platform' AND Title LIKE '$title'";
+    $result = $conn->query($query);
+    foreach($result as $row) {
+
+        $Gameid = $row['GameID'];
+
+    }*/
+
+    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','1','$condition')";
 
 
     $conn->exec($sql);
