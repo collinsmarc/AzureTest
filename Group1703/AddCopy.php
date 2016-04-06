@@ -41,11 +41,11 @@ if (!isset($_SESSION['username'])) {
         $add = "";
 
 
-        $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES ('$gameID','$id','2','$condition')";
+        $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES ('45','1510646','2','test')";
 
         $conn->exec($add);
         echo "New record created successfully";
-        header("Location:memberSite.php");
+        header("Location:index.html");
 
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
