@@ -20,15 +20,16 @@ try {    $conn = new PDO($dsn, $username, $password);
 
 
 
-    $query = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns WHERE gameID LIKE '$gameID') AS maximum";
-    $copy = $conn->exec($query);
-    $copy += 1;
+    $query = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns WHERE gameID LIKE '$gameID') AS maximum; INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','$copy','$condition')";
+    $conn->exec($query);
+    //$copy += 1;
 
 
-    $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','$copy','$condition')";
+
+   /* $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','$copy','$condition')";*/
 
 
-    $conn->exec($sql);
+    //$conn->exec($sql);
     echo "New record created successfully";
     header("Location:memberSite.php");
 
