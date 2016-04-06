@@ -101,12 +101,12 @@ if (!isset($_SESSION['username'])) {
                                 print "<table id='results'>\n";
                                 echo "<th>Game</th><th>Condition</th><th>Options</th>";
                                 foreach ($results as $row) {
-                                    $chosen=$row['gameID'];
+                                    $chosen=$row['GameID'];
 
                                     echo "<tr>";
                                     echo "<td>" . $row["Title"] . "</td>";
                                     echo "<td>" . $row["game_condition"] . "</td>";
-                                    echo "<td><form id='borrow' action='DeleteCopy.php?title=$chosen method='GET'><input id='borrow' type='submit' name='delete' value='Delete'></form></td>";
+                                    echo "<td><form id='borrow' action='DeleteCopy.php?gameID=$chosen method='GET'><input id='borrow' type='submit' name='delete' value='Delete'></form></td>";
 
                                 }
                                print "</table>\n";
