@@ -18,9 +18,11 @@ try {    $conn = new PDO($dsn, $username, $password);
     $condition=$_POST['conditionGame'];
     $gameID=$_POST['Titles'];
 
-    $inner="(SELECT MAX(copyID) FROM (SELECT IF(copyID IS NULL, 0, copyID) copyID+1 FROM owns WHERE gameID LIKE '$gameID' ) AS maximum)";
+    $max=$max = "(SELECT MAX(copyID) FROM owns WHERE gameID LIKE $gameID)";
 
-    $query = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id',$inner,'$condition')";
+    /*$inner="(SELECT MAX(copyID) FROM (SELECT IF(copyID IS NULL, 0, copyID) copyID FROM owns WHERE gameID LIKE '$gameID' ) AS maximum)";*/
+
+    $query = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id',$max+1,'$condition')";
 
 
 
