@@ -18,9 +18,9 @@ try {    $conn = new PDO($dsn, $username, $password);
     $condition=$_POST['conditionGame'];
     $gameID=$_POST['Titles'];
 
-    $max=$max = "(SELECT MAX(copyID) FROM owns WHERE gameID LIKE $gameID)";
 
-    $inner="(SELECT MAX(copyID) FROM (SELECT IF(copyID IS NULL, 0, copyID) copyID FROM owns WHERE gameID LIKE '$gameID' ) AS maximum)";
+
+    $inner="(SELECT MAX(copyID) FROM (SELECT IF(copyID IS NULL, 1, copyID) copyID FROM owns WHERE gameID LIKE '$gameID' ) AS maximum)";
 
     $query = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id',$inner+1,'$condition')";
 
