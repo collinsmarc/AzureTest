@@ -31,7 +31,7 @@ try {    $conn = new PDO($dsn, $username, $password);
 
     //$conn->exec($sql);
     echo "New record created successfully";
-    header("Location:memberSite.php");
+
 
 
 } catch (PDOException $e) {
