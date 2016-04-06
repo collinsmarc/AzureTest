@@ -1,5 +1,10 @@
+<?session_start();
+if(!isset($_SESSION['username'])){
+    header("Location:index.html");
+}
 
-<?php
+
+
 
 error_reporting(-1);
 
@@ -27,8 +32,10 @@ try {
 
     $sql = "INSERT INTO gamecollection (GameID, Title, Year, Genre, Platform, Age_Rating, Description) VALUES ('46','$title', '$year', '$genre', '$platform', '$age','$desc')";
 
+
     $conn->exec($sql);
-    echo "New record created successfully kjndsafijosdnfgjsdf";
+    echo "New record created successfully";
+    header("Location:memberSite.php");
 
 
 } catch (PDOException $e) {
