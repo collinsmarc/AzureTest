@@ -38,7 +38,7 @@ if (!isset($_SESSION['username'])) {
             $condition = $POST['conditionGame'];*/
 
 
-        $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES ('45','1510646','2','test')";
+        $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES (45,1510646,2,'test')";
 
         $conn->exec($add);
         echo "New record created successfully";
