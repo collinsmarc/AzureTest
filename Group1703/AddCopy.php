@@ -12,9 +12,7 @@ if (!isset($_SESSION['username'])) {
         $conn = new PDO($dsn, $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    } catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+
 
         /*   /*$sql = "SELECT MAX(copyID) FROM (SELECT copyID FROM owns INNER JOIN gamecollection
                    ON owns.gameID = gamecollection.GameID
@@ -42,20 +40,20 @@ if (!isset($_SESSION['username'])) {
             $condition = $POST['conditionGame'];*/
 
 
-        $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES (45,1510646,2,'test')";
+        $sql = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES ('45','1510646','2','test')";
         try {
-            $conn->exec($add);
+            $conn->exec($sql);
             echo "New record created successfully";
             header("Location:index.html");
         } catch (PDOException $e) {
             echo "Query failed: " . $e->getMessage();
         }
-
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
     $conn = null;
 }
             ?>
-hi
-
 
 
 
