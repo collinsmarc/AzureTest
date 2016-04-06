@@ -39,10 +39,13 @@ if (!isset($_SESSION['username'])) {
 
 
         $add = "INSERT INTO owns (gameID,studentID,copyID,game_condition) VALUES (45,1510646,2,'test')";
-
-        $conn->exec($add);
-        echo "New record created successfully";
-        header("Location:index.html");
+        try {
+            $conn->exec($add);
+            echo "New record created successfully";
+            header("Location:index.html");
+        } catch (PDOException $e) {
+        echo "Query failed: " . $e->getMessage();
+    }
 
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
