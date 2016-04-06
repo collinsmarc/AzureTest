@@ -28,7 +28,8 @@ try {
     $sql = "INSERT INTO gamecollection (GameID, Title, Year, Genre, Platform, Age_Rating, Description) VALUES ('46','$title', '$year', '$genre', '$platform', '$age','$desc')";
 
     $conn->exec($sql);
-    echo "New record created successfully";
+    echo "New record created successfully kjndsafijosdnfgjsdf";
+
 
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
