@@ -1,53 +1,45 @@
 <? session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location:index.html");}
+    header("Location:index.html");
 
 
-error_reporting(-1);
+    error_reporting(-1);
 
-$dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
-$username = "b52b6c6935c6d2";
-$password = "26ebeed0";
-try {    $conn = new PDO($dsn, $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
+    $username = "b52b6c6935c6d2";
+    $password = "26ebeed0";
+    try {
+        $conn = new PDO($dsn, $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);;
 
-    $sql = "";
-    $query = "";
+        $query = "SELECT * FROM gamecollection
+                   WHERE Title = '" . $POST['Titles'] . "'";
 
-    $id=$_SESSION['username'];
-    $condition=$_POST['conditionGame'];
-    $gameID=$_POST['Titles'];
+        $conn->exec($query);
 
-
-
-    $inner="(SELECT MAX(copyID) FROM (SELECT IF(copyID IS NULL, 1, copyID) copyID FROM owns WHERE gameID LIKE '$gameID' ) AS maximum)";
-
-    $query = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id',$inner+1,'$condition')";
+        $gameID = $row['GameID'];
+        $id = $_SESSION['username'];
+        $condition = $POST['conditionGame'];
 
 
+        $sql = "";
 
 
+        $sql = "INSERT INTO owns (gameID,studentID,game_condition) VALUES ('$gameID','$id','$condition')";
+
+        $conn->exec($sql);
+        echo "New record created successfully";
 
 
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
 
-
-
-    $conn->exec($query);
-    //$copy += 1;
-
-
-
-   /* $sql = "INSERT INTO owns (gameID, studentID, copyID, game_condition) VALUES ('$gameID','$id','$copy','$condition')";*/
-
-
-    //$conn->exec($sql);
-    echo "New record created successfully";
-
-
-
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    $conn = null;
+    header("Location:memberSite.php");
 }
+            ?>
 
-$conn = null;
-?>
+
+
+
