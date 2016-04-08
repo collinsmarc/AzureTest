@@ -72,11 +72,11 @@ if (!isset($_SESSION['username'])) {
                         $id = $_SESSION['username'];
                         $condition = $POST['conditionGame'];
 
-
+                        unset($query);
                         $sql = "";
 
 
-                        $sql = "INSERT INTO owns (gameID,studentID,game_condition) VALUES ('$gameID','$id','$condition')";
+                        $query = "INSERT INTO owns (gameID,studentID,game_condition) VALUES ('$gameID','$id','$condition')";
 
                         $conn->exec($sql);
                         echo "New record created successfully";
@@ -93,7 +93,7 @@ if (!isset($_SESSION['username'])) {
 
 
                     ?>
-                    
+
                     <form>
                         <form id="borrow"input type="submit" value="Back"
                     </form>
