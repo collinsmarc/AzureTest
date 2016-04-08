@@ -78,7 +78,7 @@ if (!isset($_SESSION['username'])) {
 
                         $query = "INSERT INTO owns (gameID,studentID,game_condition) VALUES ('$gameID','$id','$condition')";
 
-                        $conn->exec($sql);
+                        $conn->exec($query);
                         echo "New record created successfully";
 
 
