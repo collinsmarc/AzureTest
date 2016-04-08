@@ -141,13 +141,11 @@ if (!isset($_SESSION['username'])) {
 
         </div>
     </div>
+    <br class="clearfix" />
 </div>
-<br class="clearfix"/>
-
 <div id="footer">
     &copy; 2016. All rights reserved. Design by <strong>GROUP C</strong>.
 </div>
 </div>
 </body>
-
-
+</html>
