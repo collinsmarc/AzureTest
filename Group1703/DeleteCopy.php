@@ -18,7 +18,7 @@ try {
     $id=$_SESSION['username'];
     $game=$_GET["gameID"];
 
-    $sql = "DELETE FROM owns WHERE studentID LIKE $id AND gameID LIKE $game";
+    $sql = "DELETE FROM owns WHERE studentID LIKE $id";
 
 
     $conn->exec($sql);
