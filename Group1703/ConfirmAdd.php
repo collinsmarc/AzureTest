@@ -44,14 +44,15 @@ if (!isset($_SESSION['username'])) {
 
 
             <main>
-                <h3> Are you sure you wish to add your copy of <? echo $_POST['title']?> <h3>
+                <? $title=$_POST['title']?>
+                <h3> Are you sure you wish to add your copy of <? print $title?> <h3>
 
 
 
 
 
 
-                    <form id="borrow">
+                    <form name="borrow">
                     <input type="submit" value="Confirm">
 
                 </form>
