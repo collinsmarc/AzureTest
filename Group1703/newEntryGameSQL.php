@@ -30,7 +30,7 @@ try {
     $desc= $_POST['desc'];
 
 
-    $sql = "INSERT INTO gamecollection (Title, Year, Genre, Platform, Age_Rating, Description) VALUES ($title', '$year', '$genre', '$platform', '$age','$desc')";
+    $sql = "INSERT INTO gamecollection (Title, Year, Genre, Platform, Age_Rating, Description) VALUES ('$title', '$year', '$genre', '$platform', '$age','$desc')";
 
 
     $conn->exec($sql);
