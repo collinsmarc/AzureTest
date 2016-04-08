@@ -106,7 +106,7 @@ if (!isset($_SESSION['username'])) {
                                     echo "<tr>";
                                     echo "<td>" . $row["Title"] . "</td>";
                                     echo "<td>" . $row["game_condition"] . "</td>";
-                                    echo "<td><form id='borrow' action='DeleteCopy.php?gameID=$chosen method='GET'><input id='borrow' type='submit' name='delete' value='Delete'></form></td>";
+                                    echo "<td><form id='borrow' action='DeleteCopy.php?gameID=<?=$chosen;?> method='GET'><input id='borrow' type='submit' name='delete' value='Delete'></form></td>";
 
                                 }
                                print "</table>\n";
