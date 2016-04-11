@@ -16,18 +16,21 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $id=$_SESSION['username'];
-    $game=$_GET["gameID"];
+    $game=$row["GameID"];
 
-    $sql = "DELETE FROM owns WHERE studentID LIKE $id AND gameID LIKE $game";
+
+    $sql = "DELETE FROM owns WHERE studentID LIKE $id AND gameID LIKE $game ";
 
 
     $conn->exec($sql);
     echo "New record created successfully";
+    header("Location:memberSite.php");
 
 
 
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
+    
 }
 
 $conn = null;

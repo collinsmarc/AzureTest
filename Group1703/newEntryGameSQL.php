@@ -3,9 +3,6 @@ if(!isset($_SESSION['username'])){
     header("Location:index.html");
 }
 
-
-
-
 error_reporting(-1);
 
 $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
@@ -30,12 +27,12 @@ try {
     $desc= $_POST['desc'];
 
 
-    $sql = "INSERT INTO gamecollection (GameID,Title, Year, Genre, Platform, Age_Rating, Description) VALUES ('47','$title', '$year', '$genre', '$platform', '$age','$desc')";
+    $sql = "INSERT INTO gamecollection (Title, Year, Genre, Platform, Age_Rating, Description) VALUES ('$title', '$year', '$genre', '$platform', '$age','$desc')";
 
 
     $conn->exec($sql);
     echo "New record created successfully";
-    header("Location:memberSite.php");
+    header("Location:ConfirmAdd.php");
 
 
 } catch (PDOException $e) {
