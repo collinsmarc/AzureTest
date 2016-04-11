@@ -3,12 +3,8 @@
 session_start();
 
 
-$username=$_POST["username"];
-$password=$_POST["password"];
-
-
-$_SESSION['username']=$username;
-$_SESSION['password']=$password;
+$_SESSION['username']=$_POST["username"];
+$_SESSION['password']=$_POST["password"];
 
 if (isset($_SESSION['username'])){
     set_session('access_level','standarduser');
