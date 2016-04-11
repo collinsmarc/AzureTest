@@ -6,7 +6,7 @@ session_start();
 $_SESSION['username']=$_POST["username"];
 $_SESSION['password']=$_POST["password"];
 
-if (isset($_SESSION['username'])){
+if (isset($_SESSION['username'=="marc"])){
     set_session('access_level','standarduser');
     header("Location:Homepage.php");
 }
