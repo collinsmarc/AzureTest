@@ -1,8 +1,8 @@
 <?php
 
 
-$title=$_POST["title"];
-$content=$_POST["content"];
+$title=$_POST["Title"];
+$content=$_POST["Content"];
 $animal=$_POST["animal"];
 
 echo "<article>
