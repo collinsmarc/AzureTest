@@ -5,7 +5,7 @@ $one=$_GET["query"];
 $two=$_GET["type"];
 $three=$_GET["soda"];
 
-echo "<p> Answer is{$one}{$two}{$three}</p>";
+echo "<ul> <li>{$one}</li><li>{$two}</li><li>{$three}</li></ul>";
 
 ?>
 
