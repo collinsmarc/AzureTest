@@ -1,9 +1,9 @@
 <?php
 
 
-$title=$_GET["title"];
-$content=$_GET["content"];
-$animal=$_GET["animal"];
+$title=$_POST["title"];
+$content=$_POST["content"];
+$animal=$_POST["animal"];
 
 echo "<article>
 <h1>{$title}</h1><br>
