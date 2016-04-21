@@ -73,6 +73,8 @@ try {
             //Finally the mail is sent
             $result = $mailer->send($message);
 
+        header("Location:memberSite.php");
+
 
     }
 
