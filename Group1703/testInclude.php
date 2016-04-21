@@ -12,5 +12,7 @@ $email->addTo("1510646@rgu.ac.uk")
     ->setHtml("and easy to do anywhere, even with PHP");
 
 $sendgrid->send($email);
+
+echo "Email sent";
 ?>
 
