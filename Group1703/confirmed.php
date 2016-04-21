@@ -5,9 +5,7 @@ if(!isset($_SESSION['username'])){
     header("Location:home.php");
 }
 //email to volunteer function
-function request_game()
-{
-
+//
 try {
     $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
     $username = "b52b6c6935c6d2";
@@ -16,7 +14,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $sql = "SELECT gameCollection.Title, owns.copyID, members.firstName, members.lastName, members.email
+    /*$sql = "SELECT gameCollection.Title, owns.copyID, members.firstName, members.lastName, members.email
             FROM gameCollection INNER JOIN owns ON owns.GameID = gameCollection.gameID INNER JOIN members ON owns.studentID = members.studentID";
 
     $results = $conn->exec($sql);
@@ -25,17 +23,18 @@ try {
         $id = $row['copyID'];
         $first = $row['firstName'];
         $lastname = $row['lastName'];
-        $email = $row['email'];
+        $email = $row['email'];*/
 
 
 //email to volunteer function
         //function request_game()
         //{
 
-            $name = $first . " " . $lastname;
+          /*  $name = $first . " " . $lastname;*/
 
             //email subject
             $subject = 'You have received a borrow request';
+         $name=$_SESSION['username'];
 
 
             //email body in html
@@ -43,10 +42,7 @@ try {
             $txt = 'Hi '.$name.', <br>You have received a request to borrow one of your games. Please see the details below.
                 <table>
                     <th>Title</th><th>Copy ID</th><th>BorrowerID</th>
-                    <td>'.$title = $row["Title"].'</td>
-                    <td>'.$id = $row["copyID"].'</td>
-                    <td>'.$_SESSION['username'].'</td>
-                </table>
+                    <td>
                 <br>Please contact the user using there RGU email which is: '.$_SESSION['username'].'@rgu.ac.uk.
                 <br>If you agree upon a loan, then please remember to update the availability of said game on your profile.
                 <br>Regards,<br>   GameShare
@@ -68,7 +64,7 @@ try {
 
             //the message supplies some more detailed info
             $message = Swift_Message::newInstance('You have received a borrow request')
-                ->setFrom(array('Gamesharergu@gmail.com' => 'Webmaster@GameShare'))//shows my name when email arrives
+                ->setFrom(array('gamesharergu@gmail.com' => 'Webmaster@GameShare'))//shows my name when email arrives
                 ->setTo(array($email => $name))//shows volunteer name as linked to their email address
                 ->setBody($txt, "text/html");  //tells swiftmailer that we're using html text
 
@@ -77,7 +73,7 @@ try {
 
         header("Location:memberSite.php");
 
-        // using SendGrid's PHP Library
+       /* // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
         require("sendgrid-php/sendgrid-php.php");
         require "config.php";
@@ -91,22 +87,21 @@ try {
             ->setHtml("and easy to do anywhere, even with PHP");
 
         $sendgrid->send($email);
+*/
 
 
 
 
 
 
-    }
 
 } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
-}
+
 
 }
-echo $title;
-echo $id;
 
-//header("Location:memberSite.php");
+
+
 
 ?>
