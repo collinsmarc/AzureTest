@@ -53,11 +53,11 @@ try {
 
 
 
-            //take in the necessary swiftmailer code
+           /* //take in the necessary swiftmailer code
             require_once 'Swiftmailer/lib/swift_required.php';
 
             //this is all swiftmailer magic, using the gmail smtp server of my account...
-            $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465 ,'ssl')
+            $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587 ,'ssl')
                 ->setUsername('gamesharergu@gmail.com')
                 ->setPassword('GamesharegroupC');
 
@@ -73,7 +73,24 @@ try {
             //Finally the mail is sent
             $result = $mailer->send($message);
 
-        header("Location:memberSite.php");
+        header("Location:memberSi.php");*/
+
+        // using SendGrid's PHP Library
+// https://github.com/sendgrid/sendgrid-php
+        require 'vendor/autoload.php';
+        $sendgrid = new SendGrid("SENDGRID_APIKEY");
+        $email    = new SendGrid\Email();
+
+        $email->addTo("1510646@rgu.ac.uk")
+            ->setFrom("gamesharergu@gmail.com ")
+            ->setSubject("Sending with SendGrid is Fun")
+            ->setHtml("and easy to do anywhere, even with PHP");
+
+        $sendgrid->send($email);
+
+
+
+
 
 
     }
