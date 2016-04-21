@@ -6,13 +6,13 @@ $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
     ->setPassword('GamesharegroupC');
 
 $mailer = Swift_Mailer::newInstance($transport);
-$message = Swift_Message::newInstance('THIS IS THE SUBJECT')
-    ->setFrom(array('gamesharergu@gmail.com' => 'YOUR NAME'))
-    ->setTo(array('gamesharergu@gmail.com' => 'YOU'))
+$message = Swift_Message::newInstance('Borrow Request')
+    ->setFrom(array('gamesharergu@gmail.com' => 'GameShare Team'))
+    ->setTo(array('gamesharergu@gmail.com' => 'Valued Gameshare Member'))
     ->setBody('You Have Recieved A Borrow Request @Gameshare Please Check your Portal.
 
-    Thanks
-    Gameshare');
+    Thank You
+    GameShare');
 //$attachment = Swift_Attachment::newInstance(file_get_contents('path/logo.png'), 'logo.png');  
 //$message->attach($attachment);
 $numSent = $mailer->send($message);
