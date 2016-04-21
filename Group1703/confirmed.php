@@ -79,10 +79,10 @@ try {
 
         // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
-        require("config.php");
         require("sendgrid-php/sendgrid-php.php");
+        require "config.php";
 
-        $sendgrid = new SendGrid("f");
+        $sendgrid = new SendGrid($apiKey);
         $email    = new SendGrid\Email();
 
         $email->addTo("1510646@rgu.ac.uk")
