@@ -1,4 +1,6 @@
-<?session_start();
+<?
+
+session_start();
 if(!isset($_SESSION['username'])){
     header("Location:home.php");
 }
@@ -77,8 +79,10 @@ try {
 
         // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
-        require 'vendor/autoload.php';
-        $sendgrid = new SendGrid("SENDGRID_APIKEY");
+        require("config.php");
+        require("sendgrid-php/sendgrid-php.php");
+
+        $sendgrid = new SendGrid($API);
         $email    = new SendGrid\Email();
 
         $email->addTo("1510646@rgu.ac.uk")
