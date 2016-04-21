@@ -77,7 +77,7 @@ if(!isset($_SESSION['username'])){
             ?>
 
             <table  style="width:300px" >
-                <form  name="search" Method ="post" action = "sendEmail.php.php">
+                <form  name="search" Method ="post" action = "sendEmail.php">
                     <p>Please click confirm if you are happy to borrow copy</p>
                     <input type="submit" name="Confirm" value="Confirm">
                 </form>
