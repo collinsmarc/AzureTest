@@ -56,7 +56,7 @@ try {
 
             //this is all swiftmailer magic, using the gmail smtp server of my account...
             $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587 ,'ssl')
-                ->setUsername('gamesharergu@gmail.com')
+                ->setUsername('marc.collins.08@aberdeen.ac.uk')
                 ->setPassword('GamesharegroupC');
 
             //Creates an instance of the mailer
