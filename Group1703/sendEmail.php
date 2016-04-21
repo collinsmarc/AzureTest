@@ -2,13 +2,13 @@
 require_once 'Swiftmailer/lib/swift_required.php';
 
 $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-    ->setUsername('gamesharergu@gmail.com')
-    ->setPassword('GamesharegroupC');
+    ->setUsername('gameshareteamrgu@gmail.com')
+    ->setPassword('gameshare2016');
 
 $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Borrow Request')
-    ->setFrom(array('gamesharergu@gmail.com' => 'GameShare Team'))
-    ->setTo(array('gamesharergu@gmail.com' => 'Valued Gameshare Member'))
+    ->setFrom(array('gameshareteamrgu@gmail.com' => 'GameShare Team'))
+    ->setTo(array('gameshareteamrgu@gmail.com' => 'Valued Gameshare Member'))
     ->setBody('You Have Recieved A Borrow Request @Gameshare Please Check your Portal.
 
     Thank You
