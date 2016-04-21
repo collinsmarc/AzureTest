@@ -82,7 +82,7 @@ try {
         require("config.php");
         require("sendgrid-php/sendgrid-php.php");
 
-        $sendgrid = new SendGrid($API);
+        $sendgrid = new SendGrid("f");
         $email    = new SendGrid\Email();
 
         $email->addTo("1510646@rgu.ac.uk")
