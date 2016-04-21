@@ -55,7 +55,7 @@ try {
 
 
 
-           /* //take in the necessary swiftmailer code
+           ///take in the necessary swiftmailer code
             require_once 'Swiftmailer/lib/swift_required.php';
 
             //this is all swiftmailer magic, using the gmail smtp server of my account...
@@ -75,7 +75,7 @@ try {
             //Finally the mail is sent
             $result = $mailer->send($message);
 
-        header("Location:memberSi.php");*/
+        header("Location:memberSite.php");
 
         // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
