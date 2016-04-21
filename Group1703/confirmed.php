@@ -54,10 +54,10 @@ try {
 
 
             //take in the necessary swiftmailer code
-            require_once 'swiftmailer/lib/swift_required.php';
+            require_once 'Swiftmailer/lib/swift_required.php';
 
             //this is all swiftmailer magic, using the gmail smtp server of my account...
-            $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587 ,'ssl')
+            $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465 ,'ssl')
                 ->setUsername('gamesharergu@gmail.com')
                 ->setPassword('GamesharegroupC');
 
