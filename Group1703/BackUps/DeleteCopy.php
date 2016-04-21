@@ -15,20 +15,19 @@ try {
     $conn = new PDO($dsn, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $copy=$_GET['Delete'];
+    $id=$_SESSION['username'];
+    $game=$_GET["gameID"];
 
-    $sql = "DELETE FROM owns WHERE copyID = '$copy'";
+    $sql = "DELETE FROM owns WHERE studentID LIKE $id AND gameID LIKE $game";
 
 
     $conn->exec($sql);
     echo "New record created successfully";
-    header("Location:memberSite.php");
 
 
 
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
-    
 }
 
 $conn = null;

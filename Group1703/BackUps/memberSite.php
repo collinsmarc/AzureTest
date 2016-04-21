@@ -1,6 +1,6 @@
 <? session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location:home.php");
+    header("Location:index.html");
 } ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 <head>
     <link rel="stylesheet" type="text/css" href="design.css"/>
     <link rel="stylesheet"
-          href=unsemantic-grid-responsive-tablet.css">
+          href="unsemantic-grid-responsive-tablet.css">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
 </head>
 
@@ -25,9 +25,9 @@ if (!isset($_SESSION['username'])) {
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="home.php">Homepage</a></li>
-                    <li><a href="memberSite.php">Profile</a></li>
-                    <li><a href="forum.php">Forum</a></li>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                     <li><a href="Search.php">Search</a></li>
                     <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input
                             id="qsgo"
@@ -44,7 +44,7 @@ if (!isset($_SESSION['username'])) {
 
 
             <main class="grid container">
-                <section class="grid-50" section id="content1">
+                <section class="grid-65" section id="content1">
                     <article id="welcome">
                         <h2>Welcome Back <? echo $_SESSION['username']; ?></h2>
                         <h3>What would you like to do today?</h3>
@@ -57,7 +57,7 @@ if (!isset($_SESSION['username'])) {
                 </section>
 
 
-                <section class="grid-30"  id="content2">
+                <section class="grid-35" section id="content2">
                     <h3>Your Titles</h3>
                     <?php
 
@@ -75,6 +75,11 @@ if (!isset($_SESSION['username'])) {
                     }
 
                     $user = $_SESSION['username'];
+
+                   /* $sql = "SELECT *
+                    FROM owns
+                    INNER JOIN gamecollection ON
+                    WHERE studentID LIKE $user;";*/
 
 
 
@@ -94,24 +99,14 @@ if (!isset($_SESSION['username'])) {
 
 
                                 print "<table id='results'>\n";
-                                echo "<th>GameID</th><th>Game</th><th>Condition</th><th>Copy ID</th><th>Loan Status</th><th>Options</th>";
+                                echo "<th>Game</th><th>Condition</th><th>Options</th>";
                                 foreach ($results as $row) {
+                                    $chosen=$row['GameID'];
 
                                     echo "<tr>";
-                                    echo "<td>" . $row["GameID"] . "</td>";
                                     echo "<td>" . $row["Title"] . "</td>";
                                     echo "<td>" . $row["game_condition"] . "</td>";
-                                    echo "<td>" . $row["copyID"] . "</td>";
-                                    echo "<td>" . $row["status"] . "</td>";
-                                    echo "<td>
-                                    <form id='Delete' action='DeleteCopy.php?copyID= method='post'>
-                                        <button id='Delete' name='Delete' value='".$row['copyID']."'>Delete</button></form>
-                                    <form id='Update Status' action='UpdateStatus.php?copyID= method='post'>
-                                        <button id='UStatus' name='UStatus' value='".$row['copyID']."'>Update Status</button></form>
-                                    <form id='Update Condition' action='UpdateCondition.php?copyID= method='post'>
-                                        <button id='UCondition' name='UCondition' value='".$row['copyID']."'>Update Condition</button></form>
-                                    </td>";
-
+                                    echo "<td><form id='borrow' action='DeleteCopy.php?gameID=$chosen method='GET'><input id='borrow' type='submit' name='delete' value='Delete'></form></td>";
 
                                 }
                                print "</table>\n";
@@ -129,8 +124,6 @@ if (!isset($_SESSION['username'])) {
                     <a href="addTitlePlatform.php">Add Title</a>
                     <br><br><br><br><br><br>
                     <h3>Your Loans</h3>
-                    <a href="memberLoans.php">Borrows</a>
-                    <a href="memberLends.php">Lends</a>
 
                 </section>
             </main>

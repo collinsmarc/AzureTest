@@ -38,9 +38,9 @@
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="home.php">Homepage</a></li>
-                    <li><a href="memberSite.php">Profile</a></li>
-                    <li><a href="forum.php">Forum</a></li>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                     <li><a href="Search.php">Search</a></li>
                     <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go"></li>
                 </ul>
@@ -108,9 +108,9 @@
                             echo "<td>" . $row["Platform"] . "</td>";
                             echo "<td>" . $row["Genre"] . "</td>";
                             echo "<td>" . $row["Year"] . "</td>";
-                            echo "<td>" . $row["Age Rating"] . "</td>";
+                            echo "<td>" . $row["Age_Rating"] . "</td>";
                             echo "<td>" . $row["Description"] . "</td>";
-                            echo "<td><form id='borrow' action='borrowForm.php?title= method='post'><button id='borrow' name='borrow' value='".$row['Title']."'>Borrow</button></form></td>";
+                            echo "<td><form id='borrow' action='borrow.php' method='post'><input id='borrow' type='submit' name='Borrow' value='Borrow'></form></td>";
                         }
                         print "</table>\n";
                     }

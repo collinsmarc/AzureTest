@@ -1,12 +1,4 @@
-<?session_start();
-if(isset($_SESSION['username'])){
-    header("Location:home.php");
-}?>
-
-
-
-
-<html>
+<!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="design.css"/>
@@ -20,14 +12,22 @@ if(isset($_SESSION['username'])){
         </div>
         <div id="search">
             <Form Name ="login" action="login.php" method="post">
-                <div id="logintext">
+                <? if(!isset($_SESSION['username'])){
+                    echo '
                     <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
                     <a id="register" href="registerDetails.php">Not a member? Register.</a>
-                </div>
+               ';}
+                else{
+                    echo "Logged in as: ".$_SESSION['username'];
+                    echo ' <form name="logout" action="logout.php" method="post">
+                            <input id="logoutButton" type="submit" type="submit" value="Log Out">
+                            </form>';
+                }
+
+                ?>
             </form>
         </div>
         <div id="menu">
-            <form action="results.php" method="post">
                 <ul>
                     <li><a href="home.php">Homepage</a></li>
                     <li><a href="memberSite.php">Profile</a></li>
@@ -42,41 +42,41 @@ if(isset($_SESSION['username'])){
     <div id="page">
         <div id="content">
 
-                <?php
-
-                error_reporting(-1);
-
+                <?
                 $dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
                 $username = "b52b6c6935c6d2";
                 $password = "26ebeed0";
                 try {
-                    $conn = new PDO($dsn, $username, $password);
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                $sql = "";
-
-                $fname = $_POST['Fname'];
-
-                $sname = $_POST['Sname'];
-
-                $stuno = $_POST['stuno'];
-
-                $email = $_POST['email'];
-
-                $password = $_POST['Epassword'];
-
-
-                $sql = "INSERT INTO members (firstName, lastName, email, studentID, password) VALUES ('$fname', '$sname', '$email', '$stuno', '$password')";
-
-                $conn->exec($sql);
-                echo "New record created successfully";
-
+                $conn = new PDO($dsn, $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 } catch (PDOException $e) {
                     echo "Connection failed: " . $e->getMessage();
                 }
 
-                $conn = null;
-            ?>
+                $query = "SELECT postTitle FROM forum ORDER BY postTitle";
+                try {
+                $results = $conn->query($query);
+
+                if ($results->rowcount() == 0) {
+                echo "No posts found <br />";
+                } else {
+
+                    print "<table id='results' width='60%'>\n";
+                    echo "<th>Title</th>";
+                    foreach ($results as $row) {
+                        echo "<tr>";
+                        echo "<td><a href='forumPost.php?post=" . $row["postTitle"] . "'>'" . $row["postTitle"] . "'</td></tr></a>";
+                    }
+                    print "</table>\n";
+                }
+                } catch (PDOException $e) {
+                    echo "Connection failed: " . $e->getMessage();
+                }
+                 ?>
+
+                <a href="forumAdd.php">Add a new post</a>
+
+
         </div>
         <br class="clearfix" />
     </div>
@@ -85,6 +85,6 @@ if(isset($_SESSION['username'])){
     </div>
 </div>
 </body>
+
+
 </html>
-
-

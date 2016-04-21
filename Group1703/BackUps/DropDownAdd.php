@@ -1,6 +1,6 @@
 <?session_start();
 if(!isset($_SESSION['username'])){
-    header("Location:home.php");
+    header("Location:index.html");
 }?>
 
 
@@ -23,7 +23,7 @@ if(!isset($_SESSION['username'])){
             <h1><strong><font size="20">GameShare RGU</font></strong></h1>
         </div>
         <div id="search">
-            <Form Name ="login.php" method="post">
+            <Form Name ="login" action="login.php" method="post">
                 <? if(!isset($_SESSION['username'])){
                     echo '
                     <font size="-2"><label for="username">Username :</label><input id="username" name="username" type="text" size="-2"/><label for="Password">Password :</label><input id="password" name="password" type="password" size="-2"/></font><input class="form-submit" type="submit" value="Login" />
@@ -43,9 +43,9 @@ if(!isset($_SESSION['username'])){
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="home.php">Homepage</a></li>
-                    <li><a href="memberSite.php">Profile</a></li>
-                    <li><a href="forum.php">Forum</a></li>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                     <li><a href="Search.php">Search</a></li>
                     <li><input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go"></li>
                 </ul>

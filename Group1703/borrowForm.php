@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?session_start();
+if(!isset($_SESSION['username'])){
+    header("Location:home.php");
+}?>
 
 <html>
 
@@ -67,50 +70,30 @@
                     echo "Connection failed: " . $e->getMessage();
                 }
 
-                $query = "";
+                $title = $_GET['borrow'];
 
-                $title = $_POST['title'];
-                if (!isset($title)) {
-                    $title = $_POST['qsearch'];
-                        if (!isset($title)) {
-                            $title = '%';
-                        }
-                }
 
-                $platform = $_POST['platform'];
-                if (!isset($platform)) {
-                    $platform = '%';
-                }
-
-                $genre = $_POST['genre'];
-                if (!isset($genre)) {
-                    $genre = '%';
-                }
-
-                $year = $_POST['year'];
-                if (!isset($year)) {
-                    $year = '%';
-                }
-
-                $query = "SELECT * FROM gameCollection WHERE Title LIKE '%$title%' AND Platform Like '$platform' AND Genre Like '%$genre%' AND Year Like '%$year%' ORDER BY Title";
+                $query = "SELECT gameCollection.Title, gameCollection.Platform, owns.studentID, owns.copyID FROM owns INNER JOIN gameCollection ON owns.GameID = gameCollection.gameID WHERE gameCollection.title LIKE '%$title%' AND status = 'Available'";
                 try {
                     $results = $conn->query($query);
 
                     if ($results->rowcount() == 0) {
-                        echo "no games found <br />";
+                        echo "We're sorry, but the game you have requested is currently on loan <br />";
                     } else {
 
-                        print "<table id='results'>\n";
-                        echo "<th>Title</th><th>Platform</th><th>Genre</th><th>Year</th><th id='age'>Age Rating</th><th id='desc'>Description</th><th>Borrow</th>";
+                        print "<table id='borrowTable'>\n";
+                        echo "<th>Title</th><th>Platform</th><th>Student ID</th><th>Copy ID</th><th>Start Date</th><th>End Date</th><th>Borrow</th>";
                         foreach ($results as $row) {
                             echo "<tr>";
                             echo "<td>" . $row["Title"] . "</td>";
-                            echo "<td>" . $row["Platform"] . "</td>";
-                            echo "<td>" . $row["Genre"] . "</td>";
-                            echo "<td>" . $row["Year"] . "</td>";
-                            echo "<td>" . $row["Age Rating"] . "</td>";
-                            echo "<td>" . $row["Description"] . "</td>";
-                            echo "<td><form id='borrow' action='borrowForm.php?title= method='post'><button id='borrow' name='borrow' value='".$row['Title']."'>Borrow</button></form></td>";
+                            echo "<td>" . $row['Platform'] . "</td>";
+                            echo "<td>" . $row["studentID"] . "</td>";
+                            echo "<td>" . $row["copyID"] . "</td>";
+                            echo "<form id='borrow' action='request.php?copy=".$row["copyID"]."' method='POST'>";
+                            echo "<td><input type='text' placeholder='yyyy-mm-dd' id='sdate' name='sdate'></td>";
+                            echo "<td><input type='text' placeholder='yyyy-mm-dd' id='edate' name='edate'></td>";
+                            echo "<td><button id='Request' name='Borrow' value='".$row['copyID']."'>Request</button></form></td>";
+
                         }
                         print "</table>\n";
                     }
@@ -130,5 +113,3 @@
 </div>
 </body>
 </html>
-
-

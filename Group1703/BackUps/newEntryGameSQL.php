@@ -15,9 +15,22 @@ try {
     $conn = new PDO($dsn, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $copy=$_GET['Delete'];
+    $sql = "";
 
-    $sql = "DELETE FROM owns WHERE copyID = '$copy'";
+    $title = $_POST['title'];
+
+    $year = $_POST['year'];
+
+    $genre = $_POST['genre'];
+
+    $platform = $_POST['platform'];
+
+    $age = $_POST['age'];
+    
+    $desc= $_POST['desc'];
+
+
+    $sql = "INSERT INTO gamecollection (GameID,Title, Year, Genre, Platform, Age_Rating, Description) VALUES ('47','$title', '$year', '$genre', '$platform', '$age','$desc')";
 
 
     $conn->exec($sql);
@@ -25,10 +38,8 @@ try {
     header("Location:memberSite.php");
 
 
-
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
-    
 }
 
 $conn = null;

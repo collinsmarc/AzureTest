@@ -1,3 +1,4 @@
+<?php session_start();?>
 
 <!DOCTYPE html>
 <head>
@@ -23,9 +24,9 @@
         <div id="menu">
             <form action="results.php" method="post">
                 <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="home.php">Homepage</a></li>
+                    <li><a href="memberSite.php">Profile</a></li>
+                    <li><a href="forum.php">Forum</a></li>
                     <li><a href="Search.php">Search</a></li>
                     <li>
                         <input id="qsearch" name="qsearch" type="text" placeholder="I want to borrow..."/><input id="qsgo" type="submit"  value="Go">
@@ -55,24 +56,31 @@
                             <br>
                             <section class="grid-65" id="logins">
 
-                                
+                            <? if(!isset($_SESSION['username'])){
+                                echo "
 
-                            <form action='login.php' method='post' accept-charset='UTF-8'>
-                                <fieldset id="loginf">
-                                    <legend><strong><font size="+3">Welcome Back </font></strong></legend>
+                                <form action='login.php' method='post' accept-charset='UTF-8'>
+                                    <fieldset id='loginf'>
+                                        <legend><strong><font size='+3'>Welcome Back </font></strong></legend>
 
-                                    <input type='hidden' name='submitted' id='submitted' value='1'/><br>
+                                        <input type='hidden' name='submitted' id='submitted' value='1'/><br>
 
-                                    &nbsp;<label for='username'>Username*:</label>
-                                    <input type='text' name='username' id='username' maxlength="50"/><br><br>
+                                        &nbsp;<label for='username'>Username*:</label>
+                                        <input type='text' name='username' id='username' maxlength='50'/><br><br>
 
-                                    &nbsp;<label for='password'>Password*:</label>
-                                    <input type='password' name='password' id='password' maxlength="50"/><br><br>
+                                        &nbsp;<label for='password'>Password*:</label>
+                                        <input type='password' name='password' id='password' maxlength='50'/><br><br>
 
-                                    <section><input id="button" type='submit' name='Login' value='Login'></section>
-
-                                </fieldset>
-                            </form>
+                                        <section><input id='button' type='submit' name='Login' value='Login'></section>
+                                    ";}
+                            else{
+                                echo "Logged in as: ".$_SESSION['username'];
+                                echo ' <form name="logout" action="logout.php" method="post">
+                            <input id="logoutButton" type="submit" type="submit" value="Log Out">
+                            </form>';
+                            }?>
+                                    </fieldset>
+                                </form>
                             </section>
                         </div>
                     </td>
