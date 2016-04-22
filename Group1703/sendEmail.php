@@ -3,27 +3,7 @@ if(!isset($_SESSION['username'])){
     header("Location:home.php");
 }
 $user=($_SESSION['username']);
-
-
-error_reporting(-1);
-
-$dsn = "mysql:host=eu-cdbr-azure-north-d.cloudapp.net;dbname=db1510646_gameshare";
-$username = "b52b6c6935c6d2";
-$password = "26ebeed0";
-try {
-    $conn = new PDO($dsn, $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $query = "SELECT * FROM members WHERE studentID LIKE '$user'";
-
-    $conn->exec($query);
-
-    if ($results->rowcount() == 0) {
-        echo "no member found <br />";
-    } else {
-
-        foreach ($results as $row) {
-            $user = $row["email"];
+$email= $_POST['confirmEmail'];
 
 
             require_once 'Swiftmailer/lib/swift_required.php';
@@ -35,7 +15,7 @@ try {
             $mailer = Swift_Mailer::newInstance($transport);
             $message = Swift_Message::newInstance('Borrow Request')
                 ->setFrom(array('gameshareteamrgu@gmail.com' => 'GameShare Team'))
-                ->setTo(array($user => 'Valued Gameshare Member'))
+                ->setTo(array($email => 'Valued Gameshare Member'))
                 ->setBody('You Have Recieved A Borrow Request @Gameshare from ' . $user . ' Please Contact them at ' . $email . ' to arrange a swap!
 
     Thank You
@@ -45,14 +25,6 @@ try {
             $numSent = $mailer->send($message);
             printf("Sent %d messages\n", $numSent);
 
-        }
-    }
-}
-     catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }
-
-    $conn = null;
-
+        
 
 ?>
