@@ -8,7 +8,7 @@ $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
 $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Borrow Request')
     ->setFrom(array('gameshareteamrgu@gmail.com' => 'GameShare Team'))
-    ->setTo(array('gameshareteamrgu@gmail.com' => 'Valued Gameshare Member'))
+    ->setTo(array('1510646@rgu.ac.uk' => 'Valued Gameshare Member'))
     ->setBody('You Have Recieved A Borrow Request @Gameshare Please Check your Portal.
 
     Thank You
