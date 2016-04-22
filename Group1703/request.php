@@ -78,7 +78,7 @@ if(!isset($_SESSION['username'])){
 
             <table  style="width:300px" >
                 <form  name="search" Method ="post" action = "sendEmail.php">
-                    <input type="text" id='confirmEmail' placeholder="Please Confirm Your Email Address">
+                    <input type="text" name="confirmEmail" placeholder="Please Confirm Your Email Address">
                     <p>Please click confirm if you are happy to borrow copy</p>
                     <input type="submit" name="Confirm" value="Confirm">
                 </form>
