@@ -3,7 +3,7 @@ if(!isset($_SESSION['username'])){
     header("Location:home.php");
 }
 
-
+$user=($_SESSION['username']);
 
 require_once 'Swiftmailer/lib/swift_required.php';
 
@@ -15,7 +15,7 @@ $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Borrow Request')
     ->setFrom(array('gameshareteamrgu@gmail.com' => 'GameShare Team'))
     ->setTo(array('1510646@rgu.ac.uk' => 'Valued Gameshare Member'))
-    ->setBody('You Have Recieved A Borrow Request @Gameshare Please Check your Portal.
+    ->setBody('You Have Recieved A Borrow Request @Gameshare from '.$user.' Please Check your member portal.
 
     Thank You
     GameShare');
