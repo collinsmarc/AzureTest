@@ -15,7 +15,7 @@ $user = $_SESSION['username'];
 
 
 
-$sql = "SELECT * FROM members " ;
+$sql = "SELECT email FROM members WHERE studentID='1510646' " ;
 
 
 
