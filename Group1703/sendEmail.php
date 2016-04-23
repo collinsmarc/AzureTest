@@ -18,13 +18,17 @@ $user = $_SESSION['username'];
 $sql = "SELECT * FROM members " ;
 
 
+
         $results = $conn->query($sql);
 
         if ($results->rowcount() == 0) {
                 echo "no games added <br />";
         }
          else {
-                echo 'works';
+foreach ($results as $row) {
+
+
+        echo $row["email"];}
 
                 $user = '1510646@rgu.ac.uk';
 
