@@ -14,7 +14,8 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-$ownerGame = $_GET['user'];
+
+$ownerGame=$_SESSION['username'];
 
 
 
@@ -39,7 +40,7 @@ try {
         $message = Swift_Message::newInstance('Borrow Request')
             ->setFrom(array('gameshareteamrgu@gmail.com' => 'GameShare Team'))
             ->setTo(array($user => 'Dear Valued Member'))
-            ->setBody('You Have Recieved A Borrow Request @Gameshare from ' . $user . ' Please Contact them at ' . $email . ' to arrange a swap!
+            ->setBody('You Have Recieved A Borrow Request @Gameshare. Please Contact them at ' . $email . ' to arrange a swap!
 
     Thank You
     GameShare');
