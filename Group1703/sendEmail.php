@@ -13,7 +13,7 @@ $password = "26ebeed0";
 
 
 
-$sql = "SELECT email FROM members WHERE studentID LIKE '$requester' " ;
+$sql = "SELECT email FROM members WHERE studentID LIKE '1106883' " ;
 
 
 
