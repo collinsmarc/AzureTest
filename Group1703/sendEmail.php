@@ -18,7 +18,7 @@ $ownerGame = $_GET['user'];
 
 
 
-$query = "SELECT members.email FROM members WHERE studentID LIKE '$user'";
+$query = "SELECT email FROM members WHERE studentID LIKE '$ownerGame'";
 try {
     $results = $conn->query($query);
 
