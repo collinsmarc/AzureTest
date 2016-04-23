@@ -19,15 +19,21 @@ $ownerGame=$_SESSION['username'];
 
 
 
-$query = "SELECT email FROM members WHERE studentID LIKE '$ownerGame'";
+$sql = "SELECT gameCollection.Title, owns.copyID, members.firstName, members.lastName, members.email
+            FROM gameCollection INNER JOIN owns ON owns.GameID = gameCollection.gameID INNER JOIN members ON owns.studentID = members.studentID";
 try {
-    $results = $conn->query($query);
+    $results = $conn->query($sql);
 
     if ($results->rowcount() == 0) {
         echo "We're sorry, but the game you have requested is currently unavailable <br />";
     } else {
         $user = $row["email"];
         $email = $_POST["confirmEmail"];
+        $title = $row['Title'];
+        $id = $row['copyID'];
+        $first = $row['firstName'];
+        $lastname = $row['lastName'];
+        $email2 = $row['email'];
 
 
         require_once 'Swiftmailer/lib/swift_required.php';
@@ -39,7 +45,7 @@ try {
         $mailer = Swift_Mailer::newInstance($transport);
         $message = Swift_Message::newInstance('Borrow Request')
             ->setFrom(array('gameshareteamrgu@gmail.com' => 'GameShare Team'))
-            ->setTo(array($user => 'Dear Valued Member'))
+            ->setTo(array($email2=> 'Dear Valued Member'))
             ->setBody('You Have Recieved A Borrow Request @Gameshare. Please Contact them at ' . $email . ' to arrange a swap!
 
     Thank You
