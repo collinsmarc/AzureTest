@@ -1,5 +1,6 @@
 <?php
  $email = $_POST["confirmEmail"];
+$requester=$_SESSION['username'];
 
 error_reporting(-1);
 
@@ -11,11 +12,8 @@ $password = "26ebeed0";
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-$user = $_SESSION['username'];
 
-
-
-$sql = "SELECT email FROM members WHERE studentID='1510646' " ;
+$sql = "SELECT email FROM members WHERE studentID LIKE '$requester' " ;
 
 
 
