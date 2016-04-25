@@ -65,7 +65,8 @@
                     echo "<th>Title</th>";
                     foreach ($results as $row) {
                         echo "<tr>";
-                        echo "<td><a href='forumPost.php?post=" . $row["postTitle"] . "'>'" . $row["postTitle"] . "'</td></tr></a>";
+                        echo "<td><a href='forumPost.php?post=" . $row["postTitle"] . "'>'";
+                            echo"<td>" . $row["postContent"] . "'>'";
                     }
                     print "</table>\n";
                 }
