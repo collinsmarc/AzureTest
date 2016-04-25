@@ -13,7 +13,7 @@ $password = "26ebeed0";
 
 
 
-$sql = "SELECT email FROM members WHERE studentID LIKE '1510646'" ;
+
 
 
 
@@ -47,6 +47,7 @@ foreach ($results as $row) {
 //$attachment = Swift_Attachment::newInstance(file_get_contents('path/logo.png'), 'logo.png');
 //$message->attach($attachment);
                 $numSent = $mailer->send($message);
+             header("Location:memberSite.php");
 
         }
 
