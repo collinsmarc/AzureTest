@@ -1,37 +1,30 @@
-#logo{
-    width:130px;
-    height:120px;
-    padding:20px;
-
+#logo {
+    width: 130px;
+    height: 120px;
+    padding: 20px;
 
 }
 
-body{
+body {
     width: 960px;
 }
 
-
-h1{
+h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
     font-weight: bold;
 
-
 }
-h2{
+
+h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
     font-weight: lighter;
 }
 
-
-#logo{
-    float:left;
+#logo {
+    float: left;
 }
-
-
-
-
 
 ul {
     list-style-type: none;
@@ -40,7 +33,7 @@ ul {
     background-color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    color:black;
+    color: black;
     float: left;
 }
 
@@ -52,34 +45,34 @@ li a {
 
 }
 
-a:hover{
+a:hover {
     background-color: lightgrey;
-    color:black;
+    color: black;
 }
 
-footer{
+footer {
 
-    padding:20px;
+    padding: 20px;
     font-family: 'Oswald', sans-serif;
 
 }
 
-aside{
+aside {
 
 }
 
-header{
+header {
 
     padding: 20px;
 }
 
-article{
+article {
 
     text-align: justify;
-    padding:10px;
+    padding: 10px;
 }
 
-form{
+form {
     font-family: verdana;
 
 }
