@@ -59,29 +59,97 @@ $choice = $_GET["category"]; ?>
     <section class="grid-70">
         <article id="show">
             <?php
-            $choice = $_GET["category"];
+
+            switch ($choice) {
+                case "android":
+                    $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
+                    $result = mysqli_query($db, $sql);
+
+                    while ($row = $result->fetch_array()) {
+
+                        foreach ($result as $row) {
+                            echo "<h2>" . $row["bugName"];
+                            echo "<br>";
+                            echo "<p>" . $row["BugCategory"] . "<p>";
+                            echo "<br>";
+                            echo "<p>" . $row["BugSummary"] . "</p>";
+                            echo "<br><br>";
+                            echo "----------------------------------------------------------";
+                            break;
+                        }
+                    }
 
 
-            $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
-            $result = mysqli_query($db, $sql);
+                case "ios":
+                    $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
+                    $result = mysqli_query($db, $sql);
 
-            while ($row = $result->fetch_array()) {
+                    while ($row = $result->fetch_array()) {
 
-                foreach ($result as $row) {
-                    echo "<h2>" . $row["bugName"];
-                    echo "<br>";
-                    echo "<p>" . $row["BugCategory"] . "<p>";
-                    echo "<br>";
-                    echo "<p>" . $row["BugSummary"] . "</p>";
-                    echo "<br><br>";
-                    echo "----------------------------------------------------------";
+                        foreach ($result as $row) {
+                            echo "<h2>" . $row["bugName"];
+                            echo "<br>";
+                            echo "<p>" . $row["BugCategory"] . "<p>";
+                            echo "<br>";
+                            echo "<p>" . $row["BugSummary"] . "</p>";
+                            echo "<br><br>";
+                            echo "----------------------------------------------------------";
+                            break;
+                        }
+                    }
 
 
-                }
+                case "windows":
+                    $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
+                    $result = mysqli_query($db, $sql);
+
+                    while ($row = $result->fetch_array()) {
+
+                        foreach ($result as $row) {
+                            echo "<h2>" . $row["bugName"];
+                            echo "<br>";
+                            echo "<p>" . $row["BugCategory"] . "<p>";
+                            echo "<br>";
+                            echo "<p>" . $row["BugSummary"] . "</p>";
+                            echo "<br><br>";
+                            echo "----------------------------------------------------------";
+                            break;
+                        }
+                    }
+
+
+                default:
+                    $sql = "SELECT * FROM bugs WHERE BugCategory";
+                    $result = mysqli_query($db, $sql);
+
+                    while ($row = $result->fetch_array()) {
+
+                        foreach ($result as $row) {
+                            echo "<h2>" . $row["bugName"];
+                            echo "<br>";
+                            echo "<p>" . $row["BugCategory"] . "<p>";
+                            echo "<br>";
+                            echo "<p>" . $row["BugSummary"] . "</p>";
+                            echo "<br><br>";
+                            echo "----------------------------------------------------------";
+                            break;
+                        }
+                    }
             }
-
-
             ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         </article>
