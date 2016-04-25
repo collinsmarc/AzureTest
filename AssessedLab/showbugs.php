@@ -122,7 +122,7 @@ $choice = $_GET["category"]; ?>
 
             }
             else{
-                $sql = "SELECT * FROM bugs WHERE BugCategory";
+                $sql = "SELECT * FROM bugs;";
                 $result = mysqli_query($db, $sql);
 
                 while ($row = $result->fetch_array()) {
