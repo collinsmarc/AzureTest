@@ -52,6 +52,8 @@ include("connection.php");?>
                     echo "<p>" . $row["BugCategory"] . "<p>";
                     echo "<br>";
                     echo "<p>" . $row["BugSummary"] . "</p>";
+                    echo "<br><br>";
+                    echo"----------------------------------------------------------";
 
 
                 }
