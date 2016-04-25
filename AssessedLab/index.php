@@ -29,9 +29,9 @@
         <nav id="quick links">
             <ul>
                 <li><a href="showbugs.php">All Bug Items</a></li>
-                <li><a href="#">Android Bugs</a></li>
-                <li><a href="#">iOS Bugs</a></li>
-                <li><a href="#">Windows Bugs</a></li>
+                <li><a href="showbugs.php?category=android">Android Bugs</a></li>
+                <li><a href="showbugs.php?category=ios">iOS Bugs</a></li>
+                <li><a href="showbugs.php?category=windows">Windows Bugs</a></li>
                 <li><a href="addBugs.php">Insert Bugs</a></li>
             </ul>
         </nav>

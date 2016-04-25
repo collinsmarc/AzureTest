@@ -41,7 +41,12 @@ include("connection.php");?>
     <section class="grid-70">
         <article id="show">
             <?php
-            $sql = "SELECT * FROM bugs";
+            $choice=$_GET["category"];
+
+
+
+
+            $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
             $result = mysqli_query($db, $sql);
 
             while ($row = $result->fetch_array()) {
