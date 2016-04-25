@@ -35,7 +35,7 @@ $choice = $_GET["category"]; ?>
 
 
         default:
-            echo "<h1>Bug Tracker - GENERAL</h1>
+            echo "<h1>Bug Tracker</h1>
     <h2>Keeping track of all the pesky little bugs</h2>";
     }
     ?>
