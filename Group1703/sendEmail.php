@@ -13,7 +13,7 @@ $password = "26ebeed0";
 
 
 
-
+$sql = "SELECT email FROM members WHERE studentID LIKE '1510646'" ;
 
 
 
@@ -48,7 +48,6 @@ foreach ($results as $row) {
 //$message->attach($attachment);
                 $numSent = $mailer->send($message);
              header("Location:memberSite.php");
-
         }
 
 
