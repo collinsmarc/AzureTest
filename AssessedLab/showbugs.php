@@ -48,7 +48,7 @@ $choice = $_GET["category"]; ?>
     <aside class="grid-30">
         <nav id="quick links">
             <ul>
-                <li><a href="showbugs.php">All Bug Items</a></li>
+                <li><a href="showbugs.php?category=none">All Bug Items</a></li>
                 <li><a href="showbugs.php?category=android">Android Bugs</a></li>
                 <li><a href="showbugs.php?category=ios">iOS Bugs</a></li>
                 <li><a href="showbugs.php?category=windows">Windows Bugs</a></li>
