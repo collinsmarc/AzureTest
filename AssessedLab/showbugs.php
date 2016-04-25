@@ -62,22 +62,84 @@ $choice = $_GET["category"]; ?>
             $choice = $_GET["category"];
 
 
-            $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
-            $result = mysqli_query($db, $sql);
+            if ($choice=="android") {
+                $sql = "SELECT * FROM bugs WHERE BugCategory LIKE 'android'";
+                $result = mysqli_query($db, $sql);
 
-            while ($row = $result->fetch_array()) {
+                while ($row = $result->fetch_array()) {
 
-                foreach ($result as $row) {
-                    echo "<h2>" . $row["bugName"];
-                    echo "<br>";
-                    echo "<p>" . $row["BugCategory"] . "<p>";
-                    echo "<br>";
-                    echo "<p>" . $row["BugSummary"] . "</p>";
-                    echo "<br><br>";
-                    echo "----------------------------------------------------------";
+                    foreach ($result as $row) {
+                        echo "<h2>" . $row["bugName"];
+                        echo "<br>";
+                        echo "<p>" . $row["BugCategory"] . "<p>";
+                        echo "<br>";
+                        echo "<p>" . $row["BugSummary"] . "</p>";
+                        echo "<br><br>";
+                        echo "----------------------------------------------------------";
 
 
+                    }
                 }
+            }
+
+            elseif($choice=="windows"){
+                $sql = "SELECT * FROM bugs WHERE BugCategory LIKE 'windows'";
+                $result = mysqli_query($db, $sql);
+
+                while ($row = $result->fetch_array()) {
+
+                    foreach ($result as $row) {
+                        echo "<h2>" . $row["bugName"];
+                        echo "<br>";
+                        echo "<p>" . $row["BugCategory"] . "<p>";
+                        echo "<br>";
+                        echo "<p>" . $row["BugSummary"] . "</p>";
+                        echo "<br><br>";
+                        echo "----------------------------------------------------------";
+
+
+                    }
+                }
+            }
+            elseif($choice=="ios"){
+                $sql = "SELECT * FROM bugs WHERE BugCategory LIKE 'ios'";
+                $result = mysqli_query($db, $sql);
+
+                while ($row = $result->fetch_array()) {
+
+                    foreach ($result as $row) {
+                        echo "<h2>" . $row["bugName"];
+                        echo "<br>";
+                        echo "<p>" . $row["BugCategory"] . "<p>";
+                        echo "<br>";
+                        echo "<p>" . $row["BugSummary"] . "</p>";
+                        echo "<br><br>";
+                        echo "----------------------------------------------------------";
+
+
+                    }
+                }
+
+            }
+            else{
+                $sql = "SELECT * FROM bugs WHERE BugCategory";
+                $result = mysqli_query($db, $sql);
+
+                while ($row = $result->fetch_array()) {
+
+                    foreach ($result as $row) {
+                        echo "<h2>" . $row["bugName"];
+                        echo "<br>";
+                        echo "<p>" . $row["BugCategory"] . "<p>";
+                        echo "<br>";
+                        echo "<p>" . $row["BugSummary"] . "</p>";
+                        echo "<br><br>";
+                        echo "----------------------------------------------------------";
+
+
+                    }
+                }
+
             }
 
 
