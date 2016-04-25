@@ -1,5 +1,6 @@
 <?
-include("connection.php");?>
+include("connection.php");
+$choice = $_GET["category"]; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +9,8 @@ include("connection.php");?>
     <link rel="stylesheet" href="bugsDesign.css" type="text/css"/>
     <link rel="stylesheet"
           href="unsemantic-grid-responsive-tablet.css">
-    <meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,
-13 maximum-scale=1"  />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,
+13 maximum-scale=1"/>
 
     <title>BugTracker</title>
 </head>
@@ -17,9 +18,27 @@ include("connection.php");?>
 <body>
 <header>
     <img class="grid-30" id="logo" img src="logo.png" width="100px">
-    <h1>Bug Tracker</h1>
-    <h2>Keeping track of all the pesky little bugs</h2>
+    <?
+    switch ($choice) {
+        case "android":
+            echo "<h1>Bug Tracker - Android Exclusive</h1>
+    <h2>Keeping track of all the pesky little bugs</h2>";
+            break;
+        case "ios":
+            echo "<h1>Bug Tracker - IOS Exclusive</h1>
+    <h2>Keeping track of all the pesky little bugs</h2>";
+            break;
+        case "windows":
+            echo "<h1>Bug Tracker - WINDOWS Exclusive</h1>
+    <h2>Keeping track of all the pesky little bugs</h2>";
+            break;
 
+
+        default:
+            echo "<h1>Bug Tracker - GENERAL</h1>
+    <h2>Keeping track of all the pesky little bugs</h2>";
+    }
+    ?>
 
 
 </header>
@@ -40,9 +59,7 @@ include("connection.php");?>
     <section class="grid-70">
         <article id="show">
             <?php
-            $choice=$_GET["category"];
-
-
+            $choice = $_GET["category"];
 
 
             $sql = "SELECT * FROM bugs WHERE BugCategory LIKE '$choice'";
@@ -51,13 +68,13 @@ include("connection.php");?>
             while ($row = $result->fetch_array()) {
 
                 foreach ($result as $row) {
-                    echo "<h2>".$row["bugName"];
+                    echo "<h2>" . $row["bugName"];
                     echo "<br>";
                     echo "<p>" . $row["BugCategory"] . "<p>";
                     echo "<br>";
                     echo "<p>" . $row["BugSummary"] . "</p>";
                     echo "<br><br>";
-                    echo"----------------------------------------------------------";
+                    echo "----------------------------------------------------------";
 
 
                 }
@@ -65,8 +82,6 @@ include("connection.php");?>
 
 
             ?>
-
-
 
 
         </article>
@@ -79,8 +94,6 @@ include("connection.php");?>
 
 
 </footer>
-
-
 
 
 </body>
