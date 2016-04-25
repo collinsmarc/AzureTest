@@ -62,11 +62,11 @@
                 } else {
 
                     print "<table id='results' width='60%'>\n";
-                    echo "<th>Title</th>";
+                    echo "<th>Title</th><th>Content</th>";
                     foreach ($results as $row) {
                         echo "<tr>";
-                        echo "<td><a href='forumPost.php?post=" . $row["postTitle"] . "'>'";
-                            echo"<td>" . $row["postContent"] . "'>'";
+                        echo "<td><a href='forumPost.php?post=" . $row["postTitle"] . "'>";
+                            echo"<td>" . $row["postContent"] .">";
                     }
                     print "</table>\n";
                 }
