@@ -469,7 +469,7 @@ div#slider figure {
 /*NEW BITS ADDED BY MARC*-----------------------*/
 
 #Delete{
-	width: 60px;
+	width: 70px;
 	border-top: solid 1px;
 	border-bottom: solid 1px;
 	font-family: Oswald, sans-serif;
@@ -482,7 +482,7 @@ div#slider figure {
 }
 
 #UStatus{
-	width: 60px;
+	width: 70px;
 	border-top: solid 1px;
 	border-bottom: solid 1px;
 	font-family: Oswald, sans-serif;
@@ -495,7 +495,7 @@ div#slider figure {
 }
 
 #UCondition{
-	width: 60px;
+	width: 70px;
 	border-top: solid 1px;
 	border-bottom: solid 1px;
 	font-family: Oswald, sans-serif;
@@ -508,7 +508,7 @@ div#slider figure {
  }
 
 #Request{
-	width: 60px;
+	width: 70px;
 	border-top: solid 1px;
 	border-bottom: solid 1px;
 	font-family: Oswald, sans-serif;
@@ -521,7 +521,7 @@ div#slider figure {
 }
 
 #Confirm{
-	width: 60px;
+	width: 70px;
 	border-top: solid 1px;
 	border-bottom: solid 1px;
 	font-family: Oswald, sans-serif;
