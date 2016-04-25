@@ -67,10 +67,10 @@ $user=$_SESSION['username'];
                 } else {
 
                     print "<table id='results' width='60%'>\n";
-                    echo "<th>Title</th>";
+                    echo "<th>Feedback</th>";
                     foreach ($results as $row) {
                         echo "<tr>";
-                        echo "<td><a href='forumPost.php?post=" . $row["feedback"] ;
+                        echo "<td>". $row["feedback"] ;
                     }
                     print "</table>\n";
                 }
