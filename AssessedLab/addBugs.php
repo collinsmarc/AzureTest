@@ -29,12 +29,11 @@ include("connection.php");?>
     <aside class="grid-30">
         <nav id="quick links">
             <ul>
-                <li><a href="#">All Bug Items</a></li>
-                <li><a href="#">Android Bugs</a></li>
-                <li><a href="#">iOS Bugs</a></li>
-                <li><a href="#">Windows Bugs</a></li>
-                <li><a href="addBugs.html">Insert Bugs</a></li>
-            </ul>
+                <li><a href="showbugs.php">All Bug Items</a></li>
+                <li><a href="showbugs.php?category=android">Android Bugs</a></li>
+                <li><a href="showbugs.php?category=ios">iOS Bugs</a></li>
+                <li><a href="showbugs.php?category=windows">Windows Bugs</a></li>
+                <li><a href="addBugs.php">Insert Bugs</a></li>
         </nav>
     </aside>
 
